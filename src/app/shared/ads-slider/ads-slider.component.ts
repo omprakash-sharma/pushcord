@@ -40,7 +40,7 @@ export class AdsSliderComponent implements OnInit {
       $('.ngxcarouselPoint').css({'background-color':'#ddd'});
       $('.ngxcarouselPoint ul').css({'padding':'0px', 'padding-bottom':'4px'});
       $('.ngxcarouselPoint ul li').css({'padding':'2px'});
-      $('.ngxcarouselPoint ul li.active').css({'transform':'scale(1.4)'});
+      //$('.ngxcarouselPoint ul li.active').css({'transform':'scale(1.4)'});
     },300)
   }
 

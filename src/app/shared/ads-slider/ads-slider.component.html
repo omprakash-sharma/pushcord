@@ -6,7 +6,7 @@
     [inputs]="carouselBanner" 
     (carouselLoad)="carouselBannerLoad($event)">
         <ngx-item NgxCarouselItem class="bannerStyle" *ngFor="let Banner of carouselBannerItems">
-            <img height="100" width="100%" src="{{Banner.name}}">
+            <img height="200" width="100%" src="{{Banner.name}}">
         </ngx-item>
   
       <button class='leftRs' NgxCarouselPrev>
