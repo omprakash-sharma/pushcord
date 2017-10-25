@@ -1,0 +1,116 @@
+<div class="nav-bar-container">
+  <div class="site-nav-links flex-box">
+    <div>Pushcord &copy; 2009 - 2017 &nbsp; | &nbsp; All rights reserved</div>
+    <div class="ml-auto site-links">
+      <a>Start Selling</a>
+      <a>Advertise</a>
+      <a>Downloadables</a>
+      <a>Help</a>
+    </div>
+  </div>
+  <div class="app-nav-bar">
+    <mat-grid-list cols="64" rowHeight="60px">
+      <mat-grid-tile colspan="19" rowspan="1">
+        <mat-card class="logo-link-card flex-box">
+          <a class="logo-link">
+          </a>
+          <form class="search-form flex-box">
+            <mat-form-field class="custom-mat-input nav-bar-search inline-label">
+              <input type="text" name="searchInput" placeholder="Search pushcord here..." matInput
+                     [(ngModel)]="searchInput">
+            </mat-form-field>
+            <!--<mat-autocomplete #navBarSearch="matAutocomplete">-->
+              <!--<mat-option>-->
+              <!--</mat-option>-->
+            <!--</mat-autocomplete>-->
+
+            <button type="button" class="black-btn-o search-form-submit-btn" mat-button>
+              <img src="/assets/images/search-icon.svg"/>
+            </button>
+          </form>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="28" rowspan="1">
+        <mat-card class="app-nav-card">
+          <ul class="flex-box p-0 justify-content-space-around">
+            <li class="flex-box justify-content-center">
+              <div class="flex-box flex-column-direction">
+                <i class="material-icons">home</i>
+                <span>Home</span>
+              </div>
+            </li>
+            <li class="flex-box justify-content-center" [routerLink]="['/main/fronts']" routerLinkActive="active-link">
+              <div class="flex-box flex-column-direction">
+                <i class="material-icons">business</i>
+                <span>Fronts</span>
+              </div>
+            </li>
+            <li class="flex-box justify-content-center">
+              <div class="flex-box flex-column-direction">
+                <i class="material-icons">power</i>
+                <span>Cords</span>
+              </div>
+            </li>
+            <li class="flex-box justify-content-center">
+              <div class="flex-box flex-column-direction">
+                <i class="material-icons">content_paste</i>
+                <span>Tasks</span>
+              </div>
+            </li>
+            <li class="flex-box justify-content-center">
+              <div class="flex-box flex-column-direction">
+                <i class="material-icons">chat_bubble_outline</i>
+                <span>Exchange</span>
+              </div>
+            </li>
+            <li class="flex-box justify-content-center">
+              <div class="flex-box flex-column-direction">
+                <i class="material-icons">library_books</i>
+                <span>Line</span>
+              </div>
+            </li>
+            <li class="flex-box justify-content-center">
+              <div class="flex-box flex-column-direction">
+                <i class="material-icons">store</i>
+                <span>Store</span>
+              </div>
+            </li>
+          </ul>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="8" rowspan="1">
+        <mat-card class="cart-card">
+          <a class="cart-link flex-box">
+            <img src="/assets/images/cart-icon.svg" class="cart-icon">
+            <div class="cart-item-text">
+              -
+            </div>
+          </a>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="4" rowspan="1">
+        <mat-card class="notification-card flex-box justify-content-center">
+          <a class="notification-link"
+             [ngStyle]="{'background':true ? 'url(/assets/images/globe-notified-icon.svg) no-repeat center' : 'url(/assets/images/globe-icon.svg) no-repeat center'}">
+          </a>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="5" rowspan="1">
+        <mat-card class="flex-box">
+          <div class="user-profile-link flex-box justify-content-center">
+            <img src="/assets/images/default-user.jpg"/>
+          </div>
+          <button mat-icon-button  style="width: 24px;">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu>
+            <button mat-menu-item>
+              Logout
+            </button>
+          </mat-menu>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>
+

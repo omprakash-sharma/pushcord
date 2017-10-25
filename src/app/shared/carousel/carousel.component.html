@@ -1,0 +1,12 @@
+<div>
+  <ngx-carousel  
+  [inputs]="carouselBanner" 
+  (carouselLoad)="carouselBannerLoad($event)">
+      <ngx-item NgxCarouselItem class="bannerStyle" *ngFor="let Banner of carouselBannerItems">
+          <img src="{{Banner.name}}">
+      </ngx-item>
+
+    <button class='leftRs' NgxCarouselPrev><i class="material-icons">keyboard_arrow_left</i></button>
+    <button class='rightRs' NgxCarouselNext><i class="material-icons">keyboard_arrow_right</i></button>
+  </ngx-carousel>
+</div>

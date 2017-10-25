@@ -1,0 +1,149 @@
+:host {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.nav-bar-container{
+  background-color: #dce1e5;
+}
+
+.site-nav-links{
+  padding: 8px 10px;
+  color: #fff;
+  background-color: #0091e5;
+  font-size: 12px;
+}
+
+.site-links > a{
+  padding: 0px 5px;
+}
+
+.site-links > a:hover{
+  text-decoration: underline;
+}
+
+.app-nav-bar {
+  padding: 10px 5px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+mat-card {
+  margin: 0px 5px;
+  width: 100%;
+  padding: 0;
+  height: 95%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.mat-icon-button {
+  width: 24px;
+}
+
+.user-profile-link {
+  width: calc(100% - 24px);
+  height: 100%;
+  cursor: pointer;
+}
+
+.user-profile-link img {
+  width: auto;
+  max-height: 75%;
+}
+
+.logo-link-card {
+  padding: 10px !important;
+  justify-content: space-between;
+}
+
+.logo-link {
+  height: 100%;
+  width: 50px;
+  background: url(/assets/images/blue-logo.png) no-repeat center;
+  background-size: contain;
+}
+
+.search-form-submit-btn {
+  min-width: 40px;
+  line-height: 1px;
+  height: 33px;
+  margin-left: -1px;
+  padding: 0px;
+}
+
+.search-form {
+  width: 80%;
+}
+
+.nav-bar-search {
+  min-width: calc(100% - 40px);
+}
+
+.search-form-submit-btn img {
+  height: 25px;
+  width: 25px;
+}
+
+.notification-card {
+  padding: 10px;
+}
+
+.notification-link {
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.notification-link:hover {
+  background: url(/assets/images/globe-selected-icon.svg) no-repeat center !important;
+}
+
+.cart-card {
+  padding: 5px 10px !important;
+}
+
+.cart-link{
+  height: 100%;
+  width: 100%;
+}
+
+.cart-icon{
+  height: 35px;
+  width: 35px;
+}
+
+.cart-item-text{
+  padding: 0 5px;
+}
+
+.app-nav-card{}
+
+.app-nav-card > ul{
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+}
+
+.app-nav-card > ul > li{
+  height: 100%;
+  width: calc(100% / 7);
+  color: #7d7d7d;
+}
+
+.app-nav-card > ul > li:hover, .active-link{
+  background-color: #f4f7f9;
+  color: #0091e5 !important;
+  cursor: pointer;
+}
+
+.material-icons{
+  font-size: 22px;
+}
