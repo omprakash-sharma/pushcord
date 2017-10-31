@@ -7,7 +7,7 @@ import {AuthModule} from "./auth/auth.module";
 import {FrontsModule} from "./fronts/fronts.module";
 import {AppLandingPageComponent} from "./auth/landing-page/landing-page.component";
 import {NoAuthGuard} from "./auth/no-auth-guard.service";
-
+import { StoreModule } from './store/store.module';
 
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
@@ -37,7 +37,8 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([{
     AuthModule,
     SharedModule,
     FrontsModule,
-    rootRouting
+    rootRouting,
+    StoreModule
   ],
   providers: [ApiService,
     AuthGuard,

@@ -29,6 +29,7 @@ export class FrontComponent implements OnInit {
   /* END: Side bar CSS adjustment */
 
   constructor() {
+    console.log("main module from front.component.ts file...")
   }
 
   ngOnInit() {

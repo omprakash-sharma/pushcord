@@ -19,6 +19,12 @@ import {CommunicationModule} from "../communication/communication.module";
 import {SharedModule} from "../shared/shared.module";
 import {FrontContactPointsComponent} from "./front-details/front-contact-points/front-contact-points.component";
 
+// store module
+import { BaseStoreComponent } from '../store/base-store.component';
+import { DealsComponent } from '../store/view-by-deals/deals.component';
+import { FrontsComponent } from '../store/view-by-fronts/fronts.component';
+import { LinesComponent } from '../store/view-by-lines/lines.component';
+
 const routes: Route[] = [
   {
     path: "main",
@@ -73,6 +79,27 @@ const routes: Route[] = [
             ]
           }
         ]
+      },{
+        path: "store",
+        children: [
+          {
+            path: "",
+            component: BaseStoreComponent,
+            children: [
+              {
+                path: 'deals',
+                component: DealsComponent,
+                
+              },{
+                path: 'fronts',
+                component: FrontsComponent
+              },{
+                path: 'lines',
+                component: LinesComponent
+              }
+            ]
+          }
+        ]
       }
     ]
   }
@@ -96,4 +123,7 @@ const routes: Route[] = [
   ]
 })
 export class FrontsModule {
+  constructor(){
+    console.log("fronts module")
+  }
 }

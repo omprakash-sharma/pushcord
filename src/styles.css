@@ -12,7 +12,7 @@
 }
 
 body{
-  background-color: #dce1e5;
+  background-color: #dce1e5!important;
 }
 
 body, input, textarea, select, button, meter, progress {
