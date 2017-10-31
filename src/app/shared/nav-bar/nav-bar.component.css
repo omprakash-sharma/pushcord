@@ -100,10 +100,7 @@ mat-card {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-}
-
-.notification-link:hover {
-  background: url(/assets/images/globe-selected-icon.svg) no-repeat center !important;
+  cursor: pointer;
 }
 
 .cart-card {
@@ -146,4 +143,73 @@ mat-card {
 
 .material-icons{
   font-size: 22px;
+}
+
+.notification-card:hover > .notifications-dropdown {
+  display: block;
+}
+
+.notifications-dropdown{
+  position: absolute;
+  top: 58px;
+  z-index: 1000;
+  background-color: #fff;
+  width: 25vw;
+  right: -5vw;
+  transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+  border-radius: 2px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.25);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  display: none;
+}
+
+.notifications-header{
+  padding: 0px 10px;
+  font-size: small;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.notifications-list{
+  padding: 0px 5px;
+}
+
+.notification-details {
+  padding: 5px;
+  width: calc(100% - 25px);
+}
+
+.notifications-text {
+  font-size: small;
+  line-height: 1.5em;
+  padding: 0px 5px;
+  width: calc(100% - 40px);
+}
+
+.notifications-text div{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.notification-action-btn{
+  margin: 0px 5px;
+}
+
+.notifications-footer{
+  background-color: #edf1f6;
+  text-align: center;
+  padding: 4px;
+  cursor: pointer;
+  border-radius: inherit;
+  font-size: smaller;
+}
+.notifications-footer:hover {
+  background-color: #e6e7e8;
+}
+
+.notifications-settings {
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
 }

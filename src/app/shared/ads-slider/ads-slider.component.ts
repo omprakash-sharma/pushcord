@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxCarousel } from 'ngx-carousel';
 
-declare var jquery:any;
-declare var $ :any;
+
 @Component({
   selector: 'ads-slider',
   templateUrl: './ads-slider.component.html',
@@ -10,77 +9,65 @@ declare var $ :any;
 })
 export class AdsSliderComponent implements OnInit {
   items: Array<any> = [];
-  public carouselBannerItems: Array<any>;
-  public carouselBanner: Carousel;
+  public carouselTileItems: Array<any>;
+  public carouselTile: any;
   constructor() {
     this.items = [
-      {name:'assets/images/carousel_img/animal1.jpg'},
-      {name:'assets/images/carousel_img/animal2.jpg'},
-      {name:'assets/images/carousel_img/animal3.jpg'},
-      {name:'assets/images/carousel_img/wind1.jpg'},
-      {name:'assets/images/carousel_img/wind2.jpg'}
-    ]; 
+      {name: 'assets/images/carousel_img/img-1.jpg'},
+      {name: 'assets/images/carousel_img/img-2.jpg'},
+      {name: 'assets/images/carousel_img/img-3.jpg'},
+      {name: 'assets/images/carousel_img/img-4.jpg'},
+      {name: 'assets/images/carousel_img/img-5.jpg'},
+      {name: 'assets/images/carousel_img/img-6.jpg'}
+    ];
    }
 
   ngOnInit() {
-    this.carouselBannerItems = this.items;
-    this.carouselBanner = {
+    this.carouselTileItems = this.items;
+    this.carouselTile = {
       grid: {xs: 1, sm: 1, md: 1, lg: 1, all: 0},
       slide: 1,
       speed: 500,
       interval: 4000,
-      point: true,
-      load: 1,
+      point: {visible: true,
+      pointStyles: `
+          .ngxcarouselPoint {
+            list-style-type: none;
+            text-align: center;
+            padding: 2px;
+            margin: 0;
+            white-space: nowrap;
+            overflow: auto;
+            box-sizing: border-box;
+           background: #edf1f6;
+          }
+          .ngxcarouselPoint li {
+               display: inline-block;
+               border-radius: 50%;
+               border: 1px solid #999;
+               padding: 2px;
+               margin: 0 10px;
+               transition-timing-function: cubic-bezier(.17, .67, .83, .67);
+               transition: .4s;
+          }
+          .ngxcarouselPoint li.active {
+              background: #6b6b6b;
+              transform: scale(1.2);
+              border: 1px solid #eee;
+          }
+        `
+      },
+      load: 2,
       loop: true,
       custom: 'tile',
       touch: true,
       dynamicLength: true
     }
-    setTimeout(()=>{
-      $('.ngxcarouselPoint').css({'background-color':'#ddd'});
-      $('.ngxcarouselPoint ul').css({'padding':'0px', 'padding-bottom':'4px'});
-      $('.ngxcarouselPoint ul li').css({'padding':'2px'});
-  
-      //$('.ngxcarouselPoint ul li.active').css({'transform':'scale(1.4)'});
-    },300)
+
   }
 
-  public carouselBannerLoad(evt: any) {
-    
-      //  const len = this.carouselBannerItems.length
-      //  if (len <= 10) {
-      //    for (let i = len; i < len + 10; i++) {
-      //      this.carouselBannerItems.push(i);
-      //    }
-      //  }
-      // $('.ngxcarouselPoint').css('background-color','#fff');
-      // $('.ngxcarouselPoint').on('click',function(){alert("called")})
-  };
 
 }
-export class Carousel {
-  grid: Grid;
-  slide?: number;
-  speed?: number;
-  interval?: number;
-  animation?: Animate;
-  point?: boolean;
-  type?: string;
-  load?: number;
-  custom?: Custom;
-  loop?: boolean;
-  easing?: string;
-  touch?: boolean;
-  dynamicLength: boolean;
-}
- 
-export class Grid {
-  xs: number;
-  sm: number;
-  md: number;
-  lg: number;
-  all: number;
-}
- 
-export type Custom = 'tile';
-export type Animate = 'lazy';
+
+
+

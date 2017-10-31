@@ -20,8 +20,8 @@
                      [(ngModel)]="searchInput">
             </mat-form-field>
             <!--<mat-autocomplete #navBarSearch="matAutocomplete">-->
-              <!--<mat-option>-->
-              <!--</mat-option>-->
+            <!--<mat-option>-->
+            <!--</mat-option>-->
             <!--</mat-autocomplete>-->
 
             <button type="button" class="black-btn-o search-form-submit-btn" mat-button>
@@ -88,11 +88,39 @@
           </a>
         </mat-card>
       </mat-grid-tile>
-      <mat-grid-tile colspan="4" rowspan="1">
+      <mat-grid-tile colspan="4" rowspan="1" style="overflow: visible">
         <mat-card class="notification-card flex-box justify-content-center">
           <a class="notification-link"
              [ngStyle]="{'background':true ? 'url(/assets/images/globe-notified-icon.svg) no-repeat center' : 'url(/assets/images/globe-icon.svg) no-repeat center'}">
           </a>
+          <div class="notifications-dropdown">
+            <div class="flex-box notifications-header">
+              <a href="" class="black-link">Mark all read</a>
+              <button mat-icon-button class="ml-auto notifications-settings"><i class="material-icons light-text">settings</i>
+              </button>
+            </div>
+            <div class="notifications-list">
+              <div class="notification-box flex-box">
+                <div class="notification-details flex-box">
+                  <div class="img-thumbnail"
+                       [ngStyle]="{'background':'url(https://media.npr.org/about/people/bios/biophotos/snelson_sq-2767caa78582a137346c4cd0281656a4872fa37d-s100-c85.jpg)'}"></div>
+                  <div class="notifications-text flex-box">
+                    <div>
+                      <div><b>Satya</b> is calling you</div>
+                      <div>Just now</div>
+                    </div>
+                    <div class="ml-auto">
+                      <button class="notification-action-btn green-text" type="button" mat-icon-button><i class="material-icons">call</i></button>
+                      <button class="notification-action-btn green-text" type="button" mat-icon-button><i class="material-icons">call_end</i></button>
+                    </div>
+                  </div>
+                </div>
+                <button class="ml-auto" mat-icon-button type="button"><i class="material-icons">more_vert</i></button>
+              </div>
+            </div>
+            <div class="notifications-footer">View all</div>
+            <div class="notifications-body"></div>
+          </div>
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile colspan="5" rowspan="1">
@@ -100,7 +128,7 @@
           <div class="user-profile-link flex-box justify-content-center">
             <img src="/assets/images/default-user.jpg"/>
           </div>
-          <button mat-icon-button  style="width: 24px;">
+          <button mat-icon-button style="width: 24px;">
             <mat-icon>more_vert</mat-icon>
           </button>
           <mat-menu>

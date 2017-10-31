@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import {
   MatAutocompleteModule,
-  MatButtonModule,
+  MatButtonModule, MatButtonToggleModule,
   MatCardModule, MatDialogModule, MatExpansionModule, MatGridListModule, MatIconModule, MatInputModule, MatMenuModule,
-  MatRippleModule, MatSelectModule
+  MatRippleModule, MatSelectModule, MatSidenavModule, MatTabsModule
 } from "@angular/material";
 
 @NgModule({
@@ -24,7 +24,10 @@ import {
     MatAutocompleteModule,
     MatExpansionModule,
     MatDialogModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTabsModule,
+    MatButtonToggleModule,
+    MatSidenavModule
   ]
 })
 export class CustomMaterialModule { }

@@ -1,10 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import "/assets/css/angular-material-theme.css";
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
 * , *:before, *:after{
   box-sizing:border-box;
   -moz-box-sizing:border-box;
   -webkit-box-sizing:border-box;
   -ms-box-sizing:border-box;
+  outline: none;
 }
 
 body{
@@ -33,24 +37,27 @@ body, input, textarea, select, button, meter, progress {
   margin-left: auto !important;
 }
 .mt-10 {
-  margin-top: 10px;
+  margin-top: 10px !important;
 }
 
+.mb-10 {
+  margin-bottom: 10px !important;
+}
 
 .ml-10 {
-  margin-left: 10px;
+  margin-left: 10px !important;
 }
 
 .mr-10 {
-  margin-right: 10px;
+  margin-right: 10px !important;
 }
 
 .ml-15 {
-  margin-left: 15px;
+  margin-left: 15px !important;
 }
 
 .mr-15 {
-  margin-right: 15px;
+  margin-right: 15px !important;
 }
 
 .mt-15 {
@@ -58,11 +65,15 @@ body, input, textarea, select, button, meter, progress {
 }
 
 .mt-20 {
-  margin-top: 20px;
+  margin-top: 20px !important;
 }
 
 .p-0 {
   padding: 0px !important;
+}
+
+.p-5 {
+  padding: 5px !important;
 }
 
 .p-10 {
@@ -70,27 +81,27 @@ body, input, textarea, select, button, meter, progress {
 }
 
 .pt-10 {
-  padding-top: 10px;
+  padding-top: 10px !important;
 }
 
 .pb-10 {
-  padding-bottom: 10px;
+  padding-bottom: 10px !important;
 }
 
 .pt-15 {
-  padding-top: 15px;
+  padding-top: 15px !important;
 }
 
 .pb-15 {
-  padding-bottom: 15px;
+  padding-bottom: 15px !important;
 }
 
 .pt-20 {
-  padding-top: 20px;
+  padding-top: 20px !important;
 }
 
 .pb-20 {
-  padding-bottom: 20px;
+  padding-bottom: 20px !important;
 }
 
 .action-btn {
@@ -122,8 +133,16 @@ body, input, textarea, select, button, meter, progress {
   color: #7d7d7d;
 }
 
-li {
-  outline: none;
+.green-text {
+  color: green;
+}
+
+.red-text {
+  color: red;
+}
+
+h3, b{
+  font-weight: 500 !important;
 }
 
 /*Form CSS*/
@@ -183,6 +202,18 @@ li {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.flex-nowrap{
+  flex-wrap: nowrap !important;
+}
+
+.align-items-end {
+  align-items: flex-end !important;
+}
+
 .black-link {
   text-decoration: none;
   color: #000000;
@@ -209,6 +240,19 @@ li {
 
 .black-btn-o:disabled > span, .bordered-material-btn > span {
   color: #7d7d7d;
+}
+
+.search-box-card {
+  padding: 6px 10px 6px 10px !important;
+}
+
+.search-box-card img {
+  height: 26px;
+  width: 26px;
+}
+
+.search-box-card mat-form-field {
+  width: calc(100% - 30px);
 }
 
 /*Custom Material CSS*/
@@ -260,6 +304,10 @@ li {
   top: 1.65em;
   left: 0.5em !important;
   font-size: 14px !important;
+}
+
+.pull-up-placeholder .mat-form-field-placeholder {
+  top: 1.5em !important;
 }
 
 .mat-form-field-type-mat-select .mat-form-field-placeholder{
@@ -314,4 +362,14 @@ mat-dialog-container{
 
 .mat-dialog-actions:last-child {
   margin-bottom: 0px !important;
+}
+
+.mat-tab-body-wrapper {
+  padding: 10px;
+}
+
+.mat-tab-label-active{
+  color: #0091e5;
+  opacity: 1 !important;
+  background-color: #eeeff8;
 }

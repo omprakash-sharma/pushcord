@@ -1,0 +1,166 @@
+:host, .chat-section{
+  display: block;
+  height: inherit;
+}
+
+.chat-section {
+  background-color: #e6eaef;
+}
+
+.chat-action-area{
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  bottom: 0;
+  overflow-x: hidden;
+}
+
+.chat-form {
+  width: 100%;
+  padding: 5px;
+}
+
+.chat-text-input{
+  width: calc(100% - 40px);
+  border-bottom-right-radius: unset;
+  border-top-right-radius: unset;
+}
+
+.chat-submit-btn{
+  height: 33px;
+  border-top-left-radius: unset;
+  border-bottom-left-radius: unset;
+  padding: 0px 5px;
+  min-width: 80px;
+}
+
+.chat-submit-icon {
+  color: #0091e5;
+}
+
+.contact-name{
+  padding: 5px;
+}
+
+.contact-name:hover, .active-chat{
+  background-color: #f4f7f9;
+  cursor: pointer;
+}
+
+.contact-name .img-thumbnail {
+  width: 30px;
+  height: 30px;
+}
+
+.chat-history{
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  left: 0;
+  top:0;
+  right: 0;
+  bottom: 50px;
+}
+
+.msg-box{
+  padding: 5px 10px;
+  position: relative;
+  width: 100%;
+}
+
+.msg-text{
+  display: inline-block;
+  padding: 8px 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  min-width: 25%;
+  position: relative;
+}
+
+.others-msg{
+  background-color: #fff;
+  border-top-left-radius: unset;
+  margin-left: 15px;
+}
+
+.others-msg:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -12px;
+  width: 0;
+  height: 0;
+  border: 6px solid #d8d8d8;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.others-msg:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border: 6px solid white;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.self-msg{
+  background-color: #d7f1ff;
+  border-bottom-right-radius: unset;
+  /*border: 1px solid rgba(0,0,0,0.125);*/
+  float: right;
+  margin-right: 15px;
+}
+
+.self-msg:before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: -13px;
+  width: 0;
+  height: 0;
+  border: 7px solid #d8d8d8;
+  border-right-color: transparent;
+  border-top-color: transparent;
+}
+
+.self-msg:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border: 6px solid #d7f1ff;
+  border-right-color: transparent;
+  border-top-color: transparent;
+}
+
+.others-msg-animation, .self-msg-animation {
+  animation-duration: 0.15s;
+  animation-timing-function: ease-in-out;
+}
+
+.self-msg-animation {
+  animation-name: self-msg-keyframe;
+}
+
+.others-msg-animation {
+  animation-name: others-msg-keyframe;
+}
+
+@keyframes self-msg-keyframe {
+  0% {transform: translate3d(15px,15px,0);}
+  100% {transform: translate3d(0,0,0);}
+}
+
+@keyframes others-msg-keyframe {
+  0% {transform: translate3d(-15px,-15px,0);}
+  100% {transform: translate3d(0,0,0);}
+}
+
+
+
