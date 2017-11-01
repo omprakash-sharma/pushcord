@@ -14,6 +14,8 @@ import { CommonModule } from '@angular/common';
 import {ActivatedRouteSnapshot, RouterModule, RouterStateSnapshot} from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
+import { CustomMaterialModule } from "../shared/custom-material.module";
+
 
 
 const authRouting: ModuleWithProviders = RouterModule.forChild([
@@ -50,7 +52,8 @@ const authRouting: ModuleWithProviders = RouterModule.forChild([
     CommonModule,
     authRouting,
     SharedModule,
-    FormsModule
+    FormsModule,
+    CustomMaterialModule
   ],
   declarations: [
     AppLandingPageComponent,
