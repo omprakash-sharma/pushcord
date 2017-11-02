@@ -1,7 +1,7 @@
 <section class="store-wrapper">
    
     <mat-grid-list gutterSize="{{_outerCellGt}}"  cols="9" [rowHeight]="50" class="flex-container">
-        <mat-grid-tile colspan="2" class="def-bg cp hw_gd_area" *ngFor="let viewBy of viewByList">
+        <mat-grid-tile colspan="2" class="def_bg bs cp hw_gd_area" *ngFor="let viewBy of viewByList">
             <!-- <mat-card class="cell-card">
                 <mat-card-header class="fh pd-T4 cell-txt">
                     <div mat-card-avatar style="background:url('https://media.npr.org/about/people/bios/biophotos/snelson_sq-2767caa78582a137346c4cd0281656a4872fa37d-s100-c85.jpg')">
@@ -25,7 +25,7 @@
             </div>
         </mat-grid-tile> 
        
-        <mat-grid-tile colspan="3" class="def-bg">
+        <mat-grid-tile colspan="3" class="def_bg bs">
             <div class="card-row fh pd-LR10">
                 <div class="table-row fh">
                     <div class="table-row-cell">
@@ -40,7 +40,7 @@
             </div>
         </mat-grid-tile>
     </mat-grid-list>
-    <div class="hr-gt"></div>
+    <div class="hr_gt"></div>
   
     
     <mat-expansion-panel hideToggle="true">
@@ -52,7 +52,7 @@
         <div class="flex-box justify-content-center"><span>No filters!</span></div>
     </mat-expansion-panel>
         
-    <div class="hr-gt"></div>
+    <div class="hr_gt"></div>
 
     <div style="height:calc(100vh - 228px);">
         <router-outlet></router-outlet>

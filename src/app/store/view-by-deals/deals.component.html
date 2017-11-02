@@ -1,6 +1,96 @@
-<mat-grid-list cols="10" style="height:100%;">
-    <mat-grid-tile class="def-bg" colspan="3">col1</mat-grid-tile>
-    <mat-grid-tile class="def-bg" colspan="7">
-        col2 <router-outlet></router-outlet>
+<mat-grid-list cols="15" class="fh txt_fn">
+    <mat-grid-tile class="fh just_start" colspan="4">
+        <mat-nav-list class="pd_t15">
+            <a mat-list-item  class="side-nav-list" [class.selected]="navItem.active" *ngFor="let navItem of navListItem"> {{ navItem.dealName }} </a>
+         </mat-nav-list>
     </mat-grid-tile>
-</mat-grid-list>
+    <mat-grid-tile class="just_start fh" colspan="11"> 
+        <div class="flx_container pd_l8">
+            <div class="def_bg bs search-span">
+                <div class="" style="flex-grow:1;">
+                    <input class="def_search" placeholder="Search listings here">
+                </div>
+                <div style="flex-grow:1;">&nbsp;</div>
+            </div>
+            <div class="hr_gt"></div>
+            <div class="bs content-span">
+                <mat-card class="seller_card" style="margin-right:10px;">
+                    <div class="promo_tag c1">Best Seller</div>
+                    <img mat-card-image height="225" src="https://static.pexels.com/photos/8211/wood-shoes-floor-belt.jpg" alt="street img">
+                    <mat-card-header class="rc_card_mr">
+                        <div class="wrap_txt_ln2" style="width:calc(100% - 90px);">Upto 50% off vouchers on selected items at Columbia Spotwear in Al Wesfjsdkf</div>
+                        <div class="text-center cp" style="width:45px;" (click)="toggleStar = !toggleStar">
+                            <i class="material-icons" [hidden]="toggleStar">star_border</i>
+                            <i class="material-icons" [hidden]="!toggleStar">star</i>
+                        </div>
+                        <div class="text-center" style="width:45px;" [matMenuTriggerFor]="menu">
+                            <i class="material-icons cp">more_vert</i>
+                            <mat-menu #menu="matMenu">
+                                <button mat-menu-item>Item 1</button>
+                                <button mat-menu-item>Item 2</button>
+                            </mat-menu>
+                        </div>
+                    </mat-card-header>
+                    
+                    <mat-card-header class="rc_card_mr">
+                        <div class="c2" style="flex-grow:5">3 Vouchers left</div>
+                        <div class="text-center" style="flex-grow:2">
+                            <i class="material-icons cp txt_fn">location_on</i> 3 km away
+                        </div>
+                    </mat-card-header>
+
+                    <mat-card-header class="rc_card_mr">
+                        <div class="" style="flex-grow:5">Price From</div>
+                        <div class="text-center txt_fb6" style="flex-grow:2">
+                            AED 220
+                        </div>
+                    </mat-card-header>
+                    <mat-card-content class="rc_card_mr">
+                        <div>
+                            <div mat-card-avatar class="" style="width:30px;">
+                                <img width="30" height="30" src="https://static.pexels.com/photos/570047/pexels-photo-570047.jpeg">
+                            </div>
+                            <div class="fs_2r" style="width:calc(100% - 120px);"></div>
+                            <div class="text-center cp" style="width:45px;" (click)="toggleStar1 = !toggleStar1">
+                                <i class="material-icons" [hidden]="toggleStar1">star_border</i>
+                                <i class="material-icons" [hidden]="!toggleStar1">star</i>
+                            </div>
+                            <div class="text-center" style="width:45px;" [matMenuTriggerFor]="menu">
+                                <i class="material-icons cp">more_vert</i>
+                                <mat-menu #menu="matMenu">
+                                    <button mat-menu-item>Item 1</button>
+                                    <button mat-menu-item>Item 2</button>
+                                </mat-menu>
+                            </div>
+                        </div>
+                    </mat-card-content>
+                    <mat-card-actions>
+                      <button mat-button>LIKE</button>
+                      <button mat-button>SHARE</button>
+                    </mat-card-actions>
+                  </mat-card>
+
+                  <mat-card class="seller_card"> 
+                    <div class="promo_tag c2">Most Popular</div>
+                    <img mat-card-image height="225" src="https://static.pexels.com/photos/425241/pexels-photo-425241.jpeg" alt="Photo of a Shiba Inu">
+                    <mat-card-header class="rc_card_mr">
+                        <div class="wrap_txt_ln2" style="width:calc(100% - 110px);">The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.</div>
+                        <div style="width:55px;">b</div>
+                        <div style="width:55px;">c</div>
+                    </mat-card-header>
+                    <mat-card-content>
+                      <p>
+                        The Shiba Inu is the smallest of th e six original and distinct spitz breeds of dog from Japan.
+                        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                        bred for hunting.
+                      </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                      <button mat-button>LIKE</button>
+                      <button mat-button>SHARE</button>
+                    </mat-card-actions>
+                  </mat-card>
+            </div>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list> 

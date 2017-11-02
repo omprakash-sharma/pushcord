@@ -3,12 +3,8 @@
     width: 100%;
    /* height: calc(100vh - 113px); */
 }
-/* default/active cell background-color */
-.def-bg{
-    background-color: #fff;
-}
 .actv-bg{
-    background-color: rgba(244, 247, 249, 0.89);
+    background-color: rgba(220, 225, 229, 0.5);
     color: #0091e5;
     font-weight: 500;
 }
@@ -30,18 +26,13 @@
     line-height: 1.2;
 }
 .active-link{
-    background: rgba(255,255,255,0.6);
+    background: rgba(220, 225, 229, 0.5);
 }
 .active-link .cell-subtitle{
     color: #0091e5 !important;
     font-weight: 500;
 }
-/* horizontal gap/list breaker */
-.hr-gt{
-    display: block;
-    clear: both;
-    margin: 0.5em 0; 
-}
+
 /* mat-card cell*/
 .cell-card{
     padding: 10px 10px;
@@ -116,7 +107,7 @@
     position: relative;
 }
 .cust_dis_i{
-    min-height: 35px;
+    height: 35px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -144,6 +135,7 @@
     font-size: 1em;
     font-weight: 400;
     color: #7d7d7d;
+    height: 35px;
 }
 .hw_gd_area:hover{
     background: rgba(255,255,255,0.6);
