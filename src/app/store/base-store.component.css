@@ -1,4 +1,4 @@
-
+@import url('/assets/css/common-store-styles.css');
 .store-wrapper{
     width: 100%;
    /* height: calc(100vh - 113px); */
@@ -8,20 +8,10 @@
     color: #0091e5;
     font-weight: 500;
 }
-.fh{
-    height: 100%;
-}
-.cp{
-    cursor: pointer;
-}
-.ps_abs{
-    position: absolute;
-}
+
 .ps_abs.lta{left:7px;top: 5px;}
 .ps_abs.rta{right:40px;top: 5px;}
-.ic{
-    color: #7d7d7d;
-}
+
 .ln1_2{
     line-height: 1.2;
 }
@@ -60,42 +50,10 @@
     padding-top: 4px;
 }
 /* card cell */
-.card-row{
-    width: 100%;
-}
-.table-row{
-    display: table;
-    width: 100%;
-}
-.table-row-cell{
-    display: table-cell;
-    vertical-align: middle;
-}
-.vt{
-    vertical-align: top!important;
-}
 .pd-L7{
     padding-left:7px;
 }
-.pd-LR10{
-    padding: 0 10px;
-}
-.img-sm{
-    width: 30px;
-    height: 30px;
-    background-size: cover!important;
-}
-.txt-wrapper{
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-.cell-title{
-    font-size: 14px;
-}
-.cell-subtitle{
-    font-size: 12px;
-}
+
 .cell-txt{
     color: #7d7d7d;
 }
@@ -104,7 +62,6 @@
     display: flex;
     display: -webkit-flex;
     width: 100%;
-    position: relative;
 }
 .cust_dis_i{
     height: 35px;

@@ -32,6 +32,7 @@
                         </div>
                     </mat-card-header>
                     
+                    
                     <mat-card-header class="rc_card_mr">
                         <div class="c2" style="flex-grow:5">3 Vouchers left</div>
                         <div class="text-center" style="flex-grow:2">
@@ -45,24 +46,51 @@
                             AED 220
                         </div>
                     </mat-card-header>
-                    <mat-card-content class="rc_card_mr">
-                        <div>
-                            <div mat-card-avatar class="" style="width:30px;">
-                                <img width="30" height="30" src="https://static.pexels.com/photos/570047/pexels-photo-570047.jpeg">
+                    <mat-card-content class="mat_card_content">
+                        <mat-card-header class="rc_card_mr">
+                            <div class="img_sm" style="width:30px;">
+                                <img class="img_sm mr_t5" src="https://static.pexels.com/photos/570047/pexels-photo-570047.jpeg">
                             </div>
-                            <div class="fs_2r" style="width:calc(100% - 120px);"></div>
-                            <div class="text-center cp" style="width:45px;" (click)="toggleStar1 = !toggleStar1">
-                                <i class="material-icons" [hidden]="toggleStar1">star_border</i>
-                                <i class="material-icons" [hidden]="!toggleStar1">star</i>
+                            <div class="table_row_cell pd_l7 txt_wrapper ln1_2" style="width:calc(100% - 120px);">
+                                <div class="cell_title">Columbia Fashion</div>
+                                <div class="cell_subtitle">Clothing store</div>
+                            </div> 
+                            <div class="text-center cp ic" style="width:45px;" (click)="toggleStar = !toggleStar">
+                                <i class="material-icons" [hidden]="toggleStar">star_border</i>
+                                <i class="material-icons" [hidden]="!toggleStar">star</i>
                             </div>
-                            <div class="text-center" style="width:45px;" [matMenuTriggerFor]="menu">
+                            <div class="text-center ic" style="width:45px;" [matMenuTriggerFor]="menu">
                                 <i class="material-icons cp">more_vert</i>
                                 <mat-menu #menu="matMenu">
                                     <button mat-menu-item>Item 1</button>
                                     <button mat-menu-item>Item 2</button>
                                 </mat-menu>
                             </div>
-                        </div>
+                        </mat-card-header>
+                        <mat-card-header class="rc_card_mr flex_row ic">
+                            <div class="flex_icon_card">
+                                <div><i class="material-icons">alarm</i></div>
+                                <div>13 min</div>     
+                            </div>
+                            <div class="flex_icon_card">
+                                <div><i class="material-icons">thumb_up</i></div>
+                                <div>656</div>     
+                            </div>
+                            <div class="flex_icon_card">
+                                <div><i class="material-icons">pets</i></div>
+                                <div>27</div>     
+                            </div>
+                            <div class="flex_icon_card">
+                                <div><i class="material-icons">description</i></div>
+                                <div>&nbsp;</div>     
+                            </div>
+                            <div class="flex_icon_card">
+                                <div><i class="material-icons">child_friendly</i></div>
+                                <div>34 k</div>     
+                            </div>
+                        </mat-card-header>
+                        <mat-card-header class="rc_card_mr flex_row ic txt_cammel cell_subtitle">show value propositions</mat-card-header>
+                        
                     </mat-card-content>
                     <mat-card-actions>
                       <button mat-button>LIKE</button>

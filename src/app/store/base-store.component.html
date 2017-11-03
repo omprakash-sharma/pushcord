@@ -8,28 +8,28 @@
                         
                     </div>
                     <mat-card-title class="cell-card-title">Title</mat-card-title>
-                    <mat-card-subtitle class="cell-card-subtitle txt-wrapper">Sub title</mat-card-subtitle>
+                    <mat-card-subtitle class="cell-card-subtitle txt_wrapper">Sub title</mat-card-subtitle>
                 </mat-card-header>
             </mat-card> -->
-            <div class="card-row fh pd-LR10" [routerLink]="[viewBy.load_view]" routerLinkActive="active-link">
-                <div class="table-row fh">
-                    <div class="table-row-cell img-sm">
-                        <!-- <div class="img-sm" [ngStyle]="{'background-image': 'url(' + viewBy.img_url + ')'}"></div> -->
-                        <img class="img-sm" src="{{viewBy.img_url}}">
+            <div class="card_row fh pd_LR10" [routerLink]="[viewBy.load_view]" routerLinkActive="active-link">
+                <div class="table_row fh">
+                    <div class="table_row_cell img_sm">
+                        <!-- <div class="img_sm" [ngStyle]="{'background-image': 'url(' + viewBy.img_url + ')'}"></div> -->
+                        <img class="img_sm" src="{{viewBy.img_url}}">
                     </div>
-                    <div class="table-row-cell pd-L7 txt-wrapper ln1_2" style="width:calc(100% - 30px);">
-                        <div class="cell-title cell-txt">{{viewBy.title}}</div>
-                        <div class="cell-subtitle cell-txt">{{viewBy.sub_title}}</div>
+                    <div class="table_row_cell pd-L7 txt_wrapper ln1_2" style="width:calc(100% - 30px);">
+                        <div class="cell_title cell-txt">{{viewBy.title}}</div>
+                        <div class="cell_subtitle cell-txt">{{viewBy.sub_title}}</div>
                     </div> 
                 </div>
             </div>
         </mat-grid-tile> 
        
         <mat-grid-tile colspan="3" class="def_bg bs">
-            <div class="card-row fh pd-LR10">
-                <div class="table-row fh">
-                    <div class="table-row-cell">
-                        <div class="cust_dis_ig">
+            <div class="card_row fh pd_LR10">
+                <div class="table_row fh">
+                    <div class="table_row_cell ps_rlt">
+                        <div class="cust_dis_ig ps_abs" style="top:9px;">
                             <span class="ps_abs lta ic"><i class="material-icons">location_on</i></span>
                             <input class="cust_dis_i" style="padding-left:35px;" placeholder="Bur Dubai, Dubai">
                             <span class="ps_abs rta ic"><i class="material-icons">add</i></span>
