@@ -1,37 +1,64 @@
 import { Component, OnInit } from '@angular/core';
+import { DealsPromotionService } from '../services/deals-promotion.service'
 
 @Component({
   selector: 'deals',
   templateUrl: './deals.component.html',
-  styleUrls: ['./deals.component.css']
+  styleUrls: ['./deals.component.css'],
+  providers: [DealsPromotionService]
 })
-export class DealsComponent implements OnInit {
+export class DealsComponent implements OnInit{
   // initial variables
-  navListItem:[any];
-  constructor() { }
-
-  ngOnInit() {
-    this.navListItem = [{
-      dealName:"All deals",
-      desc:"all deals",
-      active:true
-    },{
-      dealName:"Deal of the Day",
-      desc:"today deals & offers",
-      active:false
-    },{
-      dealName:"Saving & Sales",
-      desc:"saving and sales",
-      active:false
-    },{
-      dealName:"Coupons & Vouchers",
-      desc:"coupons and vouchers",
-      active:false
-    },{
-      dealName:"Combo & Bundles",
-      desc:"combo and bundles",
-      active:false
-    }];
+  navListItem = [new navListType()];
+  dealPromotionItems:{};
+  prevNavItem;
+  constructor(private dealPromotion:DealsPromotionService) { 
+    this.dealPromotionItems = this.dealPromotion.getAllDeals();
   }
 
+  ngOnInit() {
+    this.setNavList(); 
+    
+  }
+  showDealBy(currNavItem){
+    if(!currNavItem.active){
+      this.prevNavItem.active = false;
+      currNavItem.active = true;
+    }else{
+
+    }
+    this.prevNavItem = currNavItem;
+    console.log(currNavItem)
+  }
+
+
+
+
+  // set navList
+  setNavList(){
+    if(this.dealPromotionItems){
+      for(let items of this.dealPromotionItems['list']){
+        let keyList = Object.keys(items);
+        for(let keyItem of keyList){
+          let tNavItem = {
+            dealName:keyItem,
+            active:false
+          };
+          if(tNavItem.dealName !== 'All Deals'){
+              this.navListItem.push(tNavItem);
+              this.prevNavItem = tNavItem;
+          }else{
+              tNavItem.active = true;
+              this.navListItem.push(tNavItem);
+          }
+        }
+      }
+    }
+  }
+
+}
+ export class navListType{
+  dealName:string;
+  active:boolean;
+  constructor(){}
 }

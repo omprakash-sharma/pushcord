@@ -1,7 +1,7 @@
 <mat-grid-list cols="15" class="fh txt_fn">
     <mat-grid-tile class="fh just_start" colspan="4">
         <mat-nav-list class="pd_t15">
-            <a mat-list-item  class="side-nav-list" [class.selected]="navItem.active" *ngFor="let navItem of navListItem"> {{ navItem.dealName }} </a>
+            <a mat-list-item  class="side-nav-list" [class.selected]="navItem.active" *ngFor="let navItem of navListItem" (click)="showDealBy(navItem)"> {{ navItem.dealName }} </a>
          </mat-nav-list>
     </mat-grid-tile>
     <mat-grid-tile class="just_start fh" colspan="11"> 
@@ -113,7 +113,7 @@
                         bred for hunting.
                       </p>
                     </mat-card-content>
-                    <mat-card-actions>
+                    <mat-card-actions> 
                       <button mat-button>LIKE</button>
                       <button mat-button>SHARE</button>
                     </mat-card-actions>

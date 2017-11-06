@@ -51,3 +51,11 @@ a.side-nav-list:hover{
 .c2{color: #9c27b0;}
 .c3{color: #4caf50;}
 .rc_card_mr{margin: 0 -24px 0 -24px;padding-bottom: 5px;}
+button.mat-button{
+    border: 1px solid #ccc;
+    color: rgba(0,0,0,0.6);
+}
+.mat-card>.mat-card-actions:last-child{
+    padding-top: 6px!important;
+    text-align: center;
+}
