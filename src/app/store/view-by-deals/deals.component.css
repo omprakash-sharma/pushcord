@@ -28,6 +28,10 @@ a.side-nav-list:hover{
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+    align-items: baseline;
+}
+.content-span + .content-span{
+    margin-top: 10px;
 }
 .seller_card{
     width: 100%;
@@ -58,4 +62,18 @@ button.mat-button{
 .mat-card>.mat-card-actions:last-child{
     padding-top: 6px!important;
     text-align: center;
+}
+.footer-card{
+    margin: 7px 10% 0px;
+    padding: 0;
+}
+.footer-card .mat-card-header{
+    justify-content: center;
+    padding: 10px 0;
+}
+.img-h225{
+    height: 225px;
+}
+.img-h200{
+    height: 200px!important;
 }

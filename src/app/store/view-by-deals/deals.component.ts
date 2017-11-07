@@ -9,26 +9,28 @@ import { DealsPromotionService } from '../services/deals-promotion.service'
 })
 export class DealsComponent implements OnInit{
   // initial variables
-  navListItem = [new navListType()];
+  navListItem: navListType[] = [];
   dealPromotionItems:{};
-  prevNavItem;
+  allProductsItemList:[any];
+
   constructor(private dealPromotion:DealsPromotionService) { 
     this.dealPromotionItems = this.dealPromotion.getAllDeals();
   }
 
   ngOnInit() {
     this.setNavList(); 
-    
+    //temp
+    this.allProductsItemList = this.dealPromotionItems['list'][0]['All Deals'];
+    console.log(this.allProductsItemList)
   }
   showDealBy(currNavItem){
-    if(!currNavItem.active){
-      this.prevNavItem.active = false;
-      currNavItem.active = true;
-    }else{
-
-    }
-    this.prevNavItem = currNavItem;
-    console.log(currNavItem)
+    this.switchNav(this.navListItem,currNavItem);
+    let filData = this.dealPromotionItems['list'].map(dealType =>{
+      return dealType[currNavItem.dealName];
+    })[0];
+    console.log(filData)
+    //this.allProductsItemList = filData;
+    //console.log(this.dealPromotionItems['list'][0]['All Deals'])
   }
 
 
@@ -46,7 +48,6 @@ export class DealsComponent implements OnInit{
           };
           if(tNavItem.dealName !== 'All Deals'){
               this.navListItem.push(tNavItem);
-              this.prevNavItem = tNavItem;
           }else{
               tNavItem.active = true;
               this.navListItem.push(tNavItem);
@@ -54,11 +55,20 @@ export class DealsComponent implements OnInit{
         }
       }
     }
-  }
+  };
+  // switch nav:use as common
+  switchNav(navListItem,currNavItem):void{
+    navListItem = navListItem.map(navItem =>{
+      if(navItem.active)
+        navItem.active = false;
+      currNavItem.active = true;
+      return navItem;
+    });
+  };
 
 }
- export class navListType{
-  dealName:string;
-  active:boolean;
-  constructor(){}
+ export interface navListType{
+  dealName:string,
+  active:boolean
+  //constructor(){}
 }

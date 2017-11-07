@@ -10,9 +10,8 @@ export class DealsPromotionService {
       "list":[
         {
           "All Deals":[
-            {
-              "Best Sellers":[
                 {
+                  label:"Best Sellers",
                   imgUrl:'https://tshop.r10s.jp/playerz/cabinet/accessory/04017264/imgrc0061794126.jpg?fitin=330:330',
                   offerDescriprion:"Upto 50% Off vouchers on Selected items at Columbia Spoartswear in Al Western Ethnic Brand.",
                   stock:"3 voucher left",
@@ -26,10 +25,9 @@ export class DealsPromotionService {
                     category:"Clothing Store",
                     rating:3
                   }
-                }
-              ],
-              "Most Popular":[
+                },
                 {
+                  label:"Most Popular",
                   imgUrl:'https://www.khaleejtimes.com/storyimage/KT/20170807/ARTICLE/170119232/AR/0/AR-170119232.jpg&MaxW=780&imageVersion=16by9&NCS_modified=20170807195425',
                   offerDescriprion:"Guided Dubai Bus Tour in a Choice of 10 Languages for a child or Up to Twelve years old.",
                   stock:"2 days left",
@@ -43,10 +41,9 @@ export class DealsPromotionService {
                     category:"Tourism & Travels",
                     rating:4.1
                   }
-                }
-              ],
-              "Regular":[
+                },
                 {
+                  label:"Regular",
                   imgUrl:'https://thumbnails.trvl-media.com/xPJ_gfokFOMkFEfHtlABcbU-aKQ=/cdn.lemediavault.com/images/673feb8149088c84201114f1687bd8f5.jpeg',
                   offerDescriprion:"Earn 25,000 Expedia + bonus points and stay at a VIP Acess Hotel",
                   stock:"23 hours left",
@@ -60,10 +57,9 @@ export class DealsPromotionService {
                     category:"Tourism & Travels",
                     rating:1
                   }
-                }
-              ],
-              "Just Arrived":[
+                },
                 {
+                  label:"Just Arrived",
                   imgUrl:'https://static3.ethoswatches.com/the-watch-guide/wp-content/uploads/2017/08/POST.jpg',
                   offerDescriprion:"25% - 35% Off on all watches, Price inc. VAT + delivery charges",
                   stock:"5 days left",
@@ -78,8 +74,6 @@ export class DealsPromotionService {
                     rating:4
                   }
                 }
-              ]
-            }
           ],
           "Deal of the Day":["deal of the day comming soon......"],
           "Saving & Sales":["Saving & Sales are comming soon....."],
