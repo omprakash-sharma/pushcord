@@ -10,6 +10,7 @@
 .pd_t15{padding-top: 15px;}
 .pd_l8{padding-left: 8px;}
 .pd_l7{padding-left: 7px;}
+.pd_t5{padding-top: 5px;}
 .pd_LR10{padding-left: 10px;padding-right: 10px;}
 .mr_t5{margin-top: 5px;}
 .fh{height: 100%;}
@@ -78,3 +79,4 @@
 
 .flex_row{display: flex;flex-direction: row;justify-content: center;}
 .flex_icon_card{display:flex;flex-direction: column;flex-grow: 1;}
+.flex_icon_card .material-icons{font-size: 21px;}

@@ -9,6 +9,8 @@ import { DealsComponent } from './view-by-deals/deals.component';
 import { FrontsComponent } from './view-by-fronts/fronts.component';
 import { LinesComponent } from './view-by-lines/lines.component';
 
+import { RowsplitPipe } from './filters/rowsplit.pipe';
+
 const route:Route[] = [
   {
     path:"",
@@ -36,7 +38,7 @@ const route:Route[] = [
     RouterModule.forChild(route),
     CustomMaterialModule
   ],
-  declarations: [BaseStoreComponent, DealsComponent, FrontsComponent, LinesComponent]
+  declarations: [BaseStoreComponent, DealsComponent, FrontsComponent, LinesComponent, RowsplitPipe]
 })
 export class StoreModule {
   constructor(){console.log('store module connected...')}
