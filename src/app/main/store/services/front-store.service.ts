@@ -75,8 +75,25 @@ export class FrontStoreService {
                   }
                 }
           ],
-          "Deal of the Day":["deal of the day comming soon......"],
-          "Saving & Sales":["Saving & Sales are comming soon....."],
+          "Deal of the Day":[
+            {
+              label:"Just Arrived",
+              imgUrl:'http://i1.sdlcdn.com/img/eventImage/10/dod_a.jpg',
+              offerDescriprion:"",
+              stock:"5 days left",
+              stockDescription:"Shop since 2007",
+              nearBy:"2.7 Km away",
+              sellerPriceFrom:"AED 4,500",
+              sellerPriceTo:"AED 6,500",
+              productDetails:{
+                brandTag:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHSFeri8jOPXlv9VQQ3PV32Ra64HifM_wab1p0gF9Jt8ysawSj",
+                title:"Torsten Nagengast",
+                category:"Watch Company",
+                rating:4
+              }
+            }
+          ],
+          "Saving & Sales":[],
           "Coupons & Vouchers":[],
           "Combo & Bundles":[]
         }

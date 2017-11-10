@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule,Route } from '@angular/router';
 
 import { BaseStoreComponent } from './base-store.component';
-import { CustomMaterialModule } from "./custom-material.module";
+//import { CustomMaterialModule } from "./custom-material.module";
+import { CustomMaterialModule } from "../../shared/custom-material.module";
 import { DealsComponent } from './view-by-deals/deals.component';
 import { FrontsComponent } from './view-by-fronts/fronts.component';
 import { LinesComponent } from './view-by-lines/lines.component';
+import { ActivityFilterComponent } from './activity-filter/activity-filter.component';
 
 import { RowsplitPipe } from './filters/rowsplit.pipe';
 
@@ -37,7 +39,7 @@ const route:Route[] = [
     RouterModule.forChild(route),
     CustomMaterialModule
   ],
-  declarations: [BaseStoreComponent, DealsComponent, FrontsComponent, LinesComponent, RowsplitPipe]
+  declarations: [BaseStoreComponent, DealsComponent, FrontsComponent, LinesComponent, RowsplitPipe,ActivityFilterComponent]
 })
 export class StoreModule {
   constructor(){console.log('store module connected....')}

@@ -14,8 +14,9 @@
                 <div style="flex-grow:1;">&nbsp;</div>
             </div>
             <div class="hr_gt"></div>
-            <div class="content-span" *ngFor="let products of allProductsItemList|rowsplit:2">
-                <mat-card class="seller_card bs def_fc" style="margin-right:10px;" *ngFor="let product of products">
+            <div class="content_span">
+                <div class="emp_view" *ngIf="!allProductsItemList.length">No items found...</div>
+                <mat-card class="product_card bs def_fc"  *ngFor="let product of allProductsItemList">
                     <div class="promo_tag" [ngClass]="{'fc_rm':product.label =='Best Sellers', 'fc_ep':product.label =='Most Popular', 'fc_success':product.label =='Just Arrived'}" *ngIf="product.label !== 'Regular'">{{product.label}}</div>
                     <img mat-card-image [class.img-h200]="product.label ==='Regular'" class="img-h225" src="{{product.imgUrl}}" alt="street img">
                     <mat-card-header class="rc_card_mr">
@@ -99,8 +100,8 @@
                     </mat-card-actions> 
                   </mat-card>
             </div>
-            <mat-card class="footer-card">
-                <mat-card-header>Load More</mat-card-header>
+            <mat-card class="footer-card" *ngIf="allProductsItemList.length">
+                <mat-card-header class="ldm">Load More</mat-card-header>
             </mat-card>
         </div>
     </mat-grid-tile>

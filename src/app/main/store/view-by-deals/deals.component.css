@@ -25,36 +25,7 @@ a.side-nav-list:hover{
     padding:7px 10px;
     display: flex;
 }
-.content-span{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-}
-.content-span + .content-span{
-    margin-top: 10px;
-}
-.seller_card{
-    width: 100%;
-    position: relative;
-    padding-top: 0px;
-}
-.seller_card > .promo_tag{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 999;
-    padding: 5px;
-    background: rgba(220, 225, 229, 0.63);
-    font-size: 14px;
-    font-weight: 400;
-    box-shadow: none;
-    border: 0;
-    -webkit-font-smoothing: antialiased;
-}
-.c1{color: #F44336;}
-.c2{color: #9c27b0;}
-.c3{color: #4caf50;}
+
 button.mat-button{
     border: 1px solid #ccc;
     color: rgba(0,0,0,0.6);

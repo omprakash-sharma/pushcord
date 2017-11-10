@@ -11,8 +11,8 @@ import { FrontStoreService } from '../services/front-store.service'
 export class FrontsComponent implements OnInit{
   // initial variables
   navListItem: navListType[] = [];
-  dealPromotionItems:{};
-  allProductsItemList:[any];
+  dealPromotionItems:any = {};
+  allProductsItemList:any = [];
 
   constructor(private frontStoreService:FrontStoreService) { 
     this.dealPromotionItems = this.frontStoreService.getAllDeals();
@@ -22,16 +22,14 @@ export class FrontsComponent implements OnInit{
     this.setNavList(); 
     //temp
     this.allProductsItemList = this.dealPromotionItems['list'][0]['All Deals'];
-    console.log(this.allProductsItemList)
   }
   showDealBy(currNavItem){
     this.switchNav(this.navListItem,currNavItem);
-    let filData = this.dealPromotionItems['list'].map(dealType =>{
+    this.allProductsItemList = this.dealPromotionItems['list'].map(dealType =>{
       return dealType[currNavItem.dealName];
     })[0];
-    console.log(filData)
     //this.allProductsItemList = filData;
-    //console.log(this.dealPromotionItems['list'][0]['All Deals'])
+    //console.log(this.allProductsItemList)
   }
 
 

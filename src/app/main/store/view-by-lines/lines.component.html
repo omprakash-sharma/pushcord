@@ -2,10 +2,11 @@
     <mat-grid-tile class="fh just_start" colspan="3">
         <mat-nav-list class="pd_t15">
             <ul class="side-nav-bar" *ngFor="let navCategory of navListItems">
-                <li (click)="navCategory.isCollapsed = !navCategory.isCollapsed">
-                    <i class="material-icons" [class.collapsed]="navCategory.isCollapsed">arrow_drop_down</i> {{navCategory.category}}</li>
+                <li (click)="navCategory.isCollapsed = !navCategory.isCollapsed" [innerText]="navCategory.category">
+                    <i class="material-icons" [class.collapsed]="navCategory.isCollapsed">arrow_drop_down</i>
+                </li>
                 <ul [class.collapsed]="navCategory.isCollapsed">
-                   <li *ngFor="let navSubCat of navCategory['subCategory']">{{navSubCat.subCategoryName}}</li>  
+                   <li *ngFor="let navSubCat of navCategory['subCategory']" (click)="getItems($event)" [innerText]="navSubCat.subCategoryName"></li>  
                 </ul>
             </ul>
          </mat-nav-list>
@@ -20,8 +21,9 @@
                 <div style="flex-grow:1;">&nbsp;</div>
             </div>
             <div class="hr_gt"></div>
-            <div class="content-span" *ngFor="let products of productsItemList|rowsplit:2">
-                <mat-card class="line_card def_fc" style="margin-right:10px;" *ngFor="let product of products[0]['items']">
+            <div class="content_span">
+                <div class="emp_view" *ngIf="!hasItems">No Items found...</div>
+                <mat-card class="product_card def_fc bs_none" style="margin-right:10px;" *ngFor="let product of productsItemList">
                     <div class="promo_tag" [ngClass]="{'fc_rm':product.label =='Best Sellers', 'fc_ep':product.label =='Most Popular', 'fc_success':product.label =='sale'}" *ngIf="product.label !== 'Regular'">{{product.label}}</div>
                     <img mat-card-image [class.img-h200]="product.label ==='Regular'" class="img-h275 mr_bz" src="{{product.itemUrl}}" alt="street img">
                     
@@ -61,7 +63,7 @@
                     </mat-card-content>
                   </mat-card>
             </div>
-            <mat-card class="footer-card">
+            <mat-card class="footer-card" *ngIf="hasItems">
                 <mat-card-header class="ldm">Load More</mat-card-header>
             </mat-card>
         </div>

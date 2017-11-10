@@ -2,15 +2,6 @@
    
     <mat-grid-list gutterSize="{{_outerCellGt}}"  cols="9" [rowHeight]="50" class="flex-container">
         <mat-grid-tile colspan="2" class="def_bg bs cp hw_gd_area" *ngFor="let viewBy of viewByList">
-            <!-- <mat-card class="cell-card">
-                <mat-card-header class="fh pd-T4 cell-txt">
-                    <div mat-card-avatar style="background:url('https://media.npr.org/about/people/bios/biophotos/snelson_sq-2767caa78582a137346c4cd0281656a4872fa37d-s100-c85.jpg')">
-                        
-                    </div>
-                    <mat-card-title class="cell-card-title">Title</mat-card-title>
-                    <mat-card-subtitle class="cell-card-subtitle txt_wrapper">Sub title</mat-card-subtitle>
-                </mat-card-header>
-            </mat-card> -->
             <div class="card_row fh pd_LR10" [routerLink]="[viewBy.load_view]" routerLinkActive="active-link">
                 <div class="table_row fh">
                     <div class="table_row_cell img_sm">
@@ -42,15 +33,15 @@
     </mat-grid-list>
     <div class="hr_gt"></div>
   
-    
-    <mat-expansion-panel hideToggle="true">
+    <activity-filter></activity-filter>
+    <!-- <mat-expansion-panel hideToggle="true">
         <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px" class="filter-accodian">
             <mat-panel-title class="flex-box">
             <img src="/assets/images/filter-icon.svg" style="height: 30px"/> Filters
             </mat-panel-title>
         </mat-expansion-panel-header>
         <div class="flex-box justify-content-center"><span>No filters!</span></div>
-    </mat-expansion-panel>
+    </mat-expansion-panel> -->
         
     <div class="hr_gt"></div>
 

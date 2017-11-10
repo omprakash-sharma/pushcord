@@ -25,15 +25,14 @@ export class DealsComponent implements OnInit{
   }
   showDealBy(currNavItem){
     this.switchNav(this.navListItem,currNavItem);
-    let filData = this.dealPromotionItems['list'].map(dealType =>{
+    this.allProductsItemList = this.dealPromotionItems['list'].map(dealType =>{
       return dealType[currNavItem.dealName];
     })[0];
-    console.log(filData)
     //this.allProductsItemList = filData;
     //console.log(this.dealPromotionItems['list'][0]['All Deals'])
   }
 
-
+ 
 
 
   // set navList

@@ -14,8 +14,9 @@
                     <div style="flex-grow:1;">&nbsp;</div>
                 </div>
                 <div class="hr_gt"></div>
-                <div class="content-span" *ngFor="let products of allProductsItemList|rowsplit:2">
-                    <mat-card class="front_card bs def_fc" style="margin-right:10px;" *ngFor="let product of products">
+                <div class="content_span">
+                    <div class="emp_view" *ngIf="!allProductsItemList.length">No Items found...</div>
+                    <mat-card class="product_card bs def_fc" style="margin-right:10px;" *ngFor="let product of allProductsItemList">
                        
                         <img mat-card-image [class.img-h200]="product.label ==='Regular'" class="img-h225 mr_bz" src="{{product.imgUrl}}" alt="street img">
                         
@@ -87,8 +88,8 @@
                           </mat-expansion-panel> 
                       </mat-card>
                 </div>
-                <mat-card class="footer-card">
-                    <mat-card-header>Load More</mat-card-header>
+                <mat-card class="footer-card" *ngIf="allProductsItemList.length">
+                    <mat-card-header class="ldm">Load More</mat-card-header>
                 </mat-card>
             </div>
         </mat-grid-tile>

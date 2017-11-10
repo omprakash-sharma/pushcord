@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer } from '@angular/core';
 
 import { LineCategoryService } from '../services/line-category.service'
 
@@ -13,37 +13,32 @@ export class LinesComponent implements OnInit {
   navListItems:navListType[] = [];
   allLinesCategoryList=<any>{};
   productsItemList = Array<any>();
+  hasItems:boolean = true;
 
-  constructor(private lineCategoryService:LineCategoryService) {
+  constructor(private lineCategoryService:LineCategoryService, private render:Renderer) {
     this.allLinesCategoryList = this.lineCategoryService.getAllLinesCategory();
-    //console.log(this.allLinesCategoryList)
-   }
+    this.navListItems = this.lineCategoryService.getNavListItem()['list'];
+   };
 
   ngOnInit() {
-    this.filterNavListItem();
-    this.productsItemList = this.allLinesCategoryList['list'].map(catItem =>{
-      return catItem.subCategory;
-    })[0];
-    console.log(this.productsItemList)
-  }
+    this.productsItemList = this.allLinesCategoryList['data']['Laptop/Notebooks'];
+    this.checkItemLength(this.productsItemList.length);
+  };
 
-  filterNavListItem(){
-    var tempNavList= Array<any>();
-    this.navListItems = this.allLinesCategoryList['list'].map(catItem => {
-      let tempNavItem = <any>{};
-      tempNavItem.subCategory = Array<any>();
-
-      tempNavItem.id = catItem.id;
-      tempNavItem.category = catItem.category;
-      if(catItem.subCategory.length){
-        for(let subCatItem of catItem.subCategory){
-          tempNavItem.subCategory.push({id:subCatItem.id,subCategoryName:subCatItem.subCategoryName,totalItem:subCatItem.totalItem});
-        };
-      }
-      return tempNavItem;
-    });
-    console.log(this.navListItems)
-  }
+  getItems(event){
+    let target = event.target || event.srcElement || event.currentTarget;
+    let value = target.innerText;
+    this.productsItemList = this.allLinesCategoryList['data'][value];
+    this.checkItemLength(this.productsItemList.length);
+    // this.render.setElementClass(target, "selected",true);
+  };
+  checkItemLength(itemLength):void{
+    if(itemLength == undefined || typeof itemLength == undefined || !itemLength){
+      this.hasItems = false;
+    }else{
+      this.hasItems = true;
+    }
+  };
 }
 
 export interface navListType{

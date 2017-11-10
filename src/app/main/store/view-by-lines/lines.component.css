@@ -24,24 +24,6 @@ a.side-nav-list:hover{
     padding:7px 10px;
     display: flex;
 }
-.content-span{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: flex-start;
-}
-.content-span + .content-span{
-    margin-top: 10px;
-}
-.front_card{
-    width: 100%;
-    position: relative;
-}
-
-.c1{color: #F44336;}
-.c2{color: #9c27b0;}
-.c3{color: #4caf50;}
-
 button.mat-button{
     border: 1px solid #ccc;
     color: rgba(0,0,0,0.6);
@@ -65,16 +47,7 @@ button.mat-button{
 .mat_card_content{
     margin-bottom: -24px!important;
 }
-.line_card{
-    width: 100%;
-    position: relative;
-    box-shadow: none!important;
-}
-.ldm:hover{
-    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
-    background: linear-gradient(to top,#dce1e5,#edf0f2);
-    cursor: pointer;
-}
+
 ul.side-nav-bar{
     margin: 0;
     padding: 0;
@@ -107,19 +80,7 @@ ul.collapsed{
 .material-icons.collapsed{
     transform: rotate(-90deg);
 }
-.promo_tag{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 999;
-    padding: 5px;
-    background: rgba(220, 225, 229, 0.63);
-    font-size: 14px;
-    font-weight: 400;
-    box-shadow: none;
-    border: 0;
-    -webkit-font-smoothing: antialiased;
-}
+
 .fex_container{
     display: flex;
     flex-direction: row;
@@ -140,6 +101,6 @@ ul.collapsed{
     cursor: pointer;
     background: #e9ecee;
 }
-.line_card:hover .fex_container{
+.product_card:hover .fex_container{
     visibility: visible!important;
 }
