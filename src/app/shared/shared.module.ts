@@ -1,20 +1,22 @@
-import { CustomMaterialModule } from './custom-material.module';
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
-import { NgxCarouselModule } from 'ngx-carousel';
-import 'hammerjs';
+import {CustomMaterialModule} from "./custom-material.module";
+import {CommonModule} from "@angular/common";
+import {NgModule} from "@angular/core";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpModule} from "@angular/http";
+import {RouterModule} from "@angular/router";
+import {NgxCarouselModule} from "ngx-carousel";
+import "hammerjs";
 
 
-import { ListErrorsComponent } from './list-errors.component';
-import { ShowAuthedDirective } from './show-authed.directive';
-import { HeaderComponent } from './layout/header.component';
+import {ListErrorsComponent} from "./components/list-errors.component";
+import {ShowAuthedDirective} from "./directives/show-authed.directive";
 
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { AdsSliderComponent } from './ads-slider/ads-slider.component';
-import { RunningTransactionsComponent } from './running-transactions/running-transactions.component';
+import {NavBarComponent} from "./components/nav-bar/nav-bar.component";
+import {AdsSliderComponent} from "./components/ads-slider/ads-slider.component";
+import {RunningTransactionsComponent} from "./components/running-transactions/running-transactions.component";
+import { NoComponentFoundComponent } from './components/no-component-found/no-component-found.component';
+import { ActivityFilterComponent } from './components/activity-filter/activity-filter.component';
+import {NgDropDownModule} from "./directives/ng-drop-down/ng-drop-down.module";
 
 @NgModule({
   imports: [
@@ -24,15 +26,17 @@ import { RunningTransactionsComponent } from './running-transactions/running-tra
     HttpModule,
     RouterModule,
     CustomMaterialModule,
-    NgxCarouselModule
+    NgxCarouselModule,
+    NgDropDownModule
   ],
   declarations: [
     ListErrorsComponent,
     ShowAuthedDirective,
-    HeaderComponent,
     NavBarComponent,
     AdsSliderComponent,
-    RunningTransactionsComponent
+    RunningTransactionsComponent,
+    NoComponentFoundComponent,
+    ActivityFilterComponent
   ],
   exports: [
     CommonModule,
@@ -44,9 +48,13 @@ import { RunningTransactionsComponent } from './running-transactions/running-tra
     ShowAuthedDirective,
     CustomMaterialModule,
     NgxCarouselModule,
-      NavBarComponent,
+    NavBarComponent,
     AdsSliderComponent,
-    RunningTransactionsComponent
+    RunningTransactionsComponent,
+    NoComponentFoundComponent,
+    ActivityFilterComponent,
+    NgDropDownModule
   ]
 })
-export class SharedModule {}
+export class SharedModule {
+}

@@ -1,0 +1,177 @@
+.filter-accodian{
+  padding: 0px 15px;
+}
+
+.filter-container{
+  padding: 10px 5px 0px 0px;
+  width: 22.5%;
+}
+
+.feed-container{
+  padding: 15px 0px 0px 5px;
+  width: 77.5%;
+}
+
+.search-results-container{}
+
+.result-type{
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.results-box{
+  width: 100%;
+}
+
+.result-card{
+  width: 50%;
+  border-radius: unset;
+  padding: 0px !important;
+  display: inline-block;
+  outline: none;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.result-card:hover {
+  background-color: #f7f7f7;
+  cursor: pointer;
+}
+
+.result-details{
+  padding: 0px 5px 0px 10px;
+  width: calc(100% - 80px);
+}
+
+.result-details > div {
+  width: 50%;
+  display: inline-block;
+  float: left;
+}
+
+.result-data{
+  padding: 10px 0px 10px 10px;
+}
+
+.result-name{
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.result-domain{
+  font-weight: 400;
+  color: #7d7d7d;
+  font-size: 11px;
+}
+
+.other-result-detail{
+  font-size: small;
+}
+
+.other-result-detail .svg-icon {
+  height: 20px;
+  width: 20px;
+  margin-right: 3px;
+}
+
+.request-card{
+  width: 31%;
+  margin-right: 2%;
+}
+
+.request-card .result-details > div {
+  width: 100%;
+}
+
+.request-actions{
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.request-actions-msg{
+  text-align: center;
+  font-size: small;
+  line-height: 1.5em;
+}
+
+.request-actions-msg .theme-link {
+  font-weight: 500;
+}
+
+.request-actions button {
+  margin: 0px 5px;
+}
+
+/* Icons CSS :: Start */
+
+.customer-icon {
+  background: url("/assets/images/base/IconsMain_v02.01_NewRole.svg");
+}
+
+.transaction-icon{
+  background: url("/assets/images/base/IconsMain_v02.01_NewRole.svg");
+}
+
+.show-all-icon{
+  background: url("/assets/images/base/IconsMain_v02.01_Actions_Initial.svg");
+}
+
+.feed-side-nav li:hover .show-all-icon, .active-feed .show-all-icon{
+  background: url("/assets/images/base/IconsMain_v02.01_Actions_Selected.svg");
+}
+
+.companies-icon{
+  background: url("/assets/images/base/IconsMain_v04.02_Corporate-black.svg");
+}
+
+.feed-side-nav li:hover .companies-icon, .active-feed .companies-icon{
+  background: url("/assets/images/base/IconsMain_v04.02_Corporate.svg");
+}
+
+.individual-icon{
+  background: url("/assets/images/base/IconsMain_v04.02_Individual-black.svg");
+}
+
+.feed-side-nav li:hover .individual-icon, .active-feed .individual-icon{
+  background: url("/assets/images/base/IconsMain_v04.02_Individual.svg");
+}
+
+.requests-icon{
+  background: url("/assets/images/base/IconsMain_v04.01_Compare_Initial.svg");
+}
+
+.feed-side-nav li:hover .requests-icon, .active-feed .requests-icon{
+  background: url("/assets/images/base/IconsMain_v04.01_Compare_Selected.svg");
+}
+
+.recent-connection-icon{
+  background: url("/assets/images/base/IconsMain_v02.01_Recent_initial.png");
+}
+
+.feed-side-nav li:hover .recent-connection-icon, .active-feed .recent-connection-icon{
+  background: url("/assets/images/base/IconsMain_v02.01_Recent_Selected.png");
+}
+
+.marked-icon{
+  background: url("/assets/images/base/IconsMain_v04.02_Mark.svg");
+}
+
+.feed-side-nav li:hover .marked-icon, .active-feed .marked-icon{
+  background: url("/assets/images/base/IconsMain_v04.02_mark_selected.svg");
+}
+
+.blocked-icon{
+  background: url("/assets/images/base/TaskList_Assets_Issues_UnAbortedTask.svg");
+}
+
+.feed-side-nav li:hover .blocked-icon, .active-feed .blocked-icon{
+  background: url("/assets/images/base/TaskList_Assets_Issues_AbortTask.svg");
+}
+
+.groups-icon{
+  background: url("/assets/images/base/IconsMain_v04.02_GroupIcon.svg");
+}
+
+.feed-side-nav li:hover .groups-icon, .active-feed .groups-icon{
+  background: url("/assets/images/base/IconsMain_v04.02_GroupIcon.svg");
+}
+
+/* Icons CSS :: End */

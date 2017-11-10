@@ -1,0 +1,4 @@
+Before updating "angular-material-theme.css" file, Please change following colors code in that file to site theme color (as mentioned below):
+
+1. #f44336, #ff4081, #3f51b5 => #0091e5
+2. (233, 30, 99), (255,64,129), (63,81,181) => (0,145,229)

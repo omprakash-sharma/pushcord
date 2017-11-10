@@ -1,0 +1,165 @@
+mat-expansion-panel-header {
+  border-bottom: 1px solid transparent;
+}
+
+mat-expansion-panel-header.mat-expanded {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.filter-search-box{
+  width: 40%;
+}
+
+.filter-type-box{}
+
+.filter-type{
+  text-align: center;
+  font-size: smaller;
+  background-color: #e8e8e8;
+  color: #7d7d7d;
+  font-weight: 400;
+}
+
+.filter-item{
+  width: 80px;
+  height: 50px;
+  text-align: center;
+  line-height: 1em;
+  box-shadow: unset;
+  margin-top: 3px;
+}
+
+.filter-item:hover, .mat-button-toggle-checked{
+  background-color: #f4f7f9;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.filter-item:hover .svg-icon {
+  fill: #0091e5;
+}
+
+.filter-item-text{
+  font-size: smaller;
+  display: block;
+}
+
+td {
+  text-align: center;
+}
+
+.selected-filter-item{
+  margin: 3px;
+  border: none;
+  padding: 5px;
+  background-color: #eaeaea;
+  color: #3a3a3a;
+  font-size: small;
+  border-radius: 4px;
+  text-transform: capitalize;
+}
+
+.remove-filter-icon {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.remove-filter-icon:hover {
+  color: #0091e5;
+}
+
+.clear-selected-filters{
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 5px;
+  background-color: #fff;
+  color: #e67e22;
+  font-size: small;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Icons CSS :: Start */
+
+.discuss-icon {
+  background: url(/assets/images/base/IconsMain_v04.02_discussion.svg);
+}
+
+.filter-item:hover .discuss-icon, .mat-button-toggle-checked .discuss-icon {
+  background: url(/assets/images/base/IconsMain_v04.02_Discussion_selected.svg);
+}
+
+.updates-icon {
+  background: url(/assets/images/base/IconsMain_v03.01_EmailDraft.svg);
+}
+
+.filter-item:hover .updates-icon, .mat-button-toggle-checked .updates-icon {
+  background: url(/assets/images/base/IconsMain_v03.01_EmailDraft.svg);
+}
+
+.tasks-icon {
+  background: url(/assets/images/base/IconsMain_v03.01_EmailDraft.svg);
+}
+
+.filter-item:hover .tasks-icon, .mat-button-toggle-checked .tasks-icon {
+  background: url(/assets/images/base/IconsMain_v03.01_EmailDraft.svg);
+}
+
+.shares-icon{
+  background: url(/assets/images/base/IconsMain_v02.01_EntityNormal.png);
+  height: 27px;
+  width: 25px;
+}
+
+.filter-item:hover .shares-icon, .mat-button-toggle-checked .shares-icon {
+  background: url(/assets/images/base/IconsMain_v02.01_EntitySelected.png);
+}
+
+.chat-icon{
+  background: url(/assets/images/base/IconsMain_v02.01_ChatNormal.svg);
+}
+
+.chat-icon.new-notification{
+  background: url(/assets/images/base/IconsMain_v02.01_ChatNoti.svg);
+}
+
+.filter-item:hover .chat-icon, .mat-button-toggle-checked .chat-icon {
+  background: url(/assets/images/base/IconsMain_v02.01_ChatSelected.svg);
+}
+
+.email-icon{
+  background: url(/assets/images/base/IconsMain_v02.01_EmailNormal.svg);
+}
+
+.email-icon.new-notification{
+  background: url(/assets/images/base/IconsMain_v02.01_EmailNoti.svg);
+}
+
+.filter-item:hover .email-icon, .mat-button-toggle-checked .email-icon {
+  background: url(/assets/images/base/IconsMain_v02.01_EmailSelected.svg);
+}
+
+.phone-icon{
+  background: url(/assets/images/base/IconsMain_v02.01_PhoneNormal.svg);
+}
+
+.phone-icon.new-notification{
+  background: url(/assets/images/base/IconsMain_v02.01_PhoneNoti.svg);
+}
+
+.filter-item:hover .phone-icon, .mat-button-toggle-checked .phone-icon {
+  background: url(/assets/images/base/IconsMain_v02.01_PhoneSelected.svg);
+}
+
+.meeting-icon{
+  background: url(/assets/images/base/IconsMain_v02.01_MeetingNormal.svg);
+}
+
+.meeting-icon.new-notification{
+  background: url(/assets/images/base/IconsMain_v02.01_MeetingNoti.svg);
+}
+
+.filter-item:hover .meeting-icon, .mat-button-toggle-checked .meeting-icon {
+  background: url(/assets/images/base/IconsMain_v02.01_MeetingSelected.svg);
+}
+
+/* Icons CSS :: End */

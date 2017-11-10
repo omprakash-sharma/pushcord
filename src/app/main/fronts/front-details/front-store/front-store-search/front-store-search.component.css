@@ -1,0 +1,99 @@
+.product-thumbnail-card{
+  width: 33.33%;
+  padding: 5px;
+}
+
+.product-thumbnail{
+  width: 100%;
+  /*max-width: 25vh;*/
+  height: 25vh;
+  margin: 0 auto;
+  padding: 10px !important;
+  position: relative;
+}
+
+.product-thumbnail > div {
+  background-position: center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  height: 100%;
+}
+
+.top-actions, .bottom-actions{
+  position: absolute;
+  width: 100%;
+}
+
+.top-actions{
+  top: 0;
+  left: 0;
+}
+
+.bottom-actions{
+  bottom: 10px;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.product-thumbnail:hover .bottom-actions {
+  opacity: 1;
+}
+
+.thumbnail-label{
+  padding: 5px 10px;
+  background-color: #f2f2f2;
+  font-size: smaller;
+  font-weight: 500;
+}
+
+.popular-label {
+  color: #8d69d4;
+}
+
+.orange-label {
+  color: #f96a35;
+}
+
+.green-label {
+  color: #1dbd0a;
+}
+
+.top-actions button , .bottom-actions button {
+  min-width: unset !important;
+  padding: 0 5px !important;
+  color: #7d7d7d !important;
+}
+
+.product-data:hover {
+  /*color: #0091e5;*/
+  cursor: pointer;
+}
+
+.product-data h3 {
+  margin: 0 0;
+}
+
+/* Icons CSS :: Start */
+
+.share-icon {
+  background: url("/assets/images/base/IconsMain_v04.01_Compare_Initial.svg");
+}
+
+button:hover .share-icon {
+  background: url("/assets/images/base/IconsMain_v04.01_Compare_Selected.svg");
+}
+
+.mark-icon{
+  background: url("/assets/images/base/IconsMain_v04.02_Mark.svg");
+}
+
+button:hover .mark-icon {
+  background: url("/assets/images/base/IconsMain_v04.02_mark_selected.svg");
+}
+
+.view-icon{
+  background: url("/assets/images/base/IconsMain_v04.02_Show.svg");
+}
+
+/* Icons CSS :: End */

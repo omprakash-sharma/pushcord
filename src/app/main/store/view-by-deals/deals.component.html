@@ -1,0 +1,107 @@
+<mat-grid-list cols="15" class="fh txt_fn">
+    <mat-grid-tile class="fh just_start" colspan="3">
+        <mat-nav-list class="pd_t15">
+            <a mat-list-item  class="side-nav-list" [class.selected]="navItem.active" *ngFor="let navItem of navListItem" (click)="showDealBy(navItem)"> {{ navItem.dealName }} </a>
+         </mat-nav-list>
+    </mat-grid-tile>
+    <mat-grid-tile class="just_start fh" colspan="12" style="overflow-y:auto;"> 
+        <div class="flx_container pd_l8">
+            <div class="def_bg bs search-span">
+                <div class="" style="flex-grow:1;">
+                    <i class="material-icons def_search_icon">search</i>
+                    <input class="def_search" placeholder="Search listings here">
+                </div>
+                <div style="flex-grow:1;">&nbsp;</div>
+            </div>
+            <div class="hr_gt"></div>
+            <div class="content-span" *ngFor="let products of allProductsItemList|rowsplit:2">
+                <mat-card class="seller_card bs def_fc" style="margin-right:10px;" *ngFor="let product of products">
+                    <div class="promo_tag" [ngClass]="{'fc_rm':product.label =='Best Sellers', 'fc_ep':product.label =='Most Popular', 'fc_success':product.label =='Just Arrived'}" *ngIf="product.label !== 'Regular'">{{product.label}}</div>
+                    <img mat-card-image [class.img-h200]="product.label ==='Regular'" class="img-h225" src="{{product.imgUrl}}" alt="street img">
+                    <mat-card-header class="rc_card_mr">
+                        <div class="wrap_txt_ln2" style="width:calc(100% - 90px);">{{product.offerDescriprion}}</div>
+                        <div class="text-center cp" style="width:45px;" (click)="toggleStar = !toggleStar">
+                            <i class="material-icons" [class.hidden]="toggleStar">star_border</i>
+                            <i class="material-icons" [class.hidden]="!toggleStar">star</i>
+                        </div>
+                        <div class="text-center" style="width:45px;" [matMenuTriggerFor]="menu">
+                            <i class="material-icons cp">more_vert</i>
+                            <mat-menu #menu="matMenu">
+                                <button mat-menu-item>Item 1</button>
+                                <button mat-menu-item>Item 2</button>
+                            </mat-menu>
+                        </div>
+                    </mat-card-header>
+                    
+                    
+                    <mat-card-header class="rc_card_mr">
+                        <div style="flex-grow:5"><span>{{product.stockDescription}}</span>- <span class="c2">{{product.stock}}</span></div>
+                        <div class="text-center" style="flex-grow:2">
+                            <i class="material-icons cp txt_fn">location_on</i>{{product.nearBy}}
+                        </div>
+                    </mat-card-header>
+
+                    <mat-card-header class="rc_card_mr">
+                        <div class="" style="flex-grow:5">Price From</div>
+                        <div class="text-center txt_fb6" style="flex-grow:2">
+                            {{product.sellerPriceFrom}} -{{product.sellerPriceTo}}
+                        </div>
+                    </mat-card-header>
+                    <mat-card-content class="mat_card_content def_com_bg">
+                        <mat-card-header class="rc_card_mr">
+                            <div class="img_sm" style="width:30px;">
+                                <img class="img_sm" src="{{product.productDetails.brandTag}}">
+                            </div>
+                            <div class="table_row_cell pd_l7 txt_wrapper ln1_2" style="width:calc(100% - 120px);">
+                                <div class="cell_title">{{product.productDetails.title}}</div>
+                                <div class="cell_subtitle">{{product.productDetails.category}}</div>
+                            </div> 
+                            <div class="text-center cp ic" style="width:45px;" (click)="toggleStar = !toggleStar">
+                                <i class="material-icons"  [class.hidden]="toggleStar">star_border</i>
+                                <i class="material-icons"  [class.hidden]="!toggleStar">star</i>
+                            </div>
+                            <div class="text-center ic" style="width:45px;" [matMenuTriggerFor]="menu">
+                                <i class="material-icons cp">more_vert</i>
+                                <mat-menu #menu="matMenu">
+                                    <button mat-menu-item>Item 1</button>
+                                    <button mat-menu-item>Item 2</button>
+                                </mat-menu>
+                            </div>
+                        </mat-card-header>
+                        <mat-card-header class="rc_card_mr flex_row ic">
+                            <div class="flex_icon_card">
+                                <div><i class="material-icons">alarm</i></div>
+                                <div>13 min</div>     
+                            </div>
+                            <div class="flex_icon_card">
+                                <div><i class="material-icons">thumb_up</i></div>
+                                <div>656</div>     
+                            </div>
+                            <div class="flex_icon_card">
+                                <div><i class="material-icons">pets</i></div>
+                                <div>27</div>     
+                            </div>
+                            <div class="flex_icon_card">
+                                <div><i class="material-icons">description</i></div>
+                                <div>&nbsp;</div>     
+                            </div>
+                            <div class="flex_icon_card">
+                                <div><i class="material-icons">child_friendly</i></div>
+                                <div>34 k</div>     
+                            </div>
+                        </mat-card-header>
+                        <mat-card-header class="rc_card_mr flex_row ic txt_cammel cell_subtitle">show value propositions</mat-card-header>
+                        
+                    </mat-card-content>
+                    <mat-card-actions>
+                      <button mat-button>Select</button>
+                      <button mat-button>Show Details</button>
+                    </mat-card-actions> 
+                  </mat-card>
+            </div>
+            <mat-card class="footer-card">
+                <mat-card-header>Load More</mat-card-header>
+            </mat-card>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list> 
