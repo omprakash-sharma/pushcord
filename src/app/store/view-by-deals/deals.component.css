@@ -1,0 +1,79 @@
+
+.side-nav-list{
+    display: flex;
+    padding: 5px 5px;
+    color: #7d7d7d;
+    line-height: normal;
+    justify-content: start;
+    cursor: pointer;
+}
+a.side-nav-list:hover{
+    text-decoration: none;
+    background-color: #fff;
+    color: #0091e5;
+}
+.side-nav-list.selected{
+    background-color: #edf0f2;
+}
+.flx_container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.search-span{
+    padding:7px 10px;
+    display: flex;
+}
+.content-span{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: baseline;
+}
+.content-span + .content-span{
+    margin-top: 10px;
+}
+.seller_card{
+    width: 100%;
+    position: relative;
+    padding-top: 0px;
+}
+.seller_card > .promo_tag{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    padding: 5px;
+    background: rgba(220, 225, 229, 0.63);
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: none;
+    border: 0;
+    -webkit-font-smoothing: antialiased;
+}
+.c1{color: #F44336;}
+.c2{color: #9c27b0;}
+.c3{color: #4caf50;}
+.rc_card_mr{margin: 0 -24px 0 -24px;padding-bottom: 5px;}
+button.mat-button{
+    border: 1px solid #ccc;
+    color: rgba(0,0,0,0.6);
+}
+.mat-card>.mat-card-actions:last-child{
+    padding-top: 6px!important;
+    text-align: center;
+}
+.footer-card{
+    margin: 7px 10% 0px;
+    padding: 0;
+}
+.footer-card .mat-card-header{
+    justify-content: center;
+    padding: 10px 0;
+}
+.img-h225{
+    height: 225px;
+}
+.img-h200{
+    height: 200px!important;
+}
