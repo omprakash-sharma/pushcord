@@ -1,0 +1,52 @@
+<section class="store-wrapper">
+   
+    <mat-grid-list gutterSize="{{_outerCellGt}}"  cols="9" [rowHeight]="50" class="flex-container">
+        <mat-grid-tile colspan="2" class="def_bg bs cp hw_gd_area" *ngFor="let viewBy of viewByList">
+            <div class="card_row fh pd_LR10" [routerLink]="[viewBy.load_view]" routerLinkActive="active-link">
+                <div class="table_row fh">
+                    <div class="table_row_cell img_sm">
+                        <!-- <div class="img_sm" [ngStyle]="{'background-image': 'url(' + viewBy.img_url + ')'}"></div> -->
+                        <img class="img_sm" src="{{viewBy.img_url}}">
+                    </div>
+                    <div class="table_row_cell pd-L7 txt_wrapper ln1_2 def_fc" style="width:calc(100% - 30px);">
+                        <div class="cell_title cell-txt">{{viewBy.title}}</div>
+                        <div class="cell_subtitle cell-txt">{{viewBy.sub_title}}</div>
+                    </div> 
+                </div>
+            </div>
+        </mat-grid-tile> 
+       
+        <mat-grid-tile colspan="3" class="def_bg bs">
+            <div class="card_row fh pd_LR10">
+                <div class="table_row fh">
+                    <div class="table_row_cell ps_rlt">
+                        <div class="cust_dis_ig ps_abs" style="top:9px;">
+                            <span class="ps_abs lta ic"><i class="material-icons">location_on</i></span>
+                            <input class="cust_dis_i" style="padding-left:35px;" placeholder="Bur Dubai, Dubai">
+                            <span class="ps_abs rta ic"><i class="material-icons">add</i></span>
+                            <span class="cust_dis_ig_addon"><i class="material-icons">my_location</i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <div class="hr_gt"></div>
+  
+    <activity-filter></activity-filter>
+    <!-- <mat-expansion-panel hideToggle="true">
+        <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px" class="filter-accodian">
+            <mat-panel-title class="flex-box">
+            <img src="/assets/images/filter-icon.svg" style="height: 30px"/> Filters
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="flex-box justify-content-center"><span>No filters!</span></div>
+    </mat-expansion-panel> -->
+        
+    <div class="hr_gt"></div>
+
+    <div style="height:calc(100vh - 228px);">
+        <router-outlet></router-outlet>
+    </div>
+  
+</section>

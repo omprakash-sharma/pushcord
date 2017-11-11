@@ -1,0 +1,15 @@
+<mat-card class="flex-box p-10">
+  <mat-form-field class="custom-mat-input pull-up-placeholder transactions-search inline-label">
+    <input type="text" name="searchInput" placeholder="Search transactions here..." matInput>
+  </mat-form-field>
+  <div class="ml-auto">
+    <mat-button-toggle-group #group="matButtonToggleGroup">
+      <mat-button-toggle value="grid">
+        <mat-icon>view_module</mat-icon>
+      </mat-button-toggle>
+      <mat-button-toggle value="list">
+        <mat-icon>view_list</mat-icon>
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+</mat-card>

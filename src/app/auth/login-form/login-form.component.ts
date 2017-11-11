@@ -26,7 +26,6 @@ export class LoginFormComponent implements OnInit {
   }
 
   login(user: LoginFrom) {
-    console.log(user);
     this.router.navigate(['/main/fronts']);
   }
 

@@ -1,0 +1,31 @@
+.footer-nav {
+  background-color: #0091e5;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 13px;
+}
+
+ul.language-links {
+  list-style-type: none;
+}
+
+ul.language-links > li {
+  display: inline-block;
+}
+
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0px 5px;
+}
+
+.footer-link:hover {
+  font-weight: 400;
+  text-decoration: none;
+}

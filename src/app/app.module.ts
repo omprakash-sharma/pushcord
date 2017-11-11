@@ -4,10 +4,9 @@ import {RouterModule} from "@angular/router";
 
 import {AppComponent} from "./app.component";
 import {AuthModule} from "./auth/auth.module";
-import {FrontsModule} from "./fronts/fronts.module";
+import {MainModule} from "./main/main.module";
 import {AppLandingPageComponent} from "./auth/landing-page/landing-page.component";
 import {NoAuthGuard} from "./auth/no-auth-guard.service";
-import { StoreModule } from './store/store.module';
 
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
@@ -29,16 +28,14 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([{
 @NgModule({
   declarations: [
     AppComponent
-
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AuthModule,
+    MainModule,
     SharedModule,
-    FrontsModule,
-    rootRouting,
-    StoreModule
+    rootRouting
   ],
   providers: [ApiService,
     AuthGuard,
