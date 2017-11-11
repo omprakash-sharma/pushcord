@@ -5,7 +5,8 @@ import {
   MatAutocompleteModule,
   MatButtonModule, MatButtonToggleModule,
   MatCardModule, MatDialogModule, MatExpansionModule, MatGridListModule, MatIconModule, MatInputModule, MatMenuModule,
-  MatRippleModule, MatSelectModule, MatSidenavModule, MatTabsModule
+  MatRippleModule, MatSelectModule, MatSidenavModule, MatTabsModule, MatCheckboxModule, MatRadioModule, MatListModule
+  
 } from "@angular/material";
 
 @NgModule({
@@ -27,7 +28,10 @@ import {
     MatSelectModule,
     MatTabsModule,
     MatButtonToggleModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatListModule
   ]
 })
 export class CustomMaterialModule { }
