@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { FrontStoreService } from '../services/front-store.service'
+import { DataSharingService } from '../services/data-sharing.service';
 
 @Component({
   selector: 'fronts',
@@ -14,7 +15,7 @@ export class FrontsComponent implements OnInit{
   dealPromotionItems:any = {};
   allProductsItemList:any = [];
 
-  constructor(private frontStoreService:FrontStoreService) { 
+  constructor(private frontStoreService:FrontStoreService, private dataSharing:DataSharingService) { 
     this.dealPromotionItems = this.frontStoreService.getAllDeals();
   }
 
@@ -28,9 +29,11 @@ export class FrontsComponent implements OnInit{
     this.allProductsItemList = this.dealPromotionItems['list'].map(dealType =>{
       return dealType[currNavItem.dealName];
     })[0];
-    //this.allProductsItemList = filData;
-    //console.log(this.allProductsItemList)
   }
+
+  addToCart(selectedProduct){
+    this.dataSharing.addProductsToStore(selectedProduct);
+  };
 
 
 

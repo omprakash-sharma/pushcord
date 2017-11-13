@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DealsPromotionService } from '../services/deals-promotion.service'
+import { DataSharingService } from '../services/data-sharing.service';
 
 @Component({
   selector: 'deals',
@@ -13,7 +14,7 @@ export class DealsComponent implements OnInit{
   dealPromotionItems:{};
   allProductsItemList:[any];
 
-  constructor(private dealPromotion:DealsPromotionService) { 
+  constructor(private dealPromotion:DealsPromotionService, private dataSharing:DataSharingService) { 
     this.dealPromotionItems = this.dealPromotion.getAllDeals();
   }
 
@@ -22,16 +23,16 @@ export class DealsComponent implements OnInit{
     //temp
     this.allProductsItemList = this.dealPromotionItems['list'][0]['All Deals'];
     console.log(this.allProductsItemList)
-  }
+  };
   showDealBy(currNavItem){
     this.switchNav(this.navListItem,currNavItem);
     this.allProductsItemList = this.dealPromotionItems['list'].map(dealType =>{
       return dealType[currNavItem.dealName];
     })[0];
-    //this.allProductsItemList = filData;
-    //console.log(this.dealPromotionItems['list'][0]['All Deals'])
-  }
-
+  };
+  addToCart(selectedProduct){
+    this.dataSharing.addProductsToStore(selectedProduct);
+  };
  
 
 

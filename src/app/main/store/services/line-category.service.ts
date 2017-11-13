@@ -6,7 +6,6 @@ export class LineCategoryService {
   allLinesCategory:any = {};
   lineCategoryNavItems:any = {};
   lineCategoryItems:any = {};
-
   constructor() { 
     this.lineCategoryNavItems = {
       "status":"ok",
@@ -741,9 +740,10 @@ export class LineCategoryService {
   getAllLinesCategory(){
     return this.lineCategoryItems;
    // return this.allLinesCategory;
-  }
+  };
   getNavListItem(){
     return this.lineCategoryNavItems;
-  }
+  };
 
+  
 }

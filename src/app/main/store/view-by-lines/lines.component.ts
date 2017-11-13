@@ -1,6 +1,8 @@
-import { Component, OnInit, Renderer } from '@angular/core';
+import { Component, OnInit, Renderer, OnDestroy } from '@angular/core';
 
-import { LineCategoryService } from '../services/line-category.service'
+
+import { LineCategoryService } from '../services/line-category.service';
+import { DataSharingService } from '../services/data-sharing.service';
 
 @Component({
   selector: 'lines',
@@ -8,14 +10,16 @@ import { LineCategoryService } from '../services/line-category.service'
   styleUrls: ['./lines.component.css'],
   providers:[LineCategoryService]
 })
-export class LinesComponent implements OnInit {
+export class LinesComponent implements OnInit,OnDestroy {
   // initial variables
   navListItems:navListType[] = [];
   allLinesCategoryList=<any>{};
   productsItemList = Array<any>();
   hasItems:boolean = true;
+  tempDataList: any=[];
+  error:string;
 
-  constructor(private lineCategoryService:LineCategoryService, private render:Renderer) {
+  constructor(private lineCategoryService:LineCategoryService, private render:Renderer, private dataSharing:DataSharingService) {
     this.allLinesCategoryList = this.lineCategoryService.getAllLinesCategory();
     this.navListItems = this.lineCategoryService.getNavListItem()['list'];
    };
@@ -23,6 +27,15 @@ export class LinesComponent implements OnInit {
   ngOnInit() {
     this.productsItemList = this.allLinesCategoryList['data']['Laptop/Notebooks'];
     this.checkItemLength(this.productsItemList.length);
+
+    this.dataSharing.getSelectedProductList().subscribe(
+      data => this.tempDataList = data,
+      error => this.error = error
+    );
+    this.dataSharing.newProductSharingSubject.subscribe(
+      data => console.log(data)
+    );
+    console.log(this.tempDataList)
   };
 
   getItems(event){
@@ -39,6 +52,13 @@ export class LinesComponent implements OnInit {
       this.hasItems = true;
     }
   };
+
+  addToCart(selectedProduct){
+    this.dataSharing.addProductsToStore(selectedProduct);
+  };
+  ngOnDestroy(){
+    this.dataSharing.newProductSharingSubject.complete();
+  }
 }
 
 export interface navListType{

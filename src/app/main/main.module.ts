@@ -7,6 +7,7 @@ import {FrontsModule} from "./fronts/fronts.module";
 import {HomeModule} from "./home/home.module";
 import {StoreModule} from "./store/store.module";
 import {NoComponentFoundComponent} from "../shared/components/no-component-found/no-component-found.component";
+import {DataSharingService} from '../main/store/services/data-sharing.service'
 
 const routes: Route[] = [
   {
@@ -52,7 +53,8 @@ const routes: Route[] = [
     HomeModule
   ],
   declarations: [MainComponent],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers:[DataSharingService]
 })
 
 export class MainModule {

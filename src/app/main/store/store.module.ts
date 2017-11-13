@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule,Route } from '@angular/router';
+import { DataSharingService } from './services/data-sharing.service';
 
 import { BaseStoreComponent } from './base-store.component';
 //import { CustomMaterialModule } from "./custom-material.module";
@@ -39,7 +40,8 @@ const route:Route[] = [
     RouterModule.forChild(route),
     CustomMaterialModule
   ],
-  declarations: [BaseStoreComponent, DealsComponent, FrontsComponent, LinesComponent, RowsplitPipe,ActivityFilterComponent]
+  declarations: [BaseStoreComponent, DealsComponent, FrontsComponent, LinesComponent, RowsplitPipe,ActivityFilterComponent],
+  providers:[]
 })
 export class StoreModule {
   constructor(){console.log('store module connected....')}

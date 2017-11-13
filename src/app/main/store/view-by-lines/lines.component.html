@@ -28,7 +28,7 @@
                     <img mat-card-image [class.img-h200]="product.label ==='Regular'" class="img-h275 mr_bz" src="{{product.itemUrl}}" alt="street img">
                     
                     <div class="fex_container">
-                        <i class="material-icons">add_shopping_cart</i>
+                        <i class="material-icons" (click)="addToCart(product)">add_shopping_cart</i>
                         <i class="material-icons">autorenew</i>
                         <i class="material-icons">priority_high</i>
                     </div>
