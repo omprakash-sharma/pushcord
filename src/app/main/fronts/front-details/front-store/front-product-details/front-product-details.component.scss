@@ -1,0 +1,73 @@
+@import "~assets/css/variables";
+@import "~assets/css/svg-icons";
+
+.product-details-card {
+}
+
+.product-basic-data {
+  padding: 5px 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.product-details {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.product-title, .product-price-amount {
+  margin: 0;
+  display: inline-block;
+}
+
+.product-title {
+  color: $primary-color;
+}
+
+.product-price .material-icons {
+  font-size: 16px;
+}
+
+.product-imgs {
+  width: 45%;
+}
+
+.product-highlights {
+  width: 55%;
+}
+
+.product-highlights table {
+  width: 100%;
+}
+
+.highlight-key {
+  color: $light-black-color;
+}
+
+.highlight-value {
+  font-weight: 500;
+}
+
+.highlight-key, .highlight-value {
+  padding: 5px;
+}
+
+.product-price {
+}
+
+.product-description {
+}
+
+.share-icon {
+  @include pc-compare;
+}
+
+button:hover .share-icon {
+  @include pc-compare-selected;
+}
+
+.mark-icon{
+  @include pc-mark;
+}
+
+button:hover .mark-icon {
+  @include pc-mark-selected;
+}

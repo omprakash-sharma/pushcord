@@ -5,7 +5,7 @@ import { DataSharingService } from '../services/data-sharing.service';
 @Component({
   selector: 'deals',
   templateUrl: './deals.component.html',
-  styleUrls: ['./deals.component.css'],
+  styleUrls: ['./deals.component.scss'],
   providers: [DealsPromotionService]
 })
 export class DealsComponent implements OnInit{

@@ -1,13 +1,13 @@
-<mat-card class="p-0">
+<mat-card class="_p-0">
   <!-- <img class="placeholder-img" src="/assets/images/placeholders/promotion.gif" /> -->
   <div class="mt-1">
-    
-    <ngx-carousel  
+
+    <ngx-carousel
     [inputs]="carouselTile" >
         <ngx-item NgxCarouselItem class="bannerStyle" *ngFor="let Banner of carouselTileItems">
             <img height="260" width="100%" src="{{Banner.name}}">
         </ngx-item>
-  
+
       <button class='leftRs' NgxCarouselPrev>
         <!-- <i class="material-icons">keyboard_arrow_left</i> -->
       </button>
@@ -15,6 +15,6 @@
         <!-- <i class="material-icons">keyboard_arrow_right</i> -->
       </button>
     </ngx-carousel>
-    
+
   </div>
 </mat-card>

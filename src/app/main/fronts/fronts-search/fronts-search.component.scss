@@ -1,0 +1,177 @@
+@import "~assets/css/variables";
+@import "~assets/css/svg-icons";
+
+.filter-accodian {
+  padding: 0px 15px;
+}
+
+.filter-container {
+  padding: 10px 5px 0px 0px;
+  width: 22.5%;
+}
+
+._feed-container {
+  padding: 15px 0px 0px 5px;
+  width: 77.5%;
+}
+
+.search-results-container {
+}
+
+.result-type {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.results-box {
+  width: 100%;
+}
+
+.result-card {
+  width: 50%;
+  border-radius: unset;
+  padding: 0px !important;
+  display: inline-block;
+  outline: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.result-card:hover {
+  background-color: #f7f7f7;
+  cursor: pointer;
+}
+
+.result-details {
+  padding: 0px 5px 0px 10px;
+  width: calc(100% - 80px);
+}
+
+.result-details > div {
+  width: 50%;
+  display: inline-block;
+  float: left;
+}
+
+.result-data {
+  padding: 10px 0px 10px 10px;
+}
+
+.result-name {
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.result-domain {
+  font-weight: 400;
+  color: $light-black-color;
+  font-size: 11px;
+}
+
+.other-result-detail {
+  font-size: small;
+}
+
+.other-result-detail ._svg-icon {
+  height: 20px;
+  width: 20px;
+  margin-right: 3px;
+}
+
+.request-card {
+  width: 31%;
+  margin-right: 2%;
+}
+
+.request-card .result-details > div {
+  width: 100%;
+}
+
+.request-actions {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.request-actions-msg {
+  text-align: center;
+  font-size: small;
+  line-height: 1.5em;
+}
+
+.request-actions-msg ._theme-link {
+  font-weight: 500;
+}
+
+.request-actions button {
+  margin: 0px 5px;
+}
+
+.customer-icon {
+  @include pc-new-role;
+}
+
+.transaction-icon {
+  @include pc-new-role;
+}
+
+.show-all-icon {
+  @include pc-actions;
+}
+
+._feed-side-nav li:hover .show-all-icon, .active-feed .show-all-icon {
+  @include pc-actions-selected;
+}
+
+.companies-icon {
+  @include pc-corporate;
+}
+
+._feed-side-nav li:hover .companies-icon, .active-feed .companies-icon {
+  @include pc-corporate-selected;
+}
+
+.individual-icon {
+  @include pc-individual;
+}
+
+._feed-side-nav li:hover .individual-icon, .active-feed .individual-icon {
+  @include pc-individual-selected;
+}
+
+.requests-icon {
+  @include pc-compare;
+}
+
+._feed-side-nav li:hover .requests-icon, .active-feed .requests-icon {
+  @include pc-compare-selected;
+}
+
+.recent-connection-icon {
+  @include pc-recent;
+}
+
+._feed-side-nav li:hover .recent-connection-icon, .active-feed .recent-connection-icon {
+  @include pc-recent-selected;
+}
+
+.marked-icon {
+  @include pc-mark;
+}
+
+._feed-side-nav li:hover .marked-icon, .active-feed .marked-icon {
+  @include pc-mark-selected;
+}
+
+.blocked-icon {
+  @include pc-abort-task;
+}
+
+._feed-side-nav li:hover .blocked-icon, .active-feed .blocked-icon {
+  @include pc-unaborted-task;
+}
+
+.groups-icon {
+  @include pc-group;
+}
+
+._feed-side-nav li:hover .groups-icon, .active-feed .groups-icon {
+  @include pc-group;
+}

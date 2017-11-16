@@ -4,7 +4,7 @@ import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material";
 @Component({
   selector: "connect-dialog",
   templateUrl: "./connect-dialog.component.html",
-  styleUrls: ["./connect-dialog.component.css"]
+  styleUrls: ["./connect-dialog.component.scss"]
 })
 export class ConnectDialogComponent implements OnInit {
 

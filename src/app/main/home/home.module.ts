@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from "@angular/core";
 import {SharedModule} from "../../shared/shared.module";
 import {Route, RouterModule} from "@angular/router";
 
-import { HomeComponent } from './home.component';
+import {HomeComponent} from "./home.component";
+import {CustomMaterialModule} from "./custom-material.module";
 
 const routes: Route[] = [
   {
@@ -14,8 +15,10 @@ const routes: Route[] = [
 @NgModule({
   imports: [
     SharedModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    CustomMaterialModule
   ],
   declarations: [HomeComponent]
 })
-export class HomeModule { }
+export class HomeModule {
+}

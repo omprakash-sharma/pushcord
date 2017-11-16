@@ -1,0 +1,106 @@
+@import "~assets/css/variables";
+
+.sticky-nav {
+  z-index: 150;
+  position: fixed;
+  width: 71.2vw;
+  top: 110px;
+}
+
+.sticky-side-nav {
+  z-index: 150;
+  position: fixed;
+  width: 11.5vw;
+  top: 202px;
+}
+
+.parent-main {
+  background-color: #dce1e5;
+  position: relative;
+  margin-top: 20vh;
+}
+
+.front-cover {
+  height: 20vh;
+  position: fixed;
+  width: 70.8vw;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.front-action-button {
+  min-width: 45px;
+  font-size: 12px;
+  line-height: 34px;
+}
+
+.front-action-button .material-icons {
+  font-size: 18px;
+}
+
+.front-data {
+  align-items: left
+}
+
+.front-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.front-domain {
+  font-size: 13px;
+}
+
+.front-info-section {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  height: 0;
+  display: block;
+  transition: height 0.3s;
+  overflow: hidden;
+}
+
+.expand-info-box {
+  height: 100px;
+}
+
+.front-info-toggle {
+  display: none;
+}
+
+.front-info-toggle + label {
+  width: 100%;
+  background-color: #edf1f6;
+  font-size: 12px;
+  text-align: center;
+  padding: 3px 0px;
+  cursor: pointer;
+}
+
+.front-info-toggle + label:hover {
+  background-color: #e8e8e8;
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width: 1200px) {
+  /* Styles */
+}
+
+@media only screen  and (min-width: 1440px) {
+  /* Styles */
+  .sticky-nav, .front-cover {
+    width: 70.1vw !important;
+  }
+
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width: 1824px) {
+  /* Styles */
+  .sticky-nav, .front-cover {
+    width: 52.7vw !important;
+  }
+
+}
+

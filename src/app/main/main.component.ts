@@ -3,7 +3,7 @@ import {Component, ElementRef, HostListener, OnInit, ViewChild} from "@angular/c
 @Component({
   selector: "main",
   templateUrl: "./main.component.html",
-  styleUrls: ["./main.component.css"]
+  styleUrls: ["./main.component.scss"]
 })
 export class MainComponent implements OnInit {
   /* Start: Side bar CSS adjustment */

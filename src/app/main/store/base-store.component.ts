@@ -3,12 +3,14 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'base-store',
   templateUrl: './base-store.component.html',
-  styleUrls: ['./base-store.component.css']
+  styleUrls: ['./base-store.component.scss']
 })
 export class BaseStoreComponent implements OnInit {
   // initial variables
-  _outerCellGt = '7px';
+  _outerCellGt:string = '7px';
   viewByList:[viewByTab];
+  productInfoToggle:boolean = false;
+  position:string = 'before';
 
   constructor() { console.log("BaseStoreComponent connected.......") }
 

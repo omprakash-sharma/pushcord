@@ -37,11 +37,15 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([{
     SharedModule,
     rootRouting
   ],
-  providers: [ApiService,
+  providers: [
+    ApiService,
     AuthGuard,
     JwtService,
-    UserService],
-  bootstrap: [AppComponent]
+    UserService
+  ],
+  bootstrap: [
+    AppComponent
+  ]
 })
 
 export class AppModule {

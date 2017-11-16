@@ -3,7 +3,7 @@ import {Component, EventEmitter, OnInit, Output} from "@angular/core";
 @Component({
   selector: 'activity-filter',
   templateUrl: './activity-filter.component.html',
-  styleUrls: ['./activity-filter.component.css']
+  styleUrls: ['./activity-filter.component.scss']
 })
 export class ActivityFilterComponent implements OnInit {
 

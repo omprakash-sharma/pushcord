@@ -1,0 +1,27 @@
+<div class="display-block">
+  <mat-card class="flex-box search-box-card">
+    <img src="/assets/images/search-icon.svg">
+    <mat-form-field class="custom-mat-input border-less-mat-input inline-label">
+      <input type="text" placeholder="Search contacts" matInput>
+    </mat-form-field>
+    <mat-autocomplete>
+      <mat-option>
+      </mat-option>
+    </mat-autocomplete>
+  </mat-card>
+
+  <div class="contacts-container flex-box flex-wrap mt-15">
+    <div class="contact-box" *ngFor="let contact of contactPoints; let i=index">
+      <mat-card class="contact-card">
+        <div class="contact-data flex-box">
+          <div class="img-thumbnail" [ngStyle]="{'background':'url('+ contact.img +')'}"></div>
+          <div class="contact-details">
+            <div class="contact-name ellipse-text-overflow" [title]="contact.name">{{contact.name}}</div>
+            <div class="contact-domain ellipse-text-overflow" [title]="contact.domain">{{contact.domain}}</div>
+          </div>
+          <button class="ml-auto" mat-icon-button type="button"><i class="material-icons">more_vert</i></button>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

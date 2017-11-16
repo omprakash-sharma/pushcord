@@ -1,61 +1,61 @@
 <mat-sidenav-container class="chat-section" [ngClass]="{'s-chat': shrinkMode}">
   <mat-sidenav [opened]="!shrinkMode" [mode]="'side'" class="">
-    <div class="flex-box">
-      <form class="flex-box p-5">
-        <mat-form-field class="custom-mat-input inline-label">
+    <div class="_flex-box">
+      <form class="_flex-box _p-5">
+        <mat-form-field class="_custom-mat-input _input-search _inline-label">
           <input type="text" name="searchInput" placeholder="Search here..." matInput>
         </mat-form-field>
       </form>
-      <button type="button" class="ml-auto" mat-icon-button>
+      <button type="button" class="_ml-auto" mat-icon-button>
         <mat-icon>person_add</mat-icon>
       </button>
     </div>
-    <div class="flex-box contact-name">
-      <div class="img-thumbnail"
+    <div class="_flex-box contact-name">
+      <div class="_img-thumbnail"
            [ngStyle]="{'background':'url(https://media.npr.org/about/people/bios/biophotos/snelson_sq-2767caa78582a137346c4cd0281656a4872fa37d-s100-c85.jpg)'}"></div>
-      <div class="flex-box ml-10 flex-column-direction communication-party">
+      <div class="_flex-box _ml-10 _flex-column-direction communication-party">
         <div class="title">Casie Canty</div>
-        <div class="domain light-text">Insurance Broker</div>
+        <div class="domain _light-text">Insurance Broker</div>
       </div>
     </div>
-    <div class="flex-box contact-name active-chat">
-      <div class="img-thumbnail"
+    <div class="_flex-box contact-name active-chat">
+      <div class="_img-thumbnail"
            [ngStyle]="{'background':'url(http://i2.wp.com/www.dailycal.org/assets/uploads/2017/04/yordan_dkim_staff1-100x100.jpg)'}"></div>
-      <div class="flex-box ml-10 flex-column-direction communication-party">
+      <div class="_flex-box _ml-10 _flex-column-direction communication-party">
         <div class="title">Willie Russell</div>
-        <div class="domain light-text">Insurance Manager</div>
+        <div class="domain _light-text">Insurance Manager</div>
       </div>
     </div>
-    <div class="flex-box contact-name">
-      <div class="img-thumbnail"
+    <div class="_flex-box contact-name">
+      <div class="_img-thumbnail"
            [ngStyle]="{'background':'url(https://i1.rgstatic.net/ii/profile.image/AS%3A284706059898880%401444890622271_m/Amir_Cheraghi.png)'}"></div>
-      <div class="flex-box ml-10 flex-column-direction communication-party">
+      <div class="_flex-box _ml-10 _flex-column-direction communication-party">
         <div class="title">Asif Sain</div>
-        <div class="domain light-text">Agent</div>
+        <div class="domain _light-text">Agent</div>
       </div>
     </div>
-    <div class="flex-box contact-name">
-      <div class="img-thumbnail"
+    <div class="_flex-box contact-name">
+      <div class="_img-thumbnail"
            [ngStyle]="{'background':'url(https://www.incimages.com/uploaded_files/image/100x100/Kimberly-bkt_16048.jpg)'}"></div>
-      <div class="flex-box ml-10 flex-column-direction communication-party">
+      <div class="_flex-box _ml-10 _flex-column-direction communication-party">
         <div class="title">Samantha Jones</div>
-        <div class="domain light-text">CRO</div>
+        <div class="domain _light-text">CRO</div>
       </div>
     </div>
   </mat-sidenav>
 
-  <div class="chat-history flex-box align-items-end flex-column-direction" #stayBottom>
+  <div class="chat-history _flex-box _align-items-end _flex-column-direction" #stayBottom>
     <div class="msg-box" *ngFor="let x of chatHistory; let l=last">
       <div class="msg-text" [ngClass]="{'others-msg': !x.self,'self-msg': x.self, 'others-msg-animation': (l && !x.self), 'self-msg-animation': (l && x.self)}"> {{x.msg}}</div>
     </div>
   </div>
 
-  <div class="flex-box chat-action-area">
+  <div class="_flex-box chat-action-area">
     <button mat-icon-button type="button" class="contacts-toggle" (click)="shrinkMode = !shrinkMode">
       <mat-icon>people</mat-icon>
     </button>
-    <form class="chat-form flex-box ml-auto" (submit)="send()">
-      <mat-form-field class="custom-mat-input chat-text-input inline-label">
+    <form class="chat-form _flex-box _ml-auto" (submit)="send()">
+      <mat-form-field class="_custom-mat-input _input-search chat-text-input _inline-label">
         <input type="text" name="chatTextInput" autocomplete="off" placeholder="Write message here..." [(ngModel)]="composedMsg" matInput>
       </mat-form-field>
       <!--<button type="submit" class="black-btn-o chat-submit-btn" mat-button>-->

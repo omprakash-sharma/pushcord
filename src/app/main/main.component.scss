@@ -1,0 +1,53 @@
+@import "~assets/css/variables";
+
+.body-section {
+  position: relative;
+  height: 100vh;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.main-container {
+  position: absolute;
+  z-index: 0;
+  top: 110px;
+  left: 5px;
+  right: 5px;
+  display: flex;
+}
+
+.component-grid-tile {
+  width: 73.5%;
+  padding: 0px 5px;
+}
+
+.sidebar-grid-style {
+  width: 26.5%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  bottom: 10px;
+}
+
+.sidebar-tile {
+  width: 100%;
+  padding: 0px 5px 0px 5px;
+}
+
+.footer-section {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.footer-links a {
+  padding: 3px;
+}
+
+.footer-links a:first-child {
+  padding-left: 0px;
+}
+
+.footer-links .material-icons {
+  font-size: 5px;
+}

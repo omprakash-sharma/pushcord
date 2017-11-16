@@ -5,7 +5,7 @@ import {RegisterForm} from "../models/register-form";
 @Component({
   selector: "register-form",
   templateUrl: "./register-form.component.html",
-  styleUrls: ["./register-form.component.css"]
+  styleUrls: ["./register-form.component.scss"]
 })
 export class RegisterFormComponent implements OnInit {
   registerForm: FormGroup;

@@ -4,7 +4,7 @@ import {isUndefined} from "util";
 @Component({
   selector: "chat",
   templateUrl: "./chat.component.html",
-  styleUrls: ["./chat.component.css"]
+  styleUrls: ["./chat.component.scss"]
 })
 export class ChatComponent implements OnInit, AfterViewChecked {
   @ViewChild("stayBottom") private chatHistoryElm: ElementRef;

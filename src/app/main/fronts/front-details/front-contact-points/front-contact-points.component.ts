@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-front-contact-points',
   templateUrl: './front-contact-points.component.html',
-  styleUrls: ['./front-contact-points.component.css']
+  styleUrls: ['./front-contact-points.component.scss']
 })
 export class FrontContactPointsComponent implements OnInit {
 

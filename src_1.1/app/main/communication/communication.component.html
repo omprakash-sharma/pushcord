@@ -1,0 +1,101 @@
+<div class="communiction-sheet" [ngClass]="{'shrink-mode':shrinkWidget, 'initial-state': (openSheet == undefined), 'close-sheet-animate':(openSheet == false), 'open-sheet-animate': openSheet}"
+     ngDraggable [bounds]="bounadryElement" [handle]="draggableHandle">
+  <div class="communication-header flex-box" #draggableHandle>
+    <div class="flex-box">
+      <div class="img-thumbnail"
+           [ngStyle]="{'background':'url(/assets/images/placeholders/front-detail-img.jpg)'}"></div>
+      <div class="flex-box ml-10 flex-column-direction communication-party">
+        <div class="title">Omega Insurance Brokers</div>
+        <div class="domain light-text">Insurance Brokers</div>
+      </div>
+    </div>
+    <div class="header-action-area flex-box ml-auto">
+      <button mat-icon-button>
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <button *ngIf="!shrinkWidget" mat-icon-button (click)="shrinkWidget = true">
+        <mat-icon>fullscreen_exit</mat-icon>
+      </button>
+      <button *ngIf="shrinkWidget" mat-icon-button (click)="shrinkWidget = false">
+        <mat-icon>web_asset</mat-icon>
+      </button>
+      <button mat-icon-button (click)="closeSheet()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="communication-container">
+    <mat-tab-group [selectedIndex]="selectedTab">
+      <mat-tab position="0">
+        <ng-template mat-tab-label>
+          <mat-icon class="label-icon">forum</mat-icon>
+          <span class="label-text">Chat</span>
+        </ng-template>
+        <chat [shrinkMode]="shrinkWidget"></chat>
+      </mat-tab>
+      <mat-tab position="1">
+        <ng-template mat-tab-label>
+          <mat-icon class="label-icon">call</mat-icon>
+          <span class="label-text">Call</span>
+        </ng-template>
+        Call Content here
+      </mat-tab>
+      <mat-tab position="2">
+        <ng-template mat-tab-label>
+          <mat-icon class="label-icon">description</mat-icon>
+          <span class="label-text">Document</span>
+        </ng-template>
+        Document Content here
+      </mat-tab>
+      <mat-tab position="3">
+        <ng-template mat-tab-label>
+          <mat-icon class="label-icon">event</mat-icon>
+          <span class="label-text">Meeting</span>
+        </ng-template>
+        Meeting Content here
+      </mat-tab>
+      <mat-tab position="4">
+        <ng-template mat-tab-label>
+          <mat-icon class="label-icon">chrome_reader_mode</mat-icon>
+          <span class="label-text">Object</span>
+        </ng-template>
+        Object Content here
+      </mat-tab>
+      <mat-tab position="5">
+        <ng-template mat-tab-label>
+          <mat-icon class="label-icon">business</mat-icon>
+          <span class="label-text">Front</span>
+        </ng-template>
+        Front Content here
+      </mat-tab>
+      <mat-tab position="6">
+        <ng-template mat-tab-label>
+          <mat-icon class="label-icon">shopping_cart</mat-icon>
+          <span class="label-text">Transaction</span>
+        </ng-template>
+        <transaction></transaction>
+      </mat-tab>
+      <mat-tab  position="7">
+        <ng-template mat-tab-label>
+          <mat-icon class="label-icon">insert_photo</mat-icon>
+          <span class="label-text">Image</span>
+        </ng-template>
+        Image Content here
+      </mat-tab>
+      <mat-tab  position="8">
+        <ng-template mat-tab-label>
+          <mat-icon class="label-icon">person_add</mat-icon>
+          <span class="label-text">Invite</span>
+        </ng-template>
+        Invite Content here
+      </mat-tab>
+      <mat-tab  position="9">
+        <ng-template mat-tab-label>
+          <mat-icon class="label-icon">voice_chat</mat-icon>
+          <span class="label-text">Video</span>
+        </ng-template>
+        <video-chat></video-chat>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>

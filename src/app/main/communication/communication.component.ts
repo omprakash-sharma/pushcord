@@ -3,7 +3,7 @@ import {Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation} from 
 @Component({
   selector: "communication",
   templateUrl: "./communication.component.html",
-  styleUrls: ["./communication.component.css"],
+  styleUrls: ["./communication.component.scss"],
   encapsulation: ViewEncapsulation.None
 })
 export class CommunicationComponent implements OnInit {

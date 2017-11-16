@@ -3,7 +3,7 @@ import {Component, OnInit} from "@angular/core";
 @Component({
   selector: "running-transactions",
   templateUrl: "./running-transactions.component.html",
-  styleUrls: ["./running-transactions.component.css"]
+  styleUrls: ["./running-transactions.component.scss"]
 })
 export class RunningTransactionsComponent implements OnInit {
   totalRunningTransactions: number;

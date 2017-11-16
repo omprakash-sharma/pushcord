@@ -5,7 +5,7 @@ import {MatDialog} from "@angular/material";
 @Component({
   selector: "front-details",
   templateUrl: "./front-details.component.html",
-  styleUrls: ["./front-details.component.css"]
+  styleUrls: ["./front-details.component.scss"]
 })
 export class FrontDetailsComponent implements OnInit {
   frontInfoToggle: boolean;

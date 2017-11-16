@@ -6,7 +6,7 @@ import { DataSharingService } from '../services/data-sharing.service';
 @Component({
   selector: 'fronts',
   templateUrl: './fronts.component.html',
-  styleUrls: ['./fronts.component.css'],
+  styleUrls: ['./fronts.component.scss'],
   providers: [FrontStoreService]
 })
 export class FrontsComponent implements OnInit{

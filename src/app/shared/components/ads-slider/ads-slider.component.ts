@@ -5,7 +5,7 @@ import { NgxCarousel } from 'ngx-carousel';
 @Component({
   selector: 'ads-slider',
   templateUrl: './ads-slider.component.html',
-  styleUrls: ['./ads-slider.component.css']
+  styleUrls: ['./ads-slider.component.scss']
 })
 export class AdsSliderComponent implements OnInit {
   items: Array<any> = [];

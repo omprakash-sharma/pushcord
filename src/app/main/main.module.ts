@@ -7,6 +7,13 @@ import {FrontsModule} from "./fronts/fronts.module";
 import {HomeModule} from "./home/home.module";
 import {StoreModule} from "./store/store.module";
 import {NoComponentFoundComponent} from "../shared/components/no-component-found/no-component-found.component";
+import {NavBarComponent} from "../shared/components/nav-bar/nav-bar.component";
+import {RunningTransactionsComponent} from "../shared/components/running-transactions/running-transactions.component";
+import {AdsSliderComponent} from "../shared/components/ads-slider/ads-slider.component";
+import {NgxCarouselModule} from "ngx-carousel";
+import {NgDropDownModule} from "../shared/directives/ng-drop-down/ng-drop-down.module";
+import {CustomMaterialModule} from "./custom-material.module";
+import {ProfileModule} from "./profile/profile.module";
 import {DataSharingService} from '../main/store/services/data-sharing.service'
 
 const routes: Route[] = [
@@ -32,6 +39,10 @@ const routes: Route[] = [
         loadChildren: "app/main/store/store.module#StoreModule"
       },
       {
+        path: "profile",
+        loadChildren: "app/main/profile/profile.module#ProfileModule"
+      },
+      {
         path: "**",
         component: NoComponentFoundComponent
       }
@@ -50,9 +61,19 @@ const routes: Route[] = [
     RouterModule.forChild(routes),
     FrontsModule,
     StoreModule,
-    HomeModule
+    HomeModule,
+    ProfileModule,
+    NgxCarouselModule,
+    NgDropDownModule,
+    CustomMaterialModule
   ],
-  declarations: [MainComponent],
+  declarations: [
+    MainComponent,
+    NavBarComponent,
+    AdsSliderComponent,
+    RunningTransactionsComponent,
+    NoComponentFoundComponent
+  ],
   exports: [RouterModule],
   providers:[DataSharingService]
 })

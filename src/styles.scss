@@ -1,0 +1,465 @@
+/* You can add global styles to this file, and also import other style files */
+@import "/assets/css/angular-material-theme.css";
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import "~assets/css/variables";
+
+* , *:before, *:after{
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  outline: none;
+}
+
+body{
+  background-color: #dce1e5;
+}
+
+body, input, textarea, select, button, meter, progress {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;
+  outline: none;
+}
+
+._m-0 {
+  margin: 0 0;
+}
+
+._mt-0 {
+  margin-top: 0px;
+}
+
+._mb-0 {
+  margin-bottom: 0px;
+}
+
+._ml-auto {
+  margin-left: auto !important;
+}
+._mt-10 {
+  margin-top: 10px !important;
+}
+
+._mb-10 {
+  margin-bottom: 10px !important;
+}
+
+._ml-10 {
+  margin-left: 10px !important;
+}
+
+._mr-10 {
+  margin-right: 10px !important;
+}
+
+._ml-15 {
+  margin-left: 15px !important;
+}
+
+._mr-15 {
+  margin-right: 15px !important;
+}
+
+._mt-15 {
+  margin-top: 15px !important;
+}
+
+._mt-20 {
+  margin-top: 20px !important;
+}
+
+._p-0 {
+  padding: 0px !important;
+}
+
+._p-5 {
+  padding: 5px !important;
+}
+
+._p-10 {
+  padding: 10px !important;
+}
+
+._pt-10 {
+  padding-top: 10px !important;
+}
+
+._pb-10 {
+  padding-bottom: 10px !important;
+}
+
+._pt-15 {
+  padding-top: 15px !important;
+}
+
+._pb-15 {
+  padding-bottom: 15px !important;
+}
+
+._pt-20 {
+  padding-top: 20px !important;
+}
+
+._pb-20 {
+  padding-bottom: 20px !important;
+}
+
+._action-btn {
+  background-color: #fff;
+}
+
+._action-btn > span, ._bordered-material-btn > span{
+  color: $primary-color;
+  font-weight: 500;
+}
+
+._transparent-btn {
+  font-weight: 500;
+}
+
+._display-block{
+  display: block !important;
+}
+
+._img-thumbnail {
+  height: 40px;
+  width: 40px;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  border-radius: 2px;
+}
+
+._light-text {
+  color: #7d7d7d;
+}
+
+._green-text {
+  color: green;
+}
+
+._red-text {
+  color: red;
+}
+
+h3, b{
+  font-weight: 500 !important;
+}
+
+._fw-300 {
+  font-weight: 300;
+}
+
+._fw-500 {
+  font-weight: 500;
+}
+
+/*Form CSS*/
+
+._custom-input {
+  padding: 8px;
+  outline: none;
+  border: 1px solid #dcdcdc;
+  border-radius: 2px;
+}
+
+._form-inline-group{
+  width: 100%;
+  display: block;
+}
+
+._bordered-material-btn > .mat-button-ripple, ._black-btn-o > .mat-button-ripple {
+  border: 1px solid #dcdcdc;
+  border-radius: 2px;
+}
+
+._radio-button{
+  display: none !important;
+}
+
+._radio-button + label {
+  border: 1px solid #dcdcdc;
+  padding: 10px 50px;
+  border-radius: 2px;
+  margin: 0px 10px;
+  color: $primary-color;
+}
+
+._radio-button + label:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+._radio-button:checked + label {
+  background-color: $primary-color;
+  color: white;
+}
+
+._flex-box{
+  display: flex !important;
+  align-items: center;
+}
+
+._justify-content-space-around {
+  justify-content: space-around
+}
+
+._justify-content-space-between {
+  justify-content: space-between;
+}
+
+._justify-content-center {
+  justify-content: center;
+}
+
+._flex-column-direction {
+  flex-direction: column;
+}
+
+._flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+._flex-nowrap{
+  flex-wrap: nowrap !important;
+}
+
+._align-items-end {
+  align-items: flex-end !important;
+}
+
+._black-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+._white-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+._theme-link{
+  text-decoration: none;
+  color: $primary-color;;
+}
+
+._white-link:hover, ._black-link:hover, ._theme-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+._black-btn-o > span {
+  color: #000000;
+}
+
+._black-btn-o:disabled > span, ._bordered-material-btn > span {
+  color: #7d7d7d;
+}
+
+._search-box-card {
+  padding: 6px 10px 6px 10px !important;
+}
+
+._search-box-card img {
+  height: 26px;
+  width: 26px;
+}
+
+._search-box-card mat-form-field {
+  width: calc(100% - 30px);
+}
+
+._ellipse-text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+._svg-icon {
+  height: 28px;
+  width: 28px;
+  line-height: 1em;
+  display: inline-block;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+}
+
+._feed-section{
+  display: flex;
+}
+
+._side-nav-container{
+  width: 22.5%;
+  float: left;
+  padding-right: 10px;
+}
+
+._feed-container{
+  width: 77.5%;
+  float: right;
+}
+
+._feed-side-nav{
+  list-style-type: none;
+  margin: 0 0;
+  padding: 0;
+}
+
+._feed-side-nav li {
+  padding: 5px;
+  border-radius: 2px;
+  margin-bottom: 5px;
+  display: flex;
+}
+
+._feed-side-nav li .material-icons{
+  font-size: 18px;
+}
+
+._feed-side-nav li:hover, .active-feed {
+  background-color: #fff;
+  color: $primary-color;;
+  cursor: pointer;
+}
+
+._side-nav-icon {
+  height: 25px;
+  width: 28px;
+}
+
+/*Custom Material CSS*/
+
+.mat-card, .mat-expansion-panel{
+  box-shadow: 0 1px 1px -5px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px 0 rgba(0,0,0,.12) !important;
+}
+
+.mat-radio-outer-circle{
+  border-radius: unset !important;
+  border-color: #000000;
+}
+
+.mat-radio-inner-circle, .mat-radio-outer-circle, .mat-radio-container{
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.mat-select-trigger {
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 2px;
+  padding: 8px 10px;
+}
+
+.mat-select-trigger > .mat-select-underline {
+  display: none;
+}
+
+.mat-option {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+._custom-mat-input .mat-form-field-infix {
+  padding: 8px !important;
+  outline: none;
+  border: 1px solid #dcdcdc;
+  border-radius: 2px;
+}
+
+._border-less-mat-input .mat-form-field-infix {
+  border: none !important;
+}
+
+._custom-mat-input .mat-input-underline, .mat-form-field-underline {
+  display: none;
+}
+
+._custom-mat-input .mat-form-field-wrapper{
+  padding-bottom: 0;
+}
+
+.mat-form-field-placeholder {
+  top: 1.65em;
+  left: 0.5em !important;
+  font-size: 14px !important;
+}
+
+._pull-up-placeholder .mat-form-field-placeholder {
+  top: 1.5em !important;
+}
+
+.mat-form-field-type-mat-select .mat-form-field-placeholder{
+  top: 2em;
+}
+
+.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-placeholder,
+.mat-form-field-can-float .mat-form-field-autofill-control:-webkit-autofill+.mat-form-field-placeholder-wrapper .mat-form-field-placeholder {
+  transform: translateY(-1.75em) translateX(-0.5em) scale(.8);
+  font-weight: 500;
+}
+
+._inline-label.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-placeholder,
+._inline-label.mat-form-field-can-float .mat-form-field-autofill-control:-webkit-autofill+.mat-form-field-placeholder-wrapper .mat-form-field-placeholder {
+  transform: translateY(0em) translateX(-100%) scale(1);
+}
+
+._input-search .mat-form-field-placeholder {
+  top: 1.5em;
+}
+
+.mat-expansion-panel-header {
+  padding: 0 10px !important;
+}
+
+.mat-expansion-panel-body {
+  padding:0px !important;
+  margin: 0 0 !important;
+}
+
+.mat-radio-button{
+  margin-right: 15px;
+}
+
+.mat-btn-success {
+  background-color: #1dbd0a;
+  color: white !important;
+}
+
+mat-dialog-container{
+  padding: 0px !important;
+  overflow: hidden;
+}
+
+.mat-dialog-title{
+  margin: 0px !important;
+}
+
+.mat-dialog-content {
+  margin: 0 auto !important;
+}
+
+.mat-dialog-actions:last-child {
+  margin-bottom: 0px !important;
+}
+
+.mat-tab-body-wrapper {
+  padding: 10px;
+}
+
+.mat-tab-label-active{
+  color: $primary-color;;
+  opacity: 1 !important;
+  background-color: #eeeff8;
+}
+
+.mat-button-toggle-label {
+  width: inherit;
+  white-space: normal;
+}
+
+.mat-button-toggle-label-content{
+  width: inherit;
+  padding: 0 !important;
+  line-height: 1em !important;
+}
+
+.mat-button-toggle {
+  color: unset !important;
+}

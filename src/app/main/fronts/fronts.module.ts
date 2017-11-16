@@ -13,6 +13,8 @@ import {FrontContactPointsComponent} from "./front-details/front-contact-points/
 import {Route, RouterModule} from "@angular/router";
 import {CommunicationModule} from "../communication/communication.module";
 import {SharedModule} from "../../shared/shared.module";
+import {ActivityFilterComponent} from "../../shared/components/activity-filter/activity-filter.component";
+import {CustomMaterialModule} from "./custom-material.module";
 
 const routes: Route[] = [
   {
@@ -20,7 +22,7 @@ const routes: Route[] = [
     component: FrontsSearchComponent
   },
   {
-    path: ":id",
+    path: "profile/:id",
     component: FrontDetailsComponent,
     children: [
       {
@@ -33,11 +35,11 @@ const routes: Route[] = [
         component: FrontActivityComponent
       },
       {
-        path: "fs_store",
+        path: "store",
         component: FrontStoreSearchComponent
       },
       {
-        path: "fs_store/:id",
+        path: "store/:id",
         component: FrontProductDetailsComponent
       },
       {
@@ -61,10 +63,21 @@ const routes: Route[] = [
     SharedModule,
     RouterModule.forChild(routes),
     CommunicationModule,
+    CustomMaterialModule
   ],
-  declarations: [FrontsSearchComponent, FrontDetailsComponent, FeedCardComponent, ConnectDialogComponent, FrontActivityComponent
-    , AboutFrontComponent, FrontTransactionsComponent, FrontStoreSearchComponent,
-    FrontProductDetailsComponent, FrontContactPointsComponent],
+  declarations: [
+    FrontsSearchComponent,
+    FrontDetailsComponent,
+    FeedCardComponent,
+    ConnectDialogComponent,
+    FrontActivityComponent,
+    AboutFrontComponent,
+    FrontTransactionsComponent,
+    FrontStoreSearchComponent,
+    FrontProductDetailsComponent,
+    FrontContactPointsComponent,
+    ActivityFilterComponent
+  ],
   entryComponents: [
     ConnectDialogComponent
   ]

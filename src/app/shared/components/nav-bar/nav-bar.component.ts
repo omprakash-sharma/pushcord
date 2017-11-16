@@ -4,7 +4,7 @@ import { DataSharingService } from '../../../main/store/services/data-sharing.se
 @Component({
   selector: "nav-bar",
   templateUrl: "./nav-bar.component.html",
-  styleUrls: ["./nav-bar.component.css"],
+  styleUrls: ["./nav-bar.component.scss"],
   providers:[]
 })
 export class NavBarComponent implements OnInit {

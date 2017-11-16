@@ -1,0 +1,629 @@
+@mixin pc-view {
+  background: url("/assets/images/base/pc-view.svg");
+}
+
+@mixin pc-view-selected {
+  background: url("/assets/images/base/pc-view-selected.svg");
+}
+
+@mixin pc-chat {
+  background: url(/assets/images/base/pc-chat.svg);
+}
+
+@mixin pc-chat-selected {
+  background: url(/assets/images/base/pc-chat-selected.svg);
+}
+
+@mixin pc-chat-noti {
+  background: url(/assets/images/base/pc-chat-noti.svg);
+}
+
+@mixin pc-shopping-bag {
+  background: url("/assets/images/base/pc-shopping-bag.svg");
+}
+
+@mixin pc-shopping-bag-selected {
+  background: url("/assets/images/base/pc-shopping-bag-selectedsvg");
+}
+
+@mixin pc-close-red {
+  background: url("/assets/images/base/pc-close-red.svg");
+}
+
+@mixin pc-push {
+  background: url("/assets/images/base/pc-push.svg");
+}
+
+@mixin pc-notification {
+  background: url(/assets/images/base/pc-notification.svg);
+}
+
+@mixin pc-notification-selected {
+  background: url(/assets/images/base/pc-notification-selected.svg);
+}
+
+@mixin pc-notification-noti {
+  background: url(/assets/images/base/pc-notification-noti.svg);
+}
+
+@mixin pc-discuss {
+  background: url(/assets/images/base/pc-discuss.svg);
+}
+
+@mixin pc-discuss-selected {
+  background: url(/assets/images/base/pc-discuss-selected.svg);
+}
+
+@mixin pc-share-alt {
+  background: url(/assets/images/base/pc-share-alt.svg);
+}
+
+@mixin pc-share-alt-selected {
+  background: url(/assets/images/base/pc-share-alt-selected.svg);
+}
+
+@mixin pc-email {
+  background: url(/assets/images/base/pc-email.svg);
+}
+
+@mixin pc-email-selected {
+  background: url(/assets/images/base/pc-email-selected.svg);
+}
+
+@mixin pc-email-noti {
+  background: url(/assets/images/base/pc-email-noti.svg);
+}
+
+@mixin pc-phone {
+  background: url(/assets/images/base/pc-phone.svg);
+}
+
+@mixin pc-phone-selected {
+  background: url(/assets/images/base/pc-phone-selected.svg);
+}
+
+@mixin pc-phone-noti {
+  background: url(/assets/images/base/pc-phone-noti.svg);
+}
+
+@mixin pc-meeting {
+  background: url(/assets/images/base/pc-meeting.svg);
+}
+
+@mixin pc-meeting-selected {
+  background: url(/assets/images/base/pc-meeting-selected.svg);
+}
+
+@mixin pc-meeting-noti {
+  background: url(/assets/images/base/pc-meeting-noti.svg);
+}
+
+@mixin pc-endorse {
+  background: url(/assets/images/base/pc-endorse.svg);
+}
+
+@mixin pc-endorse-selected {
+  background: url(/assets/images/base/pc-endorse-selected.svg);
+}
+
+@mixin pc-mark {
+  background: url(/assets/images/base/pc-mark.svg);
+}
+
+@mixin pc-mark-selected {
+  background: url(/assets/images/base/pc-mark-selected.svg);
+}
+
+@mixin pc-menu-options {
+  background: url(/assets/images/base/pc-menu-options.svg);
+}
+
+@mixin pc-menu-options-selected {
+  background: url(/assets/images/base/pc-menu-options-selected.svg);
+}
+
+@mixin pc-compare {
+  background: url("/assets/images/base/pc-compare.svg");
+}
+
+@mixin pc-compare-selected {
+  background: url("/assets/images/base/pc-compare-selected.svg");
+}
+
+@mixin pc-new-role {
+  background: url("/assets/images/base/pc-new-role.svg");
+}
+
+@mixin pc-actions {
+  background: url("/assets/images/base/pc-actions.svg");
+}
+
+@mixin pc-actions-selected {
+  background: url("/assets/images/base/pc-actions-selected.svg");
+}
+
+@mixin pc-corporate {
+  background: url("/assets/images/base/pc-corporate.svg");
+}
+
+@mixin pc-corporate-selected {
+  background: url("/assets/images/base/pc-corporate-selected.svg");
+}
+
+@mixin pc-individual {
+  background: url("/assets/images/base/pc-individual.svg");
+}
+
+@mixin pc-individual-selected {
+  background: url("/assets/images/base/pc-individual-selected.svg");
+}
+
+@mixin pc-recent {
+  background: url("/assets/images/base/pc-recent.png");
+}
+
+@mixin pc-recent-selected {
+  background: url("/assets/images/base/pc-recent-selected.png");
+}
+
+@mixin pc-abort-task {
+  background: url("/assets/images/base/pc-abort-task.svg");
+}
+
+@mixin pc-unaborted-task {
+  background: url("/assets/images/base/pc-unaborted-task.svg");
+}
+
+@mixin pc-group {
+  background: url("/assets/images/base/pc-group.svg");
+}
+
+@mixin pc-action-request {
+  background: url("/assets/images/base/pc-action-request.svg");
+}
+
+@mixin pc-cancellation {
+  background: url("/assets/images/base/pc-cancellation.svg");
+}
+
+@mixin pc-completed {
+  background: url("/assets/images/base/pc-completed.svg");
+}
+
+@mixin pc-endorsement {
+  background: url("/assets/images/base/pc-endorsement.svg");
+}
+
+@mixin pc-escalated {
+  background: url("/assets/images/base/pc-escalated.svg");
+}
+
+@mixin pc-escalation {
+  background: url("/assets/images/base/pc-escalation.svg");
+}
+
+@mixin pc-extension {
+  background: url("/assets/images/base/pc-new-application.svg");
+}
+
+@mixin pc-new-application {
+  background: url("/assets/images/base/pc-group.svg");
+}
+
+@mixin pc-new-service {
+  background: url("/assets/images/base/pc-new-service.svg");
+}
+
+@mixin pc-open {
+  background: url("/assets/images/base/pc-open.svg");
+}
+
+@mixin pc-recieved {
+  background: url("/assets/images/base/pc-recieved.svg");
+}
+
+@mixin pc-renew {
+  background: url("/assets/images/base/pc-renew.svg");
+}
+
+@mixin pc-report-problem {
+  background: url("/assets/images/base/pc-report-problem.svg");
+}
+
+@mixin pc-sent {
+  background: url("/assets/images/base/pc-sent.svg");
+}
+
+@mixin pc-waiting {
+  background: url("/assets/images/base/pc-waiting.svg");
+}
+
+@mixin pc-working {
+  background: url("/assets/images/base/pc-working.svg");
+}
+
+@mixin pc-callback {
+  background: url("/assets/images/base/pc-callback.svg");
+}
+
+@mixin pc-call-disconnected {
+  background: url("/assets/images/base/pc-call-disconnected.svg");
+}
+
+@mixin pc-connection-green {
+  background: url("/assets/images/base/pc-connection-green.svg");
+}
+
+@mixin pc-connection-orange {
+  background: url("/assets/images/base/pc-connection-orange.svg");
+}
+
+@mixin pc-connection-red {
+  background: url("/assets/images/base/pc-connection-red.svg");
+}
+
+@mixin pc-download {
+  background: url("/assets/images/base/pc-download.svg");
+}
+
+@mixin pc-maximize {
+  background: url("/assets/images/base/pc-maximize.svg");
+}
+
+@mixin pc-new-project {
+  background: url("/assets/images/base/pc-new-project.svg");
+}
+
+@mixin pc-print {
+  background: url("/assets/images/base/pc-print.svg");
+}
+
+@mixin pc-rotate-left {
+  background: url("/assets/images/base/pc-rotate-left.svg");
+}
+
+@mixin pc-rotate-right {
+  background: url("/assets/images/base/pc-rotate-right.svg");
+}
+
+@mixin pc-tag-info {
+  background: url("/assets/images/base/pc-tag-info.svg");
+}
+
+@mixin pc-advance-search {
+  background: url("/assets/images/base/pc-advance-search.svg");
+}
+
+@mixin pc-agent {
+  background: url("/assets/images/base/pc-agent.svg");
+}
+
+@mixin pc-agent-selected {
+  background: url("/assets/images/base/pc-agent-selected.svg");
+}
+
+@mixin pc-alert-red {
+  background: url("/assets/images/base/pc-alert-red.svg");
+}
+
+@mixin pc-contact-point {
+  background: url("/assets/images/base/pc-contact-point.svg");
+}
+
+@mixin pc-contact-point-selected {
+  background: url("/assets/images/base/pc-contact-point-selected.svg");
+}
+
+@mixin pc-copy {
+  background: url("/assets/images/base/pc-copy.svg");
+}
+
+@mixin pc-edit {
+  background: url("/assets/images/base/pc-edit.svg");
+}
+
+@mixin pc-edit-selected {
+  background: url("/assets/images/base/pc-edit-selected.svg");
+}
+
+@mixin pc-group-add {
+  background: url("/assets/images/base/pc-group-add.svg");
+}
+
+@mixin pc-folder-view {
+  background: url("/assets/images/base/pc-folder-view.svg");
+}
+
+@mixin pc-folder-view-selected {
+  background: url("/assets/images/base/pc-folder-view-selected.svg");
+}
+
+@mixin pc-help {
+  background: url("/assets/images/base/pc-help.svg");
+}
+
+@mixin pc-image-space {
+  background: url("/assets/images/base/pc-image-space.svg");
+}
+
+@mixin pc-info {
+  background: url("/assets/images/base/pc-info.svg");
+}
+
+@mixin pc-info-selected {
+  background: url("/assets/images/base/pc-info-selected.svg");
+}
+
+@mixin pc-list-view {
+  background: url("/assets/images/base/pc-list-view.svg");
+}
+
+@mixin pc-list-view-selected {
+  background: url("/assets/images/base/pc-list-view-selected.svg");
+}
+
+@mixin pc-merge-document {
+  background: url("/assets/images/base/pc-merge-document.svg");
+}
+
+@mixin pc-mic {
+  background: url("/assets/images/base/pc-mic.svg");
+}
+
+@mixin pc-mic-selected {
+  background: url("/assets/images/base/pc-mic-selected.svg");
+}
+
+@mixin pc-move {
+  background: url("/assets/images/base/pc-move.svg");
+}
+
+@mixin pc-new {
+  background: url("/assets/images/base/pc-new.svg");
+}
+
+@mixin pc-new-selected {
+  background: url("/assets/images/base/pc-new-selected.svg");
+}
+
+@mixin pc-new-document {
+  background: url("/assets/images/base/pc-new-document.svg");
+}
+
+@mixin pc-employee {
+  background: url("/assets/images/base/pc-employee.svg");
+}
+
+@mixin pc-employee-selected {
+  background: url("/assets/images/base/pc-employee-selected.svg");
+}
+
+@mixin pc-phone-campaign {
+  background: url("/assets/images/base/pc-phone-campaign.svg");
+}
+
+@mixin pc-phone-campaign-selected {
+  background: url("/assets/images/base/pc-phone-campaign-selected.svg");
+}
+
+@mixin pc-principal {
+  background: url("/assets/images/base/pc-principal.svg");
+}
+
+@mixin pc-principal-selected {
+  background: url("/assets/images/base/pc-principal-selected.svg");
+}
+
+@mixin pc-progress {
+  background: url("/assets/images/base/pc-progress.svg");
+}
+
+@mixin pc-progress-selected {
+  background: url("/assets/images/base/pc-progress-selected.svg");
+}
+
+@mixin pc-read {
+  background: url("/assets/images/base/pc-read.svg");
+}
+
+@mixin pc-history {
+  background: url("/assets/images/base/pc-history.svg");
+}
+
+@mixin pc-scanner {
+  background: url("/assets/images/base/pc-scanner.svg");
+}
+
+@mixin pc-sms-campaign {
+  background: url("/assets/images/base/pc-sms-campaign.svg");
+}
+
+@mixin pc-sms-campaign-selected {
+  background: url("/assets/images/base/pc-sms-campaign-selected.svg");
+}
+
+@mixin pc-sub-agent {
+  background: url("/assets/images/base/pc-sub-agent.svg");
+}
+
+@mixin pc-sub-agent-selected {
+  background: url("/assets/images/base/pc-sub-agent-selected.svg");
+}
+
+@mixin pc-unread {
+  background: url("/assets/images/base/pc-unread.svg");
+}
+
+@mixin pc-filter {
+  background: url("/assets/images/base/pc-filter.svg");
+}
+
+@mixin pc-filter-selected {
+  background: url("/assets/images/base/pc-filter-selected.svg");
+}
+
+@mixin pc-new-appointment {
+  background: url("/assets/images/base/pc-new-appointment.svg");
+}
+
+@mixin pc-new-appointment-selected {
+  background: url("/assets/images/base/pc-new-appointment-selected.svg");
+}
+
+@mixin pc-new-meeting {
+  background: url("/assets/images/base/pc-new-meeting.svg");
+}
+
+@mixin pc-notes {
+  background: url("/assets/images/base/pc-notes.svg");
+}
+
+@mixin pc-notes-selected {
+  background: url("/assets/images/base/pc-notes-selected.svg");
+}
+
+@mixin pc-email-forward {
+  background: url("/assets/images/base/pc-email-forward.svg");
+}
+
+@mixin pc-email-reply {
+  background: url("/assets/images/base/pc-email-reply.svg");
+}
+
+@mixin pc-email-reply-all {
+  background: url("/assets/images/base/pc-email-reply-all.svg");
+}
+
+@mixin pc-email-draft {
+  background: url("/assets/images/base/pc-email-draft.svg");
+}
+
+@mixin pc-email-select {
+  background: url("/assets/images/base/pc-email-select.svg");
+}
+
+@mixin pc-refresh {
+  background: url("/assets/images/base/pc-refresh.svg");
+}
+
+@mixin pc-reminder {
+  background: url("/assets/images/base/pc-reminder.svg");
+}
+
+@mixin pc-zoom-out {
+  background: url("/assets/images/base/pc-zoom-out.svg");
+}
+
+@mixin pc-zoom-in {
+  background: url("/assets/images/base/pc-zoom-in.svg");
+}
+
+@mixin pc-tick {
+  background: url("/assets/images/base/pc-tick.svg");
+}
+
+@mixin pc-image-cross {
+  background: url("/assets/images/base/pc-image-cross.svg");
+}
+
+@mixin pc-display {
+  background: url("/assets/images/base/pc-display.svg");
+}
+
+@mixin pc-display-selected {
+  background: url("/assets/images/base/pc-display-selected.svg");
+}
+
+@mixin pc-more {
+  background: url("/assets/images/base/pc-more.svg");
+}
+
+@mixin pc-more-selected {
+  background: url("/assets/images/base/pc-more-selected.svg");
+}
+
+@mixin pc-rotate {
+  background: url("/assets/images/base/pc-rotate.svg");
+}
+
+@mixin pc-file-pdf {
+  background: url("/assets/images/base/pc-file-pdf.svg");
+}
+
+@mixin pc-file-doc {
+  background: url("/assets/images/base/pc-file-doc.svg");
+}
+
+@mixin pc-file-html {
+  background: url("/assets/images/base/pc-file-html.svg");
+}
+
+@mixin pc-file-jpg {
+  background: url("/assets/images/base/pc-file-jpg.svg");
+}
+
+@mixin pc-file-png {
+  background: url("/assets/images/base/pc-file-png.svg");
+}
+
+@mixin pc-file-ppt {
+  background: url("/assets/images/base/pc-file-ppt.svg");
+}
+
+@mixin pc-file-rar {
+  background: url("/assets/images/base/pc-file-rar.svg");
+}
+
+@mixin pc-file-txt {
+  background: url("/assets/images/base/pc-file-txt.svg");
+}
+
+@mixin pc-file-zip {
+  background: url("/assets/images/base/pc-file-zip.svg");
+}
+
+@mixin pc-email-read {
+  background: url("/assets/images/base/pc-email-read.svg");
+}
+
+@mixin pc-flag {
+  background: url("/assets/images/base/pc-flag.svg");
+}
+
+@mixin pc-new-line {
+  background: url("/assets/images/base/pc-new-line.svg");
+}
+
+@mixin pc-new-line-selected {
+  background: url("/assets/images/base/pc-new-line-selected.svg");
+}
+
+@mixin pc-not-visible {
+  background: url("/assets/images/base/pc-not-visible.svg");
+}
+
+@mixin pc-calendar {
+  background: url("/assets/images/base/pc-calendar.svg");
+}
+
+@mixin pc-calendar-day {
+  background: url("/assets/images/base/pc-calendar-day.svg");
+}
+
+@mixin pc-calendar-selected {
+  background: url("/assets/images/base/pc-calendar-selected.svg");
+}
+
+@mixin pc-dialpad {
+  background: url("/assets/images/base/pc-dialpad.svg");
+}
+
+@mixin pc-delete {
+  background: url("/assets/images/base/pc-delete.svg");
+}
+
+@mixin pc-file-excel {
+  background: url("/assets/images/base/pc-file-excel.gif");
+}
+
+

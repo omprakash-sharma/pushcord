@@ -1,15 +1,15 @@
 <div class="communiction-sheet" [ngClass]="{'shrink-mode':shrinkWidget, 'initial-state': (openSheet == undefined), 'close-sheet-animate':(openSheet == false), 'open-sheet-animate': openSheet}"
      ngDraggable [bounds]="bounadryElement" [handle]="draggableHandle">
-  <div class="communication-header flex-box" #draggableHandle>
-    <div class="flex-box">
-      <div class="img-thumbnail"
+  <div class="communication-header _flex-box" #draggableHandle>
+    <div class="_flex-box">
+      <div class="_img-thumbnail"
            [ngStyle]="{'background':'url(/assets/images/placeholders/front-detail-img.jpg)'}"></div>
-      <div class="flex-box ml-10 flex-column-direction communication-party">
+      <div class="_flex-box _ml-10 _flex-column-direction communication-party">
         <div class="title">Omega Insurance Brokers</div>
-        <div class="domain light-text">Insurance Brokers</div>
+        <div class="domain _light-text">Insurance Brokers</div>
       </div>
     </div>
-    <div class="header-action-area flex-box ml-auto">
+    <div class="header-action-area _flex-box _ml-auto">
       <button mat-icon-button>
         <mat-icon>more_vert</mat-icon>
       </button>

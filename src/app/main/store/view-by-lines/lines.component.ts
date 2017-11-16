@@ -7,7 +7,7 @@ import { DataSharingService } from '../services/data-sharing.service';
 @Component({
   selector: 'lines',
   templateUrl: './lines.component.html',
-  styleUrls: ['./lines.component.css'],
+  styleUrls: ['./lines.component.scss'],
   providers:[LineCategoryService]
 })
 export class LinesComponent implements OnInit,OnDestroy {

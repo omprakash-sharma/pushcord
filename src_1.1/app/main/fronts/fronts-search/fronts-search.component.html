@@ -1,0 +1,75 @@
+<mat-expansion-panel hideToggle="true">
+  <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px" class="filter-accodian">
+    <mat-panel-title class="flex-box">
+      <img src="/assets/images/filter-icon.svg" style="height: 30px"/> Filters
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <div class="flex-box justify-content-center"><span>No filters!</span></div>
+</mat-expansion-panel>
+
+<div class="feed-section">
+  <div class="side-nav-container pt-15">
+    <ul class="feed-side-nav" [class.sticky-side-nav]="sideNavFixed">
+      <li class="flex-box active-feed light-text"><span class="svg-icon show-all-icon side-nav-icon"></span> Show All (10)</li>
+      <li class="flex-box light-text"><span class="svg-icon companies-icon side-nav-icon"></span> Companies (4)</li>
+      <li class="flex-box light-text"><span class="svg-icon individual-icon side-nav-icon"></span> Individuals (4)</li>
+    </ul>
+    <ul class="feed-side-nav mt-15">
+      <li class="flex-box light-text"><span class="svg-icon requests-icon side-nav-icon"></span> Requests (2)</li>
+      <li class="flex-box light-text"><span class="svg-icon recent-connection-icon side-nav-icon"></span> Recent Connections</li>
+    </ul>
+    <ul class="feed-side-nav mt-15">
+      <li class="flex-box light-text"><span class="svg-icon marked-icon side-nav-icon"></span> Marked</li>
+      <li class="flex-box light-text"><span class="svg-icon blocked-icon side-nav-icon"></span> Blocked</li>
+    </ul>
+    <ul class="feed-side-nav mt-15">
+      <li class="flex-box light-text"><span class="svg-icon groups-icon side-nav-icon"></span> Groups</li>
+    </ul>
+  </div>
+  <div class="feed-container flex-column-direction">
+    <mat-card class="flex-box search-box-card">
+      <img src="/assets/images/search-icon.svg">
+      <mat-form-field class="custom-mat-input border-less-mat-input inline-label">
+        <input type="text" placeholder="Search fronts" matInput>
+      </mat-form-field>
+      <mat-autocomplete>
+        <mat-option>
+        </mat-option>
+      </mat-autocomplete>
+    </mat-card>
+
+    <div class="search-results-container mt-15" *ngFor="let resultType of searchResults">
+      <div class="result-type">{{resultType.type}} ({{resultType.list.length}})</div>
+      <div class="results-box">
+        <mat-card class="result-card" [ngClass]="{'request-card':resultType.requests}"
+                  [routerLink]="['/main/fronts/'+i]" *ngFor="let result of resultType.list; let i=index">
+          <div class="result-data flex-box">
+            <div class="img-thumbnail" [ngStyle]="{'background':'url('+ result.img +')'}"></div>
+            <div class="result-details">
+              <div>
+                <div class="result-name ellipse-text-overflow">{{result.name}}</div>
+                <div class="result-domain ellipse-text-overflow">{{result.domain}}</div>
+              </div>
+              <div *ngIf="!resultType.requests">
+                <div class="other-result-detail flex-box light-text"><span class="svg-icon customer-icon"></span>Customer
+                </div>
+                <div class="other-result-detail flex-box light-text"><span class="svg-icon transaction-icon"></span>{{result.transactions}}
+                </div>
+              </div>
+            </div>
+            <button class="ml-auto" mat-icon-button type="button"><i class="material-icons">more_vert</i></button>
+          </div>
+          <div class="request-actions p-10" *ngIf="resultType.requests" (click)="disablePropagation($event)">
+            <div class="request-actions-msg light-text">Requested to connect as your <a class="theme-link">{{result.requestType}}</a>,
+              do you wish to allow?
+            </div>
+            <div class="flex-box justify-content-center mt-10">
+              <button mat-button class="black-btn-o light-text" style="font-weight: 400" type="button">Ignore</button>
+              <button mat-button class="mat-btn-success" type="button">Connect</button>
+            </div>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

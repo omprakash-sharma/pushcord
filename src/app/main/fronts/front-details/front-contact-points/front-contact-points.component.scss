@@ -1,0 +1,40 @@
+@import "~assets/css/variables";
+
+.contact-box{
+  width: 33%;
+  padding: 5px;
+}
+
+.contact-card{
+  padding: 0px !important;
+  outline: none;
+}
+
+.contact-card:hover {
+  background-color: #f7f7f7;
+  cursor: pointer;
+}
+
+.contact-card:hover .contact-name {
+  color: $primary-color;
+}
+
+.contact-details{
+  padding: 0px 5px;
+  width: calc(100% - 80px);
+}
+
+.contact-data{
+  padding: 10px 0px 10px 10px;
+}
+
+.contact-name{
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.contact-domain{
+  font-weight: 400;
+  color: $light-black-color;
+  font-size: 11px;
+}
