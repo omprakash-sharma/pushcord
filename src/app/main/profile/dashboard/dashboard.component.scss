@@ -1,0 +1,86 @@
+@import "~assets/css/variables";
+@import "~assets/css/svg-icons";
+
+.profile-heading{
+  font-size: 20px;
+  color: #474747;
+}
+
+.profile-cover{
+  height: 158px;
+}
+
+.search-form-submit-btn {
+  min-width: 40px;
+  line-height: 1px;
+  height: 33px;
+  margin-left: -1px;
+  padding: 0px;
+}
+
+.search-form-submit-btn img {
+  height: 25px;
+  width: 25px;
+}
+
+.search-form{
+  width: 100%;
+}
+
+.dashboard-action{
+  line-height: 32px !important;
+  padding: 0px 12px !important;
+}
+
+.dashboard-action-text-color{
+  color: #3cb53c !important;
+}
+
+.dashboard-links-button{
+  width: 100%;
+  color: $light-black-color;
+  text-align: left !important;
+  line-height: 32px;
+}
+
+.dashboard-links-button:disabled{
+  background-color: #F8F9F9;
+}
+
+.close-icon{
+  @include pc-image-cross;
+  width: 18px;
+  height: 18px;
+}
+
+.dashboard-links{
+  max-width: 100%;
+}
+
+.flex_child{
+  margin-bottom: 10px;
+}
+
+.search-icon {
+  @include pc-search;
+}
+
+.dashboard-links-container{
+  margin: 5px;
+  display: inline-block;
+  width: calc(25% - 7.5px);
+  float: left;
+}
+
+.dashboard-links-container:first-child{
+  margin-left: 0px;
+}
+
+.dashboard-links-container:last-child{
+  margin-right: 0px;
+}
+
+.links-container-heading{
+  background-color: #ebf0f5;
+}
+

@@ -1,0 +1,195 @@
+<div class="nav-bar-container">
+  <div class="site-nav-links _flex-box _justify-content-center">
+    <div class="_flex-box">
+      <div>Pushcord &copy; 2009 - 2017 &nbsp; | &nbsp; All rights reserved</div>
+      <div class="_ml-auto site-links">
+        <a>Start Selling</a>
+        <a>Advertise</a>
+        <a>Downloadables</a>
+        <a>Help</a>
+      </div>
+    </div>
+  </div>
+  <div class="app-nav-bar">
+    <mat-grid-list cols="64" rowHeight="60px">
+      <mat-grid-tile colspan="19" rowspan="1">
+        <mat-card class="logo-link-card _flex-box">
+          <a class="logo-link">
+          </a>
+          <form class="search-form _flex-box">
+            <mat-form-field class="_custom-mat-input _input-search _inline-label">
+              <input type="text" name="searchInput" placeholder="Search pushcord here..." matInput
+                     [(ngModel)]="searchInput">
+            </mat-form-field>
+            <!--<mat-autocomplete #navBarSearch="matAutocomplete">-->
+            <!--<mat-option>-->
+            <!--</mat-option>-->
+            <!--</mat-autocomplete>-->
+
+
+            <button type="button" class="black-btn-o search-form-submit-btn" mat-button>
+              <img src="/assets/images/search-icon.svg"/>
+            </button>
+          </form>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="28" rowspan="1">
+        <mat-card class="app-nav-card">
+          <ul class="_flex-box _p-0 _justify-content-space-around">
+            <li class="_flex-box _justify-content-center" [routerLink]="['/main/home']" routerLinkActive="active-link">
+              <div class="_flex-box _flex-column-direction">
+                <i class="material-icons">home</i>
+                <span>Home</span>
+              </div>
+            </li>
+            <li class="_flex-box _justify-content-center" [routerLink]="['/main/fronts']" routerLinkActive="active-link">
+              <div class="_flex-box _flex-column-direction">
+                <i class="material-icons">business</i>
+                <span>Fronts</span>
+              </div>
+            </li>
+            <li class="_flex-box _justify-content-center">
+              <div class="_flex-box _flex-column-direction">
+                <i class="material-icons">power</i>
+                <span>Cords</span>
+              </div>
+            </li>
+            <li class="_flex-box _justify-content-center">
+              <div class="_flex-box _flex-column-direction">
+                <i class="material-icons">content_paste</i>
+                <span>Tasks</span>
+              </div>
+            </li>
+            <li class="_flex-box _justify-content-center">
+              <div class="_flex-box _flex-column-direction">
+                <i class="material-icons">chat_bubble_outline</i>
+                <span>Exchange</span>
+              </div>
+            </li>
+            <li class="_flex-box _justify-content-center">
+              <div class="_flex-box _flex-column-direction">
+                <i class="material-icons">library_books</i>
+                <span>Line</span>
+              </div>
+            </li>
+            <li class="_flex-box _justify-content-center" [routerLink]="['/main/store']" routerLinkActive="active-link">
+              <div class="_flex-box _flex-column-direction">
+                <i class="material-icons">store</i>
+                <span>Store</span>
+              </div>
+            </li>
+          </ul>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="8" rowspan="1" style="overflow: visible">
+        <mat-card class="cart-card">
+          <a class="cart-link _flex-box _justify-content-space-around" ngDropDown [dropDown]="cartDropDown" [toggleClass]="'expanded'" [toggleDropdownClass]="'show-dropdown'">
+            <span class="_svg-icon cart-icon"></span>
+            <div class="cart-item-text">
+              <span *ngIf="allSelectedStoreProducts.length" [innerText]="allSelectedStoreProducts.length"></span>
+            </div>
+          </a>
+          <div #cartDropDown class="navbar-dropdown cart-dropdown _p-10 _pt-20">
+            <div class="_display-block">
+              <div class="cart-item-summary _flex-box">
+                <div class="cart-items-count">01</div>
+                <div>
+                  <div style="line-height: 1.5em">x9a3fv21fw</div>
+                  <div class="_light-text cart-item-id">100234-476-01</div>
+                </div>
+                <div class="_flex-box _ml-auto">
+                  <button type="button" mat-icon-button>
+                    <span class="_svg-icon push-icon"></span>
+                  </button>
+                  <button type="button" mat-icon-button>
+                    <span class="_svg-icon view-icon"></span>
+                  </button>
+                  <button type="button" mat-icon-button>
+                    <mat-icon>more_vert</mat-icon>
+                  </button>
+                </div>
+              </div>
+              <div class="cart-details _p-10">
+                <div class="_p-10">
+                  <div class="_flex-box _pb-10" style="border-bottom: 1px solid rgba(0,0,0,0.1)">
+                    <div class="_img-thumbnail"
+                         [ngStyle]="{'background':'url(/assets/images/placeholders/store-product.jpg)'}"></div>
+                    <div class="cart-item-product">
+                      <div class="_fw-500 _ellipse-text-overflow cart-item-product-name">P-Series P2540UA-AB51</div>
+                      <div class="_fw-300 _ellipse-text-overflow">by <span class="_fw-500">Acer Inc.</span></div>
+                    </div>
+                  </div>
+                  <div class="_flex-box _pt-10">
+                    <div class="_img-thumbnail"
+                         [ngStyle]="{'background':'url(/assets/images/placeholders/front-detail-img.jpg)'}"></div>
+                    <div class="cart-item-front">
+                      <div class="_ellipse-text-overflow">Maplin Electronics</div>
+                      <div class="_fw-300 _ellipse-text-overflow cart-item-product-price">Price <span class="_fw-500">AED 1,249.00</span> (Tax Inclusive)</div>
+                    </div>
+                    <button type="button" mat-icon-button>
+                      <span class="_svg-icon close-icon"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="4" rowspan="1" style="overflow: visible">
+        <mat-card class="notification-card _flex-box _justify-content-center">
+          <a class="notification-link" ngDropDown [dropDown]="notificationDropDown" [toggleClass]="'expanded'" [toggleDropdownClass]="'show-dropdown'"
+             [ngClass]="{'noti':true}">
+          </a>
+          <div #notificationDropDown class="navbar-dropdown notifications-dropdown">
+            <div class="_flex-box notifications-header">
+              <a href="" class="_black-link">Mark all read</a>
+              <button mat-icon-button class="_ml-auto notifications-settings"><i class="material-icons _light-text">settings</i>
+              </button>
+            </div>
+            <div class="notifications-list">
+              <div class="notification-box _flex-box">
+                <div class="notification-details _flex-box">
+                  <div class="_img-thumbnail"
+                       [ngStyle]="{'background':'url(https://media.npr.org/about/people/bios/biophotos/snelson_sq-2767caa78582a137346c4cd0281656a4872fa37d-s100-c85.jpg)'}"></div>
+                  <div class="notifications-text _flex-box">
+                    <div>
+                      <div><b>Satya</b> is calling you</div>
+                      <div>Just now</div>
+                    </div>
+                    <div class="_ml-auto">
+                      <button class="notification-action-btn _green-text" type="button" mat-icon-button><i
+                        class="material-icons">call</i></button>
+                      <button class="notification-action-btn _green-text" type="button" mat-icon-button><i
+                        class="material-icons">call_end</i></button>
+                    </div>
+                  </div>
+                </div>
+                <button class="_ml-auto" mat-icon-button type="button"><i class="material-icons">more_vert</i></button>
+              </div>
+            </div>
+            <div class="notifications-footer">View all</div>
+            <div class="notifications-body"></div>
+          </div>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="5" rowspan="1">
+        <mat-card class="_flex-box">
+          <div class="user-profile-link _flex-box _justify-content-center" [routerLink]="['/main/profile']">
+            <img src="/assets/images/default-user.jpg"/>
+          </div>
+          <button mat-icon-button style="width: 24px;">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu>
+            <button mat-menu-item>
+              Logout
+            </button>
+          </mat-menu>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>
+
+

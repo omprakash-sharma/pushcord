@@ -1,0 +1,74 @@
+<mat-card>
+  <form [formGroup]="registerForm" (submit)="register(registerForm.value)" novalidate>
+    <div class="form-sub-section form-head">
+      Welcome to Pushcord
+      <h1>ACCOUNT SETUP</h1>
+      <div class="_form-inline-group">
+        <mat-radio-group class="_mt-20" name="AccountType" formControlName="userType"
+                         (change)="manageBusinessFileds(registerForm.get('userType').value)">
+          <mat-radio-button value="INDIVIDUAL">Individual</mat-radio-button>
+          <mat-radio-button value="BUSINESS">Business</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class="_form-inline-group user-names-group _mt-20">
+        <mat-form-field class="custom-mat-input">
+          <input matInput type="text" placeholder="First name" formControlName="firstName">
+        </mat-form-field>
+        <mat-form-field class="custom-mat-input">
+          <input matInput type="text" placeholder="Middle name" formControlName="middleName">
+        </mat-form-field>
+        <mat-form-field class="custom-mat-input">
+          <input matInput type="text" placeholder="Last name" formControlName="lastName">
+        </mat-form-field>
+      </div>
+      <div class="_form-inline-group _mt-20">
+        <mat-form-field class="custom-mat-input input-mat">
+          <input matInput type="email" placeholder="Email address" formControlName="email">
+        </mat-form-field>
+      </div>
+      <div class="_form-inline-group _mt-10">
+        <mat-form-field>
+          <mat-select class="select-input" placeholder="Business origin" name="BusinessOrigin"
+                      formControlName="busniessOrigin">
+            <mat-option>
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="custom-mat-input input-mat">
+          <input matInput type="email" placeholder="Email address" formControlName="busniessEmail">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="form-sub-section">
+      <div class="_form-inline-group _mt-10" *ngIf="registerForm.get('userType').value === 'BUSINESS'">
+        <mat-form-field class="custom-mat-input">
+          <input matInput type="text" placeholder="Business name" formControlName="busniessName">
+        </mat-form-field>
+        <mat-form-field class="custom-mat-input input-mat">
+          <input matInput type="text" placeholder="Business website" formControlName="busniessWebsite">
+        </mat-form-field>
+        <mat-form-field>
+        <mat-select class="select-input" placeholder="Your designation" name="BusinessOrigin"
+                    formControlName="userDesignation">
+          <mat-option value="Customer">Customer</mat-option>
+        </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="_form-inline-group _mt-20">
+        <mat-form-field class="custom-mat-input">
+          <input matInput type="password" placeholder="Password" formControlName="password">
+        </mat-form-field>
+        <mat-form-field class="custom-mat-input">
+          <input matInput type="password" placeholder="Retype Password" formControlName="confirmPassword">
+        </mat-form-field>
+        <div class="_form-inline-group _mt-10" style="font-size: 12px">The password must atleast be 8 characters long, It
+          must include 1 numeric character.
+        </div>
+      </div>
+    </div>
+    <div class="form-sub-section _flex-box" style="justify-content: center">
+      <button type="reset" [routerLink]="['/']" class="black-btn-o register-form-btn" mat-button>CANCEL</button>
+      <button type="submit" class="bordered-material-btn register-form-btn" mat-button>CREATE ACCOUNT</button>
+    </div>
+  </form>
+</mat-card>

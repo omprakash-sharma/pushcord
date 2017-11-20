@@ -1,0 +1,120 @@
+<mat-expansion-panel class="_mt-10">
+  <mat-expansion-panel-header collapsedHeight="auto" expandedHeight="auto" class="filter-accodian" style="padding-top: 10px !important; padding-bottom: 10px !important;">
+    <mat-panel-title class="_flex-box">
+      <img src="/assets/images/filter-icon.svg" style="height: 30px"/> Filters
+      <div>
+        <button class="selected-filter-item" type="button" *ngFor="let filter of selectedFilters"
+                (click)="removeFilter(filter.name, $event)">{{filter.name}} <span class="remove-filter-icon">X</span>
+        </button>
+        <button class="clear-selected-filters" type="button" *ngIf="selectedFilters.length"
+                (click)="removeAllFilters($event)">Clear all
+        </button>
+      </div>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <div class="_display-block _p-10">
+    <div class="_flex-box">
+      <mat-form-field class="_custom-mat-input _input-search _inline-label filter-search-box">
+        <input type="text" name="filterInput" #filterInput (change)="onSearch(filterInput.value)" placeholder="Search listings here..." matInput>
+      </mat-form-field>
+      <button mat-icon-button class="action-icon _ml-auto">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </div>
+    <table>
+      <thead>
+      <tr>
+        <th class="filter-type">Feed</th>
+        <th class="filter-type">Activity</th>
+        <th class="filter-type">Cords</th>
+        <th class="filter-type">Exchange</th>
+        <th class="filter-type">Lines</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>
+          <mat-button-toggle class="filter-item" #DiscussFilter [checked]="filtersList.discuss"
+                             (change)="updateSelection('discuss',DiscussFilter.checked)">
+            <span class="_svg-icon discuss-icon"></span>
+            <span class="filter-item-text">Discuss</span>
+          </mat-button-toggle>
+          <mat-button-toggle class="filter-item" #UpdatesFilter [checked]="filtersList.updates"
+                             (change)="updateSelection('updates',UpdatesFilter.checked)">
+            <span class="_svg-icon updates-icon"></span>
+            <span class="filter-item-text">Updates</span>
+          </mat-button-toggle>
+        </td>
+        <td>
+          <mat-button-toggle class="filter-item" #TasksFilter [checked]="filtersList.tasks"
+                             (change)="updateSelection('tasks',TasksFilter.checked)">
+            <span class="_svg-icon tasks-icon"></span>
+            <span class="filter-item-text">Tasks</span>
+          </mat-button-toggle>
+          <mat-button-toggle class="filter-item" #SharesFilter [checked]="filtersList.shares"
+                             (change)="updateSelection('shares',SharesFilter.checked)">
+            <span class="_svg-icon shares-icon"></span>
+            <span class="filter-item-text">Shares</span>
+          </mat-button-toggle>
+        </td>
+        <td>
+          <mat-button-toggle class="filter-item" #RelationFilter [checked]="filtersList.relation"
+                             (change)="updateSelection('relation',RelationFilter.checked)">
+            <span class="_svg-icon tasks-icon"></span>
+            <span class="filter-item-text">Relation</span>
+          </mat-button-toggle>
+          <mat-button-toggle class="filter-item" #TransactionFilter [checked]="filtersList.transaction"
+                             (change)="updateSelection('transaction',TransactionFilter.checked)">
+            <span class="_svg-icon updates-icon"></span>
+            <span class="filter-item-text">Transaction</span>
+          </mat-button-toggle>
+          <mat-button-toggle class="filter-item" #UnitsFilter [checked]="filtersList.units"
+                             (change)="updateSelection('units',UnitsFilter.checked)">
+            <span class="_svg-icon updates-icon"></span>
+            <span class="filter-item-text">Units</span>
+          </mat-button-toggle>
+        </td>
+        <td>
+          <mat-button-toggle class="filter-item" #ChatFilter [checked]="filtersList.chat"
+                             (change)="updateSelection('chat',ChatFilter.checked)">
+            <span class="_svg-icon chat-icon new-notification"></span>
+            <span class="filter-item-text">Chat</span>
+          </mat-button-toggle>
+          <mat-button-toggle class="filter-item" #EmailFilter [checked]="filtersList.email"
+                             (change)="updateSelection('email',EmailFilter.checked)">
+            <span class="_svg-icon email-icon"></span>
+            <span class="filter-item-text">Email</span>
+          </mat-button-toggle>
+          <mat-button-toggle class="filter-item" #PhoneFilter [checked]="filtersList.phone"
+                             (change)="updateSelection('phone',PhoneFilter.checked)">
+            <span class="_svg-icon phone-icon"></span>
+            <span class="filter-item-text">Phone</span>
+          </mat-button-toggle>
+          <mat-button-toggle class="filter-item" #MeetingFilter [checked]="filtersList.meeting"
+                             (change)="updateSelection('meeting',MeetingFilter.checked)">
+            <span class="_svg-icon meeting-icon"></span>
+            <span class="filter-item-text">Meeting</span>
+          </mat-button-toggle>
+          <mat-button-toggle class="filter-item" #DocumentsFilter [checked]="filtersList.documents"
+                             (change)="updateSelection('documents',DocumentsFilter.checked)">
+            <span class="_svg-icon updates-icon"></span>
+            <span class="filter-item-text">Documents</span>
+          </mat-button-toggle>
+        </td>
+        <td>
+          <mat-button-toggle class="filter-item" #PromotionFilter [checked]="filtersList.promotion"
+                             (change)="updateSelection('promotion',PromotionFilter.checked)">
+            <span class="_svg-icon updates-icon"></span>
+            <span class="filter-item-text">Promotion</span>
+          </mat-button-toggle>
+          <mat-button-toggle class="filter-item" #DealsFilter [checked]="filtersList.deals"
+                             (change)="updateSelection('deals',DealsFilter.checked)">
+            <span class="_svg-icon updates-icon"></span>
+            <span class="filter-item-text">Deals</span>
+          </mat-button-toggle>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</mat-expansion-panel>

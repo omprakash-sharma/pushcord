@@ -22,7 +22,7 @@ export class FrontDetailsComponent implements OnInit {
      this.frontHeaderFixed = false;
     }
 
-     if (window.scrollY > 290) {
+     if (window.scrollY > 223) {
     this.sideNavFixed = true;
     } else {
      this.sideNavFixed = false;

@@ -1,5 +1,5 @@
 @import "~assets/css/variables";
-
+@import "~assets/css/svg-icons";
 .sticky-nav {
   z-index: 150;
   position: fixed;
@@ -11,7 +11,7 @@
   z-index: 150;
   position: fixed;
   width: 11.5vw;
-  top: 202px;
+  top: 269px;
 }
 
 .parent-main {
@@ -104,3 +104,33 @@
 
 }
 
+ul.actionbar {
+  height: 100%;
+  padding-left: 10px;
+  list-style-type: none;
+  margin: 0px;
+
+  li{
+    height: 100%;
+    width: 75px;
+    float: left;
+  }
+}
+
+.flex_actionbar{
+  background-color: #EDF1F6;
+  border-top: 1px solid #dce1e5;
+}
+
+.actionbar-text{
+  font-size: small;
+  margin-top: 4px;
+}
+
+.alarm-icon{
+  @include pc-chat;
+}
+
+.like-icon{
+  @include pc-endorse;
+}

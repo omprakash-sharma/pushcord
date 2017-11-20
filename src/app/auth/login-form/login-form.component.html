@@ -5,27 +5,27 @@
   </div>
   <form class="form-sub-section" [formGroup]="loginForm" (submit)="login(loginForm.value)">
     <div class="_form-inline-group _mt-10">
-      <mat-form-field class="custom-mat-input login-form-input">
+      <mat-form-field class="_custom-mat-input login-form-input">
         <input matInput type="email" placeholder="Enter email or phone number" formControlName="username">
       </mat-form-field>
     </div>
     <div class="_form-inline-group _mt-10">
-      <mat-form-field class="custom-mat-input login-form-input">
+      <mat-form-field class="_custom-mat-input login-form-input">
         <input matInput type="password" placeholder="Enter Password" formControlName="password">
       </mat-form-field>
     </div>
     <div class="_form-inline-group _flex-box">
-      <mat-checkbox class="example-margin" style="font-size: 14px">Remember me</mat-checkbox>
+      <mat-checkbox style="font-size: 14px">Remember me</mat-checkbox>
       <a [routerLink]="['/']" class="_black-link fp-link">Forgot password</a>
     </div>
     <div class="_form-inline-group" style="text-align: center">
-      <button type="submit" class="bordered-material-btn login-form-submit-btn" [disabled]="loginForm.invalid"  mat-button>LOG IN</button>
+      <button type="submit" class="_bordered-material-btn login-form-submit-btn" [disabled]="loginForm.invalid"  mat-button>LOG IN</button>
     </div>
   </form>
   <div class="form-sub-section">
     <div class="_form-inline-group _flex-box _justify-content-space-around">
-      <button type="submit" class="black-btn-o" mat-button>Login with Facebook</button>
-      <button type="submit" class="black-btn-o" mat-button>Login with Google</button>
+      <button type="submit" class="_black-btn-o" mat-button>Login with Facebook</button>
+      <button type="submit" class="_black-btn-o" mat-button>Login with Google</button>
     </div>
     <div class="_form-inline-group footer-text-box">
       Don't have an account? <a class="_theme-link" [routerLink]="['/register']">Register now!</a> It's really simple and you can start enjoying all the benefits!

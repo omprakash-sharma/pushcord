@@ -1,0 +1,33 @@
+<form class="_display-block dialog-form">
+  <div class="dialog-title _flex-box">
+    <h1 mat-dialog-title>Request for connection</h1>
+    <button class="custom-mat-input dialog-close-btn _light-text _ml-auto" (click)="closeDialog()" mat-button>
+      <i class="material-icons">close</i>
+    </button>
+  </div>
+  <div mat-dialog-content class="_flex-box _flex-column-direction _justify-content-center">
+    <mat-form-field class="connection-type-form-field">
+      <mat-select placeholder="Connection type" style="width: 250px">
+        <mat-option value="" disabled>Connection type</mat-option>
+        <mat-option value="Customer">Customer</mat-option>
+        <mat-option value="Agent">Agent</mat-option>
+        <mat-option value="Courier">Courier</mat-option>
+        <mat-option value="3rdParty">3rd Party</mat-option>
+        <mat-option value="Government">Government</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <p>Omega will retrieve the following info from front: <br> <b>Your primary front information.</b></p>
+    <a class="_theme-link">Edit the information that you wish to share</a>
+    <p class="form-footer-text">When you'll connect with Omega Insurance Brokers you will be able to connect with them
+      enabling the power to send and receive chat messages,
+      calls, documents, email, organize meetings, Plus you would be able to receive special offers, discounts and will
+      treated as privileged customers.</p>
+  </div>
+  <div mat-dialog-actions class="_flex-box _justify-content-center">
+    <button mat-button class="custom-mat-input black-btn-o" type="button" (click)="closeDialog()" tabindex="-1">Cancel
+    </button>
+    <button mat-button class="mat-btn-success" type="submit" [mat-dialog-close]="data.animal" tabindex="2">Allow &
+      Connect
+    </button>
+  </div>
+</form>

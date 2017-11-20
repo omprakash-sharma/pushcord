@@ -88,6 +88,10 @@ mat-card {
   width: 80%;
 }
 
+.search-icon {
+  @include pc-search;
+}
+
 ._input-search {
   min-width: calc(100% - 40px);
 }

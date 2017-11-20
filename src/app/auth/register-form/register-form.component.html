@@ -11,18 +11,18 @@
         </mat-radio-group>
       </div>
       <div class="_form-inline-group user-names-group _mt-20">
-        <mat-form-field class="custom-mat-input">
+        <mat-form-field class="_custom-mat-input">
           <input matInput type="text" placeholder="First name" formControlName="firstName">
         </mat-form-field>
-        <mat-form-field class="custom-mat-input">
+        <mat-form-field class="_custom-mat-input">
           <input matInput type="text" placeholder="Middle name" formControlName="middleName">
         </mat-form-field>
-        <mat-form-field class="custom-mat-input">
+        <mat-form-field class="_custom-mat-input">
           <input matInput type="text" placeholder="Last name" formControlName="lastName">
         </mat-form-field>
       </div>
       <div class="_form-inline-group _mt-20">
-        <mat-form-field class="custom-mat-input input-mat">
+        <mat-form-field class="_custom-mat-input input-mat">
           <input matInput type="email" placeholder="Email address" formControlName="email">
         </mat-form-field>
       </div>
@@ -34,17 +34,17 @@
             </mat-option>
           </mat-select>
         </mat-form-field>
-        <mat-form-field class="custom-mat-input input-mat">
+        <mat-form-field class="_custom-mat-input input-mat">
           <input matInput type="email" placeholder="Email address" formControlName="busniessEmail">
         </mat-form-field>
       </div>
     </div>
     <div class="form-sub-section">
       <div class="_form-inline-group _mt-10" *ngIf="registerForm.get('userType').value === 'BUSINESS'">
-        <mat-form-field class="custom-mat-input">
+        <mat-form-field class="_custom-mat-input">
           <input matInput type="text" placeholder="Business name" formControlName="busniessName">
         </mat-form-field>
-        <mat-form-field class="custom-mat-input input-mat">
+        <mat-form-field class="_custom-mat-input input-mat">
           <input matInput type="text" placeholder="Business website" formControlName="busniessWebsite">
         </mat-form-field>
         <mat-form-field>
@@ -55,10 +55,10 @@
         </mat-form-field>
       </div>
       <div class="_form-inline-group _mt-20">
-        <mat-form-field class="custom-mat-input">
+        <mat-form-field class="_custom-mat-input">
           <input matInput type="password" placeholder="Password" formControlName="password">
         </mat-form-field>
-        <mat-form-field class="custom-mat-input">
+        <mat-form-field class="_custom-mat-input">
           <input matInput type="password" placeholder="Retype Password" formControlName="confirmPassword">
         </mat-form-field>
         <div class="_form-inline-group _mt-10" style="font-size: 12px">The password must atleast be 8 characters long, It
@@ -67,8 +67,8 @@
       </div>
     </div>
     <div class="form-sub-section _flex-box" style="justify-content: center">
-      <button type="reset" [routerLink]="['/']" class="black-btn-o register-form-btn" mat-button>CANCEL</button>
-      <button type="submit" class="bordered-material-btn register-form-btn" mat-button>CREATE ACCOUNT</button>
+      <button type="reset" [routerLink]="['/']" class="_black-btn-o register-form-btn" mat-button>CANCEL</button>
+      <button type="submit" class="_bordered-material-btn register-form-btn" mat-button>CREATE ACCOUNT</button>
     </div>
   </form>
 </mat-card>

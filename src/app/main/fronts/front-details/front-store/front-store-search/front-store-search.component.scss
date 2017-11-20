@@ -79,6 +79,10 @@
   @include pc-compare;
 }
 
+.search-icon {
+  @include pc-search;
+}
+
 button:hover .share-icon {
   @include pc-compare-selected;
 }

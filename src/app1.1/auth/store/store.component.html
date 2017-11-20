@@ -1,0 +1,35 @@
+<landing-page-nav></landing-page-nav>
+
+<div class="store-form-body">
+  <mat-card class="store-form">
+    <form [formGroup]="" novalidate>
+      <div class="store-form-group">
+        <h2 class="store-form-head">I am</h2>
+      </div>
+      <div class="store-form-group">
+        <input type="radio" name="storeType" class="_radio-button" id="INDIVIDUAL" value="INDIVIDUAL"/>
+        <label for="INDIVIDUAL">
+          INDIVIDUAL
+        </label>
+        <input type="radio" name="storeType" class="_radio-button" id="BUSINESS" value="BUSINESS"/>
+        <label for="BUSINESS">
+          BUSINESS
+        </label>
+      </div>
+      <div class="store-form-group">
+        <h2 class="store-form-head">And i am looking for</h2>
+      </div>
+      <div class="store-form-group">
+        <input placeholder="Search here" class="_custom-input store-search-input"/>
+        <button type="submit" class="store-search-submit-btn">EXPLORE</button>
+      </div>
+      <div class="store-form-group" style="margin-top: 100px">
+        <h4 class="store-form-text">We have 100+ categories with over 10 million <br> products and services to cater
+          your every need</h4>
+        <button type="button" class="bordered-material-btn store-form-btn" mat-button>GO TO STORE</button>
+      </div>
+    </form>
+  </mat-card>
+</div>
+
+<landing-page-footer></landing-page-footer>

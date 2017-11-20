@@ -1,0 +1,75 @@
+<mat-expansion-panel hideToggle="true">
+  <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px" class="filter-accodian">
+    <mat-panel-title class="_flex-box">
+      <img src="/assets/images/filter-icon.svg" style="height: 30px"/> Filters
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <div class="_flex-box _justify-content-center"><span>No filters!</span></div>
+</mat-expansion-panel>
+
+<div class="_feed-section">
+  <div class="_side-nav-container _pt-15">
+    <ul class="_feed-side-nav" [class.sticky-side-nav]="sideNavFixed">
+      <li class="_flex-box active-feed _light-text"><span class="_svg-icon show-all-icon _side-nav-icon"></span> Show All (10)</li>
+      <li class="_flex-box _light-text"><span class="_svg-icon companies-icon _side-nav-icon"></span> Companies (4)</li>
+      <li class="_flex-box _light-text"><span class="_svg-icon individual-icon _side-nav-icon"></span> Individuals (4)</li>
+    </ul>
+    <ul class="_feed-side-nav _mt-15">
+      <li class="_flex-box _light-text"><span class="_svg-icon requests-icon _side-nav-icon"></span> Requests (2)</li>
+      <li class="_flex-box _light-text"><span class="_svg-icon recent-connection-icon _side-nav-icon"></span> Recent Connections</li>
+    </ul>
+    <ul class="_feed-side-nav _mt-15">
+      <li class="_flex-box _light-text"><span class="_svg-icon marked-icon _side-nav-icon"></span> Marked</li>
+      <li class="_flex-box _light-text"><span class="_svg-icon blocked-icon _side-nav-icon"></span> Blocked</li>
+    </ul>
+    <ul class="_feed-side-nav _mt-15">
+      <li class="_flex-box _light-text"><span class="_svg-icon groups-icon _side-nav-icon"></span> Groups</li>
+    </ul>
+  </div>
+  <div class="_feed-container _flex-column-direction">
+    <mat-card class="_flex-box _search-box-card">
+      <img src="/assets/images/search-icon.svg">
+      <mat-form-field class="custom-mat-input border-less-mat-input inline-label">
+        <input type="text" placeholder="Search fronts" matInput>
+      </mat-form-field>
+      <mat-autocomplete>
+        <mat-option>
+        </mat-option>
+      </mat-autocomplete>
+    </mat-card>
+
+    <div class="search-results-container _mt-15" *ngFor="let resultType of searchResults">
+      <div class="result-type">{{resultType.type}} ({{resultType.list.length}})</div>
+      <div class="results-box">
+        <mat-card class="result-card" [ngClass]="{'request-card':resultType.requests}"
+                  [routerLink]="['/main/fronts/profile/'+i]" *ngFor="let result of resultType.list; let i=index">
+          <div class="result-data _flex-box">
+            <div class="_img-thumbnail" [ngStyle]="{'background':'url('+ result.img +')'}"></div>
+            <div class="result-details">
+              <div>
+                <div class="result-name _ellipse-text-overflow">{{result.name}}</div>
+                <div class="result-domain _ellipse-text-overflow">{{result.domain}}</div>
+              </div>
+              <div *ngIf="!resultType.requests">
+                <div class="other-result-detail _flex-box _light-text"><span class="_svg-icon customer-icon"></span>Customer
+                </div>
+                <div class="other-result-detail _flex-box _light-text"><span class="_svg-icon transaction-icon"></span>{{result.transactions}}
+                </div>
+              </div>
+            </div>
+            <button class="_ml-auto" mat-icon-button type="button"><i class="material-icons">more_vert</i></button>
+          </div>
+          <div class="request-actions _p-10" *ngIf="resultType.requests" (click)="disablePropagation($event)">
+            <div class="request-actions-msg _light-text">Requested to connect as your <a class="_theme-link">{{result.requestType}}</a>,
+              do you wish to allow?
+            </div>
+            <div class="_flex-box _justify-content-center _mt-10">
+              <button mat-button class="black-btn-o _light-text" style="font-weight: 400" type="button">Ignore</button>
+              <button mat-button class="mat-btn-success" type="button">Connect</button>
+            </div>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,7 @@
+@mixin pc-search {
+  background: url("/assets/images/base/pc-search.svg");
+}
+
 @mixin pc-view {
   background: url("/assets/images/base/pc-view.svg");
 }
@@ -23,7 +27,7 @@
 }
 
 @mixin pc-shopping-bag-selected {
-  background: url("/assets/images/base/pc-shopping-bag-selectedsvg");
+  background: url("/assets/images/base/pc-shopping-bag-selected.svg");
 }
 
 @mixin pc-close-red {

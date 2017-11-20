@@ -27,7 +27,7 @@ const route:Route[] = [
       {
         path: 'deals',
         component: DealsComponent,
-        
+
       },{
         path: 'fronts',
         component: FrontsComponent
@@ -37,10 +37,10 @@ const route:Route[] = [
       }
     ]
   }
-  
+
 ];
 
-@NgModule({ 
+@NgModule({
   imports: [
     CommonModule,
     FormsModule,

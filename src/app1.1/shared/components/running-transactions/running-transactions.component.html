@@ -1,0 +1,27 @@
+<mat-expansion-panel [expanded]="true">
+  <mat-expansion-panel-header collapsedHeight="30px" expandedHeight="30px">
+    <mat-panel-title>
+      Running Transactions({{totalRunningTransactions}})
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+
+  <div class="transaction" *ngFor="let transaction of runningTransactions">
+    <div class="transaction-cord _flex-box">
+      <div class="transaction-cord-img" [ngStyle]="{'background':'url('+transaction.cord.img+') no-repeat center'}"></div>
+      <div>{{transaction.cord.name}}</div>
+      <div class="transaction-cord-actions _ml-auto">
+        <span class="_svg-icon rt-icon star-icon"></span>
+        <span class="_svg-icon rt-icon like-icon"></span>
+        <span class="_svg-icon rt-icon menu-icon"></span>
+      </div>
+    </div>
+    <div class="transaction-line _flex-box">
+      <div class="_img-thumbnail" [ngStyle]="{'background':'url('+transaction.line.img+')'}"></div>
+      <div class="transaction-line-data">
+        <div class="transaction-line-name _ellipse-text-overflow">{{transaction.line.name}}</div>
+        <div class="transaction-time _ellipse-text-overflow">{{transaction.line.time}}</div>
+      </div>
+      <div class="_flex-box _ml-auto transaction-amount">{{transaction.line.amount}}</div>
+    </div>
+  </div>
+</mat-expansion-panel>

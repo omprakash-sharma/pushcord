@@ -1,13 +1,12 @@
-<div class="front-cover" [ngStyle]="{'background':'url(/assets/images/placeholders/front-cover.PNG)'}" ></div>
+<div class="front-cover" [ngStyle]="{'background':'url(/assets/images/placeholders/front-cover.PNG)'}"></div>
 <div class="parent-main">
-<mat-card class="_p-0" [class.sticky-nav]="frontHeaderFixed" style="margin-bottom:-60px">
+  <mat-card class="_p-0" [class.sticky-nav]="frontHeaderFixed" style="margin-bottom:-60px">
     <div class="_flex-box">
       <button type="button" class="_p-0 back-btn" mat-icon-button>
         <i class="material-icons">chevron_left</i>
       </button>
       <div class="_flex-box _p-10">
-        <div class="_img-thumbnail"
-             [ngStyle]="{'background':'url(/assets/images/placeholders/front-detail-img.jpg)'}"></div>
+        <div class="_img-thumbnail" [ngStyle]="{'background':'url(/assets/images/placeholders/front-detail-img.jpg)'}"></div>
         <div class="_flex-box _ml-10 _flex-column-direction front-data">
           <div class="front-title">Omega Insurance Brokers</div>
           <div class="front-domain _light-text">Insurance Brokers</div>
@@ -23,42 +22,79 @@
         </button>
       </div>
     </div>
+    <div class="_flex-box flex_actionbar ">
+      <ul class="actionbar _p-10">
+        <li>
+          <div class="_flex-box _flex-column-direction">
+            <span class="_svg-icon alarm-icon"></span>
+            <span class="actionbar-text">13 min</span>
+          </div>
+        </li>
+        <li>
+          <div class="_flex-box _flex-column-direction">
+            <span class="_svg-icon like-icon"></span>
+            <span class="actionbar-text">675</span>
+          </div>
+        </li>
+        <li>
+          <div class="_flex-box _flex-column-direction">
+            <span class="_svg-icon alarm-icon"></span>
+            <span class="actionbar-text">2.7</span>
+          </div>
+        </li>
+        <li>
+          <div class="_flex-box _flex-column-direction">
+            <span class="_svg-icon alarm-icon"></span>
+            <span class="actionbar-text">-</span>
+          </div>
+        </li>
+        <li>
+          <div class="_flex-box _flex-column-direction">
+            <span class="_svg-icon alarm-icon"></span>
+            <span class="actionbar-text">13k</span>
+          </div>
+        </li>
+      </ul>
+    </div>
     <div class="front-info-section" [ngClass]="frontInfoToggle ? 'expand-info-box':''">
       <div style="text-align: center;padding: 10px">Omega Insurance Brokers information</div>
     </div>
+
     <div class="_flex-box">
-      <input type="checkbox" class="front-info-toggle" [(ngModel)]="frontInfoToggle" id="frontInfoToggle"/>
+      <input type="checkbox" class="front-info-toggle" [(ngModel)]="frontInfoToggle" id="frontInfoToggle" />
       <label for="frontInfoToggle">{{frontInfoToggle ? 'Hide info' : 'Show info'}}</label>
     </div>
-</mat-card>
-<div style="padding-top:60px">
-<mat-card class="_p-10 _mt-10 _flex-box">
-  <button mat-raised-button class="mat-btn-success _ml-auto" (click)="openConnectionDialog()">CONNECT</button>
-</mat-card>
+  </mat-card>
 
-<activity-filter></activity-filter>
 
-<div class="_feed-section _mt-10">
-  <div class="_side-nav-container">
-    <ul class="_feed-side-nav" [class.sticky-side-nav]="sideNavFixed">
-      <li [routerLink]="['activity']" routerLinkActive="active-feed"><i class="material-icons">flash_on</i>&nbsp;Activity
-      </li>
-      <li [routerLink]="['store']" routerLinkActive="active-feed"><i class="material-icons">store</i>&nbsp;Store</li>
-      <li [routerLink]="['about-us']" routerLinkActive="active-feed"><i class="material-icons">assignment_ind</i>&nbsp;About
-        us
-      </li>
-    </ul>
-    <ul class="_feed-side-nav _mt-10" >
-      <li [routerLink]="['transactions']" routerLinkActive="active-feed"><i class="material-icons">shopping_basket</i>&nbsp;Transactions (4)</li>
-      <li [routerLink]="['contact-points']" routerLinkActive="active-feed"><i class="material-icons">perm_identity</i>&nbsp;Contact Points</li>
-    </ul>
+
+  <div style="padding-top:60px">
+    <mat-card class="_p-10 _mt-10 _flex-box">
+      <button mat-raised-button class="mat-btn-success _ml-auto" (click)="openConnectionDialog()">CONNECT</button>
+    </mat-card>
+
+    <activity-filter></activity-filter>
+
+    <div class="_feed-section _mt-10">
+      <div class="_side-nav-container">
+        <ul class="_feed-side-nav" [class.sticky-side-nav]="sideNavFixed">
+          <li [routerLink]="['activity']" routerLinkActive="active-feed"><i class="material-icons">flash_on</i>&nbsp;Activity
+          </li>
+          <li [routerLink]="['store']" routerLinkActive="active-feed"><i class="material-icons">store</i>&nbsp;Store</li>
+          <li [routerLink]="['about-us']" routerLinkActive="active-feed"><i class="material-icons">assignment_ind</i>&nbsp;About us
+          </li>
+        </ul>
+        <ul class="_feed-side-nav _mt-10">
+          <li [routerLink]="['transactions']" routerLinkActive="active-feed"><i class="material-icons">shopping_basket</i>&nbsp;Transactions (4)</li>
+          <li [routerLink]="['contact-points']" routerLinkActive="active-feed"><i class="material-icons">perm_identity</i>&nbsp;Contact Points</li>
+        </ul>
+      </div>
+      <div class="_feed-container">
+        <router-outlet></router-outlet>
+      </div>
+      <!-- Communication module starts here -->
+      <communication [openSheet]="openCommunication" (onClose)="sheetClosed($event)"></communication>
+    </div>
+
   </div>
-  <div class="_feed-container">
-    <router-outlet></router-outlet>
-  </div>
-  <!-- Communication module starts here -->
-  <communication [openSheet]="openCommunication" (onClose)="sheetClosed($event)"></communication>
-</div>
-
-</div>
 </div>

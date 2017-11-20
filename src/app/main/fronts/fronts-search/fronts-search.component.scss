@@ -112,6 +112,10 @@
   @include pc-new-role;
 }
 
+.search-icon {
+  @include pc-search;
+}
+
 .show-all-icon {
   @include pc-actions;
 }
@@ -161,11 +165,11 @@
 }
 
 .blocked-icon {
-  @include pc-abort-task;
+  @include pc-unaborted-task;
 }
 
 ._feed-side-nav li:hover .blocked-icon, .active-feed .blocked-icon {
-  @include pc-unaborted-task;
+  @include pc-abort-task;
 }
 
 .groups-icon {

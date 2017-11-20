@@ -7,12 +7,19 @@
 
   <div class="transaction" *ngFor="let transaction of runningTransactions">
     <div class="transaction-cord _flex-box">
-      <div class="transaction-cord-img" [ngStyle]="{'background':'url('+transaction.cord.img+') no-repeat center'}"></div>
+      <div class="transaction-cord-img"
+           [ngStyle]="{'background':'url('+transaction.cord.img+') no-repeat center'}"></div>
       <div>{{transaction.cord.name}}</div>
       <div class="transaction-cord-actions _ml-auto">
-        <span class="_svg-icon rt-icon star-icon"></span>
-        <span class="_svg-icon rt-icon like-icon"></span>
-        <span class="_svg-icon rt-icon menu-icon"></span>
+        <button type="button" class="rt-icon" mat-icon-button>
+          <span class="_svg-icon rt-icon star-icon"></span>
+        </button>
+        <button type="button" class="rt-icon" mat-icon-button>
+          <span class="_svg-icon rt-icon like-icon"></span>
+        </button>
+        <button type="button" class="rt-icon" mat-icon-button>
+          <span class="_svg-icon rt-icon menu-icon"></span>
+        </button>
       </div>
     </div>
     <div class="transaction-line _flex-box">
