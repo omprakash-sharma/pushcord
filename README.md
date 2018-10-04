@@ -1,2 +1,2 @@
-# pushcord
-pushcord project initial setup
+# webstore
+webstore project initial setup for fun.
